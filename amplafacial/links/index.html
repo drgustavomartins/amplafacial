@@ -114,14 +114,7 @@ body::before {
   height: 100%;
   border-radius: 50%;
   background: var(--navy);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-display);
-  font-size: 36px;
-  font-weight: 600;
-  color: var(--gold);
-  letter-spacing: 1px;
+  object-fit: cover;
 }
 
 .profile-name {
@@ -451,7 +444,7 @@ footer a:hover {
   <!-- Profile -->
   <section class="profile">
     <div class="avatar-ring">
-      <div class="avatar">GM</div>
+      <img class="avatar" src="avatar.jpg" alt="Dr. Gustavo Martins" width="104" height="104">
     </div>
     <h1 class="profile-name">Dr. Gustavo Martins</h1>
     <p class="profile-title">Harmonização Facial</p>

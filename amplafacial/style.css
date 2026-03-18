@@ -1126,6 +1126,13 @@ h1, h2, h3, h4 {
   font-size: 1.1em;
 }
 
+.ct-na {
+  color: var(--color-text-faint);
+  font-size: var(--text-xs);
+  font-style: italic;
+  opacity: 0.6;
+}
+
 /* Price rows */
 .ct-price-row td {
   padding: var(--space-6) var(--space-4);

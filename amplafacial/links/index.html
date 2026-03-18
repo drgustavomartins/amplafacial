@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+<!--
+   ______                            __
+  / ____/___  ____ ___  ____  __  __/ /____  _____
+ / /   / __ \/ __ `__ \/ __ \/ / / / __/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ / /_/  __/ /
+\____/\____/_/ /_/ /_/ .___/\__,_/\__/\___/_/
+                    /_/
+        Created with Perplexity Computer
+        https://www.perplexity.ai/computer
+-->
+<meta name="generator" content="Perplexity Computer">
+<meta name="author" content="Perplexity Computer">
+<meta property="og:see_also" content="https://www.perplexity.ai/computer">
+<link rel="author" href="https://www.perplexity.ai/computer">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Gustavo Martins — Harmonização Facial</title>
+<meta name="description" content="Dr. Gustavo Martins — Especialista em Harmonização Facial Natural. Método NaturalUp®. Rio de Janeiro.">
+<meta property="og:title" content="Dr. Gustavo Martins — Harmonização Facial">
+<meta property="og:description" content="Especialista em Harmonização Facial Natural. Método NaturalUp®. Rio de Janeiro.">
+<meta property="og:type" content="website">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy: #0a1628;
+  --navy-light: #0f1f38;
+  --navy-card: #111e33;
+  --navy-border: #1a2d4d;
+  --gold: #c9a84c;
+  --gold-light: #dfc06e;
+  --gold-dim: rgba(201, 168, 76, 0.15);
+  --gold-glow: rgba(201, 168, 76, 0.08);
+  --text-primary: #e8e4dc;
+  --text-secondary: #9a978f;
+  --text-faint: #5c5a54;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Inter', 'Helvetica Neue', sans-serif;
+  --radius: 16px;
+  --transition: 280ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100dvh;
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  background: var(--navy);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: 
+    radial-gradient(ellipse 600px 400px at 50% 0%, rgba(201, 168, 76, 0.04) 0%, transparent 70%),
+    radial-gradient(ellipse 400px 600px at 80% 100%, rgba(201, 168, 76, 0.02) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 460px;
+  padding: 48px 20px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ─── Profile ─── */
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.avatar-ring {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  padding: 3px;
+  background: linear-gradient(135deg, var(--gold), var(--gold-light), var(--gold));
+  margin-bottom: 20px;
+  box-shadow: 0 0 40px rgba(201, 168, 76, 0.15);
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 1px;
+}
+
+.profile-name {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 1.2rem + 1.5vw, 2rem);
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+
+.profile-title {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--gold);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.profile-desc {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  max-width: 320px;
+}
+
+.profile-desc .method {
+  color: var(--gold-light);
+  font-weight: 500;
+}
+
+/* ─── Divider ─── */
+.divider {
+  width: 48px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 8px 0 36px;
+}
+
+/* ─── Section label ─── */
+.section-label {
+  width: 100%;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--gold);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  padding-left: 4px;
+  opacity: 0.7;
+}
+
+.section-label + .links {
+  margin-top: 0;
+}
+
+/* ─── Links ─── */
+.links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.link-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 15px 18px;
+  background: var(--navy-card);
+  border: 1px solid var(--navy-border);
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.link-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--gold);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.link-card:hover {
+  background: var(--navy-light);
+  border-color: rgba(201, 168, 76, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(201, 168, 76, 0.1);
+}
+
+.link-card:hover::before {
+  opacity: 1;
+}
+
+.link-card:active {
+  transform: translateY(0);
+}
+
+.link-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+  background: var(--gold-dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition);
+}
+
+.link-card:hover .link-icon {
+  background: rgba(201, 168, 76, 0.22);
+}
+
+.link-icon svg {
+  width: 19px;
+  height: 19px;
+  color: var(--gold);
+}
+
+.link-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.link-label {
+  font-size: 0.92rem;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 1px;
+}
+
+.link-sublabel {
+  font-size: 0.76rem;
+  color: var(--text-secondary);
+  line-height: 1.3;
+}
+
+.link-arrow {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  color: var(--text-faint);
+  transition: all var(--transition);
+}
+
+.link-card:hover .link-arrow {
+  color: var(--gold);
+  transform: translateX(3px);
+}
+
+/* ─── Locations grid ─── */
+.locations {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.loc-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--navy-card);
+  border: 1px solid var(--navy-border);
+  border-radius: 14px;
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.loc-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--gold);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.loc-card:hover {
+  background: var(--navy-light);
+  border-color: rgba(201, 168, 76, 0.25);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+}
+
+.loc-card:hover::before {
+  opacity: 1;
+}
+
+.loc-icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--gold-dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loc-icon svg {
+  width: 16px;
+  height: 16px;
+  color: var(--gold);
+}
+
+.loc-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.loc-name {
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 1px;
+}
+
+.loc-address {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  line-height: 1.3;
+}
+
+.loc-arrow {
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+  color: var(--text-faint);
+  transition: all var(--transition);
+}
+
+.loc-card:hover .loc-arrow {
+  color: var(--gold);
+  transform: translateX(2px);
+}
+
+/* ─── Footer ─── */
+footer {
+  text-align: center;
+  padding: 16px 0 24px;
+}
+
+footer a {
+  font-size: 0.7rem;
+  color: var(--text-faint);
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  transition: color var(--transition);
+}
+
+footer a:hover {
+  color: var(--text-secondary);
+}
+
+/* ─── Animations ─── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.profile { animation: fadeUp 0.6s ease-out both; }
+.divider { animation: fadeUp 0.6s ease-out 0.1s both; }
+
+.section-label:nth-of-type(1) { animation: fadeUp 0.5s ease-out 0.12s both; }
+.links:nth-of-type(1) .link-card:nth-child(1) { animation: fadeUp 0.5s ease-out 0.16s both; }
+.links:nth-of-type(1) .link-card:nth-child(2) { animation: fadeUp 0.5s ease-out 0.20s both; }
+
+.section-label:nth-of-type(2) { animation: fadeUp 0.5s ease-out 0.24s both; }
+.links:nth-of-type(2) .link-card:nth-child(1) { animation: fadeUp 0.5s ease-out 0.28s both; }
+.links:nth-of-type(2) .link-card:nth-child(2) { animation: fadeUp 0.5s ease-out 0.32s both; }
+.links:nth-of-type(2) .link-card:nth-child(3) { animation: fadeUp 0.5s ease-out 0.36s both; }
+
+.section-label:nth-of-type(3) { animation: fadeUp 0.5s ease-out 0.40s both; }
+.links:nth-of-type(3) .link-card:nth-child(1) { animation: fadeUp 0.5s ease-out 0.44s both; }
+.links:nth-of-type(3) .link-card:nth-child(2) { animation: fadeUp 0.5s ease-out 0.48s both; }
+.links:nth-of-type(3) .link-card:nth-child(3) { animation: fadeUp 0.5s ease-out 0.52s both; }
+
+.section-label:nth-of-type(4) { animation: fadeUp 0.5s ease-out 0.56s both; }
+.locations .loc-card:nth-child(1) { animation: fadeUp 0.5s ease-out 0.60s both; }
+.locations .loc-card:nth-child(2) { animation: fadeUp 0.5s ease-out 0.64s both; }
+.locations .loc-card:nth-child(3) { animation: fadeUp 0.5s ease-out 0.68s both; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+::selection {
+  background: rgba(201, 168, 76, 0.25);
+  color: var(--text-primary);
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Profile -->
+  <section class="profile">
+    <div class="avatar-ring">
+      <div class="avatar">GM</div>
+    </div>
+    <h1 class="profile-name">Dr. Gustavo Martins</h1>
+    <p class="profile-title">Harmonização Facial</p>
+    <p class="profile-desc">
+      Especialista em harmonização com resultados naturais. 
+      Criador do <span class="method">Método NaturalUp®</span>
+    </p>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══ AGENDAMENTO ═══ -->
+  <p class="section-label">Agendamento</p>
+  <nav class="links" aria-label="Agendamento">
+
+    <a href="https://wa.me/5521995523509?text=Ol%C3%A1%2C%20vim%20do%20Instagram%20e%20gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Gustavo%20Martins" target="_blank" rel="noopener noreferrer" class="link-card">
+      <div class="link-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="4" width="18" height="18" rx="2"/>
+          <path d="M16 2v4M8 2v4M3 10h18"/>
+          <path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/>
+        </svg>
+      </div>
+      <div class="link-content">
+        <div class="link-label">Agendar Consulta</div>
+        <div class="link-sublabel">WhatsApp — (21) 99552-3509</div>
+      </div>
+      <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+
+    <a href="https://wa.me/5521976263881?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20acompanhamento%20VIP%20Ampla%20Facial%20e%20o%20M%C3%A9todo%20NaturalUp%C2%AE" target="_blank" rel="noopener noreferrer" class="link-card">
+      <div class="link-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+        </svg>
+      </div>
+      <div class="link-content">
+        <div class="link-label">Mentoria Ampla Facial</div>
+        <div class="link-sublabel">Acompanhamento VIP — NaturalUp®</div>
+      </div>
+      <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+
+  </nav>
+
+  <!-- ═══ REDES SOCIAIS ═══ -->
+  <p class="section-label">Redes Sociais</p>
+  <nav class="links" aria-label="Redes Sociais">
+
+    <a href="https://www.instagram.com/dr.gustavomartins" target="_blank" rel="noopener noreferrer" class="link-card">
+      <div class="link-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5"/>
+          <circle cx="12" cy="12" r="5"/>
+          <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/>
+        </svg>
+      </div>
+      <div class="link-content">
+        <div class="link-label">Instagram Pessoal</div>
+        <div class="link-sublabel">@dr.gustavomartins</div>
+      </div>
+      <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+
+    <a href="https://www.instagram.com/amplafacial" target="_blank" rel="noopener noreferrer" class="link-card">
+      <div class="link-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5"/>
+          <circle cx="12" cy="12" r="5"/>
+          <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/>
+        </svg>
+      </div>
+      <div class="link-content">
+        <div class="link-label">Ampla Facial</div>
+        <div class="link-sublabel">@amplafacial — Mentoria</div>
+      </div>
+      <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+
+    <a href="https://www.tiktok.com/@drgustavomartins" target="_blank" rel="noopener noreferrer" class="link-card">
+      <div class="link-icon">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 0010.86 4.46V13a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-.81-.07 4.83 4.83 0 01-.38-4.36z"/>
+        </svg>
+      </div>
+      <div class="link-content">
+        <div class="link-label">TikTok</div>
+        <div class="link-sublabel">@drgustavomartins</div>
+      </div>
+      <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+
+  </nav>
+
+  <!-- ═══ SITES ═══ -->
+  <p class="section-label">Sites</p>
+  <nav class="links" aria-label="Sites">
+
+    <a href="https://www.amplafacial.com.br/" target="_blank" rel="noopener noreferrer" class="link-card">
+      <div class="link-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M2 12h20"/>
+          <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+        </svg>
+      </div>
+      <div class="link-content">
+        <div class="link-label">Ampla Facial</div>
+        <div class="link-sublabel">Mentoria — Método NaturalUp®</div>
+      </div>
+      <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+
+    <a href="https://protocolo.amplafacial.com.br/" target="_blank" rel="noopener noreferrer" class="link-card">
+      <div class="link-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"/>
+          <rect x="8" y="2" width="8" height="4" rx="1"/>
+          <path d="M9 14l2 2 4-4"/>
+        </svg>
+      </div>
+      <div class="link-content">
+        <div class="link-label">Protocolo Ampla Facial</div>
+        <div class="link-sublabel">Área do paciente</div>
+      </div>
+      <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+
+    <a href="https://clinicagustavomartins.com.br/" target="_blank" rel="noopener noreferrer" class="link-card">
+      <div class="link-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+      </div>
+      <div class="link-content">
+        <div class="link-label">Clínica Gustavo Martins</div>
+        <div class="link-sublabel">clinicagustavomartins.com.br</div>
+      </div>
+      <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+
+  </nav>
+
+  <!-- ═══ CLÍNICAS ═══ -->
+  <p class="section-label">Clínicas</p>
+  <div class="locations">
+
+    <a href="https://www.google.com/maps/place/Cl%C3%ADnica+Gustavo+Martins+-+Especialista+em+Face/@-23.0026332,-43.4080283,12z/data=!4m6!3m5!1s0x9bdb7eea6fb0a3:0x31e314fa063a24cd!8m2!3d-23.003346!4d-43.3256189!16s%2Fg%2F11lgthp0yc" target="_blank" rel="noopener noreferrer" class="loc-card">
+      <div class="loc-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+          <circle cx="12" cy="10" r="3"/>
+        </svg>
+      </div>
+      <div class="loc-content">
+        <div class="loc-name">Barra da Tijuca</div>
+        <div class="loc-address">Clínica Gustavo Martins</div>
+      </div>
+      <svg class="loc-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+
+    <a href="https://www.google.com/maps/place/Amplavida/@-22.918707,-43.6865027,17z/data=!3m1!4b1!4m5!3m4!1s0x9bfa5b3fdbffc5:0x6be54b403fc9704e!8m2!3d-22.918707!4d-43.684314" target="_blank" rel="noopener noreferrer" class="loc-card">
+      <div class="loc-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+          <circle cx="12" cy="10" r="3"/>
+        </svg>
+      </div>
+      <div class="loc-content">
+        <div class="loc-name">Santa Cruz</div>
+        <div class="loc-address">Amplavida</div>
+      </div>
+      <svg class="loc-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+
+    <a href="https://www.google.com/maps/place/Shopping+195/@-22.9655583,-43.1796802,17z/data=!3m2!4b1!5s0x9bd55134f008bd:0x9e037f689f5df245!4m6!3m5!1s0x9bd555a80ad687:0x4be7c6e53a56ca84!8m2!3d-22.9655633!4d-43.1771053!16s%2Fg%2F11h6s2k0q7" target="_blank" rel="noopener noreferrer" class="loc-card">
+      <div class="loc-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+          <circle cx="12" cy="10" r="3"/>
+        </svg>
+      </div>
+      <div class="loc-content">
+        <div class="loc-name">Copacabana</div>
+        <div class="loc-address">Shopping 195</div>
+      </div>
+      <svg class="loc-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+
+  </div>
+
+</div>
+
+<footer>
+  <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer">
+    Created with Perplexity Computer
+  </a>
+</footer>
+
+</body>
+</html>

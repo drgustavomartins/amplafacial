@@ -1001,6 +1001,228 @@ h1, h2, h3, h4 {
   }
 }
 
+/* ===== COMPARISON TABLE ===== */
+.comparison-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-divider);
+  background: rgba(255,255,255,0.02);
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+.comparison-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.comparison-table th {
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+  color: var(--color-gold);
+  font-weight: 700;
+  text-align: center;
+  padding: var(--space-6) var(--space-4);
+  background: rgba(11, 18, 48, 0.95);
+  border-bottom: 2px solid var(--color-border-gold);
+  position: relative;
+}
+
+.comparison-table th.ct-feature-col {
+  text-align: left;
+  width: 40%;
+  font-size: var(--text-sm);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-gold-light);
+}
+
+.comparison-table th.ct-plan-col {
+  width: 20%;
+}
+
+.comparison-table th.ct-featured {
+  background: rgba(212,168,67,0.1);
+  position: relative;
+}
+
+.ct-badge {
+  display: block;
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #111B47;
+  background: var(--color-gold);
+  padding: 2px 10px;
+  border-radius: var(--radius-sm);
+  margin: var(--space-2) auto 0;
+  width: fit-content;
+}
+
+/* Group Headers */
+.ct-group-header td {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  padding: var(--space-5) var(--space-6) var(--space-2);
+  background: rgba(212,168,67,0.04);
+  border-bottom: 1px solid rgba(212,168,67,0.12);
+}
+
+/* Feature rows */
+.comparison-table tbody tr:not(.ct-group-header) {
+  transition: background 0.15s ease;
+}
+
+.comparison-table tbody tr:not(.ct-group-header):hover {
+  background: rgba(255,255,255,0.03);
+}
+
+.ct-feature {
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  padding: var(--space-4) var(--space-6);
+  line-height: 1.5;
+  border-bottom: 1px solid var(--color-divider);
+}
+
+.ct-value {
+  text-align: center;
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  padding: var(--space-4) var(--space-3);
+  border-bottom: 1px solid var(--color-divider);
+  white-space: nowrap;
+}
+
+.ct-featured-cell {
+  background: rgba(212,168,67,0.04);
+}
+
+/* Check and X marks */
+.ct-check::before {
+  content: '\2713';
+  color: var(--color-gold);
+  font-weight: 700;
+  font-size: 1.1em;
+  margin-right: 4px;
+}
+
+.ct-x::before {
+  content: '\2717';
+  color: var(--color-text-faint);
+  font-weight: 400;
+  font-size: 1.1em;
+}
+
+/* Price rows */
+.ct-price-row td {
+  padding: var(--space-6) var(--space-4);
+  border-top: 2px solid var(--color-border-gold);
+  border-bottom: 1px solid var(--color-divider);
+}
+
+.ct-price-row .ct-feature {
+  border-top: 2px solid var(--color-border-gold);
+}
+
+.ct-price {
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  color: var(--color-gold);
+  font-weight: 700;
+  padding: var(--space-6) var(--space-4);
+  border-top: 2px solid var(--color-border-gold);
+  border-bottom: 1px solid var(--color-divider);
+}
+
+.ct-dupla-row td {
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-divider);
+}
+
+.ct-dupla-row .ct-feature {
+  font-size: var(--text-sm);
+  color: var(--color-gold-light);
+  padding: var(--space-3) var(--space-6);
+  border-bottom: 1px solid var(--color-divider);
+}
+
+.ct-dupla-price {
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+  color: var(--color-gold-light);
+  font-weight: 600;
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-divider);
+}
+
+/* CTA row */
+.ct-cta-row td {
+  padding: var(--space-6) var(--space-4) var(--space-8);
+}
+
+.ct-cta-cell {
+  text-align: center;
+  padding: var(--space-6) var(--space-4) var(--space-8);
+}
+
+.btn--sm {
+  font-size: clamp(0.65rem, 0.6rem + 0.25vw, 0.8rem);
+  padding: var(--space-3) var(--space-4);
+  letter-spacing: 0.06em;
+}
+
+/* Mobile: cards fallback for comparison table */
+@media (max-width: 767px) {
+  .comparison-table-wrap {
+    border: none;
+    background: none;
+    overflow-x: auto;
+  }
+
+  .comparison-table {
+    min-width: 600px;
+  }
+
+  .comparison-table th {
+    font-size: var(--text-sm);
+    padding: var(--space-4) var(--space-3);
+  }
+
+  .ct-feature {
+    font-size: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .ct-value {
+    font-size: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+    padding: var(--space-3) var(--space-2);
+  }
+
+  .ct-price {
+    font-size: var(--text-base);
+  }
+
+  .btn--sm {
+    font-size: 0.65rem;
+    padding: var(--space-2) var(--space-3);
+  }
+}
+
 /* ===== FOR WHOM ===== */
 .for-whom-grid {
   display: grid;
@@ -1142,6 +1364,83 @@ h1, h2, h3, h4 {
 
 .footer-attribution a:hover {
   color: var(--color-gold-light);
+}
+
+/* ===== WHATSAPP FLOATING BUTTON ===== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 90;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25D366;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35), 0 2px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1) translateY(-2px);
+  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.5), 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.whatsapp-float:active {
+  transform: scale(1.05);
+}
+
+@media (max-width: 767px) {
+  .whatsapp-float {
+    bottom: 16px;
+    right: 16px;
+    width: 52px;
+    height: 52px;
+  }
+  .whatsapp-float svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* ===== NATURALUP WATERMARK ===== */
+.naturalup-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.naturalup-watermark {
+  position: absolute;
+  bottom: -5%;
+  left: -5%;
+  width: 340px;
+  height: auto;
+  opacity: 0.04;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  filter: grayscale(20%);
+}
+
+.naturalup-watermark--right {
+  left: auto;
+  right: -3%;
+  bottom: -8%;
+  width: 300px;
+}
+
+@media (max-width: 767px) {
+  .naturalup-watermark {
+    width: 200px;
+    opacity: 0.03;
+  }
+  .naturalup-watermark--right {
+    width: 180px;
+  }
 }
 
 /* ===== SCROLL ANIMATIONS ===== */

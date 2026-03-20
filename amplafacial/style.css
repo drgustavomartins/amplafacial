@@ -1968,23 +1968,23 @@ h1, h2, h3, h4 {
   letter-spacing: 0.01em;
 }
 
-/* ===== TIMELINE STEPPER (PILARES) ===== */
+/* ===== PILARES TIMELINE ===== */
 .timeline-stepper {
   display: flex;
   flex-direction: column;
-  gap: var(--space-10);
+  gap: var(--space-8);
   margin-top: var(--space-12);
   position: relative;
-  padding-left: var(--space-10);
+  padding-left: var(--space-12);
 }
 
 /* Vertical gold line for mobile */
 .timeline-stepper::before {
   content: '';
   position: absolute;
-  left: 18px;
-  top: 30px;
-  bottom: 30px;
+  left: 20px;
+  top: 36px;
+  bottom: 36px;
   width: 2px;
   background: linear-gradient(180deg, var(--color-gold) 0%, rgba(212,168,67,0.15) 100%);
 }
@@ -1998,7 +1998,7 @@ h1, h2, h3, h4 {
   font-family: var(--font-display);
   font-size: clamp(2.5rem, 2rem + 2vw, 4rem);
   color: var(--color-gold);
-  opacity: 0.2;
+  opacity: 0.18;
   line-height: 1;
   margin-bottom: var(--space-2);
   letter-spacing: -0.02em;
@@ -2021,33 +2021,41 @@ h1, h2, h3, h4 {
   max-width: 40ch;
 }
 
-/* Desktop: horizontal timeline */
+/* Desktop: horizontal cards layout */
 @media (min-width: 768px) {
   .timeline-stepper {
     flex-direction: row;
-    gap: 0;
+    gap: var(--space-6);
     padding-left: 0;
     justify-content: center;
   }
 
   .timeline-stepper::before {
-    left: 10%;
-    right: 10%;
-    top: 28px;
-    bottom: auto;
-    width: auto;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+    display: none;
   }
 
   .timeline-step {
     flex: 1;
     text-align: center;
-    padding: 0 var(--space-6);
+    padding: var(--space-8) var(--space-6);
+    background: var(--color-surface);
+    border: 1px solid var(--color-divider);
+    border-radius: var(--radius-lg);
+    transition: border-color 0.3s ease, background 0.3s ease;
+  }
+
+  .timeline-step:hover {
+    border-color: rgba(212,168,67,0.25);
+    background: rgba(255,255,255,0.05);
+  }
+
+  .timeline-step__number {
+    font-size: clamp(3rem, 2rem + 3vw, 4.5rem);
+    margin-bottom: var(--space-3);
   }
 
   .timeline-step__desc {
-    max-width: none;
+    max-width: 30ch;
     margin: 0 auto;
   }
 }
@@ -2168,10 +2176,17 @@ h1, h2, h3, h4 {
   border-radius: var(--radius-xl);
   padding: var(--space-10) var(--space-8);
   text-align: center;
+  margin-inline: auto;
+  max-width: 100%;
 }
 
 .base-teorica-compact__header {
   margin-bottom: var(--space-8);
+}
+
+.base-teorica-compact__header .section-label,
+.base-teorica-compact__header .section-heading {
+  text-align: center;
 }
 
 .base-teorica-compact__desc {
@@ -2224,4 +2239,6 @@ h1, h2, h3, h4 {
   font-size: var(--text-sm);
   color: var(--color-gold-light);
   opacity: 0.7;
+  max-width: 50ch;
+  margin: var(--space-4) auto 0;
 }

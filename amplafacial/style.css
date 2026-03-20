@@ -146,18 +146,17 @@ h1, h2, h3, h4 {
   }
 }
 
-/* Legacy fallback */
 .logo-img {
-  height: 32px;
+  height: 52px;
   width: auto;
-  max-width: 220px;
+  max-width: 200px;
   object-fit: contain;
 }
 
 @media (min-width: 768px) {
   .logo-img {
-    height: 38px;
-    max-width: 280px;
+    height: 60px;
+    max-width: 260px;
   }
 }
 
@@ -1507,6 +1506,12 @@ h1, h2, h3, h4 {
   width: 24px;
   height: 26px;
   flex-shrink: 0;
+}
+
+.footer-logo-img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
 }
 
 .footer-links {

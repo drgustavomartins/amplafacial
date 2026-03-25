@@ -1219,6 +1219,48 @@ h1, h2, h3, h4 {
   letter-spacing: 0.06em;
 }
 
+/* Processo Seletivo Banner */
+.processo-seletivo-banner {
+  text-align: center;
+  padding: var(--space-8) var(--space-6);
+  border-top: 2px solid var(--color-border-gold);
+}
+
+.processo-seletivo-badge {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #111B47;
+  background: var(--color-gold);
+  padding: var(--space-2) var(--space-5);
+  border-radius: 2rem;
+  margin-bottom: var(--space-4);
+}
+
+.processo-seletivo-text {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--color-gold-light);
+  line-height: 1.7;
+  max-width: 540px;
+  margin: 0 auto var(--space-6);
+}
+
+.processo-seletivo-banner .btn {
+  font-size: var(--text-sm);
+}
+
+.processo-seletivo-banner--mobile {
+  background: rgba(212,168,67,0.05);
+  border: 1px solid var(--color-border-gold);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8) var(--space-6);
+  margin-top: var(--space-6);
+}
+
 /* ===== MOBILE: SECTIONED CARDS FOR COMPARISON ===== */
 @media (max-width: 767px) {
   /* Hide desktop table on mobile */

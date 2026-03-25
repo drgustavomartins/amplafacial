@@ -1,0 +1,17 @@
+# MCP configuration (contains secrets)
+.mcp.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Environment files
+.env
+.env.*

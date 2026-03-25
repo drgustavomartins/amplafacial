@@ -24,15 +24,25 @@
 <link rel="icon" href="./favicon.ico" sizes="32x32">
 <link rel="icon" type="image/svg+xml" href="./assets/logo-ampla-icon.svg">
 <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+<link rel="canonical" href="https://amplafacial.com.br/">
 <title>Ampla Facial | Acompanhamento VIP | Dr. Gustavo Martins</title>
 <meta name="description" content="Ampla Facial | Acompanhamento VIP em Harmonização Facial com Método NaturalUp®. Planejamento Evolutivo para Resultados de Longo Prazo. By Dr. Gustavo Martins.">
 <meta property="og:title" content="Ampla Facial | Acompanhamento VIP | Dr. Gustavo Martins">
 <meta property="og:description" content="Evolução clínica é uma decisão. Acompanhamento VIP em Harmonização Facial com Método NaturalUp®.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://amplafacial.com.br/">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="https://amplafacial.com.br/assets/hero.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- Security Headers (meta tags) -->
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 
 <link rel="stylesheet" href="./base.css">
 <link rel="stylesheet" href="./style.css">
@@ -113,7 +123,7 @@
           <li><strong>Professor</strong> de pós-graduação e cursos livres</li>
         </ul>
         <div class="about-social fade-in">
-          <a href="https://instagram.com/dr.gustavomartins" target="_blank" rel="noopener noreferrer">@dr.gustavomartins</a>
+          <a href="https://www.instagram.com/dr.gustavomartins" target="_blank" rel="noopener noreferrer">@dr.gustavomartins</a>
         </div>
       </div>
     </div>
@@ -741,7 +751,7 @@
     <p class="fade-in">Ampla Facial | Acompanhamento VIP com Método NaturalUp® by Dr. Gustavo Martins</p>
     <div class="cta-buttons fade-in">
       <a href="https://wa.me/5521976263881?text=Oi%20Amanda%2C%20vim%20do%20site%20e%20gostaria%20de%20conversar%20sobre%20o%20acompanhamento%20Ampla%20Facial%20do%20Dr%20Gustavo%20Martins%20e%20o%20m%C3%A9todo%20NaturalUp%C2%AE" target="_blank" rel="noopener noreferrer" class="btn btn--gold">Falar com a Amanda</a>
-      <a href="https://instagram.com/amplafacial" target="_blank" rel="noopener noreferrer" class="cta-instagram">@amplafacial</a>
+      <a href="https://www.instagram.com/amplafacial" target="_blank" rel="noopener noreferrer" class="cta-instagram">@amplafacial</a>
     </div>
   </div>
 </section>
@@ -759,8 +769,8 @@
         <img src="./assets/logo-ampla-header.png" alt="Ampla Facial" class="footer-logo-img">
       </p>
       <div class="footer-links">
-        <a href="https://instagram.com/dr.gustavomartins" target="_blank" rel="noopener noreferrer">@dr.gustavomartins</a>
-        <a href="https://instagram.com/amplafacial" target="_blank" rel="noopener noreferrer">@amplafacial</a>
+        <a href="https://www.instagram.com/dr.gustavomartins" target="_blank" rel="noopener noreferrer">@dr.gustavomartins</a>
+        <a href="https://www.instagram.com/amplafacial" target="_blank" rel="noopener noreferrer">@amplafacial</a>
         <a href="https://wa.me/5521976263881?text=Oi%20Amanda%2C%20vim%20do%20site%20e%20gostaria%20de%20conversar%20sobre%20o%20acompanhamento%20Ampla%20Facial%20do%20Dr%20Gustavo%20Martins%20e%20o%20m%C3%A9todo%20NaturalUp%C2%AE" target="_blank" rel="noopener noreferrer">+55 21 97626-3881</a>
       </div>
       <p class="footer-attribution">
@@ -774,15 +784,12 @@
 // Sticky header scroll state
 (function() {
   const header = document.getElementById('header');
-  let lastY = 0;
   window.addEventListener('scroll', function() {
-    const y = window.scrollY;
-    if (y > 80) {
+    if (window.scrollY > 80) {
       header.classList.add('site-header--scrolled');
     } else {
       header.classList.remove('site-header--scrolled');
     }
-    lastY = y;
   }, { passive: true });
 })();
 </script>

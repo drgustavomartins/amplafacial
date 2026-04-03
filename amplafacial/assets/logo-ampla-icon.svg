@@ -6,10 +6,12 @@
       <stop offset="100%" stop-color="#B8912E"/>
     </linearGradient>
   </defs>
-  <!-- Arc 1 (top, shortest crescent) -->
-  <path d="M42 4 C66 8, 84 30, 78 58 Q76 26, 38 10 Z" fill="url(#g1)" opacity="0.72"/>
-  <!-- Arc 2 (middle crescent) -->
-  <path d="M32 20 C62 22, 86 50, 76 82 Q78 44, 26 26 Z" fill="url(#g1)" opacity="0.84"/>
-  <!-- Arc 3 (bottom, longest crescent) -->
-  <path d="M22 38 C56 38, 86 70, 70 108 Q78 62, 16 44 Z" fill="url(#g1)"/>
+  <g transform="translate(100,0) scale(-1,1)">
+    <!-- Arc 1 (top, shortest crescent) -->
+    <path d="M42 4 C66 8, 84 30, 78 58 Q76 26, 38 10 Z" fill="url(#g1)" opacity="0.72"/>
+    <!-- Arc 2 (middle crescent) -->
+    <path d="M32 20 C62 22, 86 50, 76 82 Q78 44, 26 26 Z" fill="url(#g1)" opacity="0.84"/>
+    <!-- Arc 3 (bottom, longest crescent) -->
+    <path d="M22 38 C56 38, 86 70, 70 108 Q78 62, 16 44 Z" fill="url(#g1)"/>
+  </g>
 </svg>

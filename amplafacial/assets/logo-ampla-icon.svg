@@ -1,17 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 100">
   <defs>
-    <linearGradient id="g1" x1="0%" y1="0%" x2="80%" y2="100%">
-      <stop offset="0%" stop-color="#EDCC5A"/>
+    <linearGradient id="g1" x1="30%" y1="0%" x2="70%" y2="100%">
+      <stop offset="0%" stop-color="#EDD06A"/>
       <stop offset="50%" stop-color="#D4A843"/>
-      <stop offset="100%" stop-color="#B8912E"/>
+      <stop offset="100%" stop-color="#C49535"/>
     </linearGradient>
   </defs>
-  <g transform="translate(100,0) scale(-1,1)">
-    <!-- Arc 1 (top, shortest crescent) -->
-    <path d="M42 4 C66 8, 84 30, 78 58 Q76 26, 38 10 Z" fill="url(#g1)" opacity="0.72"/>
-    <!-- Arc 2 (middle crescent) -->
-    <path d="M32 20 C62 22, 86 50, 76 82 Q78 44, 26 26 Z" fill="url(#g1)" opacity="0.84"/>
-    <!-- Arc 3 (bottom, longest crescent) -->
-    <path d="M22 38 C56 38, 86 70, 70 108 Q78 62, 16 44 Z" fill="url(#g1)"/>
-  </g>
+  <!-- Arc 1 (outermost, longest) — opens left, tips go down-right -->
+  <path d="M78 6 C42 6, 8 34, 12 78 C14 48, 36 24, 72 18 C80 16, 84 14, 82 8 Z" fill="url(#g1)"/>
+  <!-- Arc 2 (middle) -->
+  <path d="M88 22 C56 22, 22 46, 28 86 C30 58, 50 38, 82 34 C90 32, 94 30, 90 24 Z" fill="url(#g1)" opacity="0.92"/>
+  <!-- Arc 3 (inner, shortest) -->
+  <path d="M98 38 C70 38, 40 58, 46 92 C48 68, 64 52, 92 50 C100 48, 102 46, 100 40 Z" fill="url(#g1)" opacity="0.85"/>
 </svg>

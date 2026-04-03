@@ -2581,6 +2581,14 @@ h1, h2, h3, h4 {
 }
 
 /* Audio player for MP3 files */
+.mat-empty {
+  color: #C9A84C;
+  font-style: italic;
+  text-align: center;
+  padding: var(--space-8) var(--space-4);
+  font-size: 1.1rem;
+}
+
 .mat-audio {
   margin-top: var(--space-3);
 }

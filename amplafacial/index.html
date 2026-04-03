@@ -727,7 +727,18 @@
         </div>
       </button>
 
-      <!-- Card 2: Bioestimuladores de Colágeno -->
+      <!-- Card 2: Preenchedores Faciais (em breve) -->
+      <button class="mat-card" data-folder="preenchedores" type="button">
+        <div class="mat-card__img">
+          <img src="./covers/cover_preenchedores_faciais.png" alt="Preenchedores Faciais" loading="lazy" width="600" height="400">
+        </div>
+        <div class="mat-card__overlay">
+          <span class="mat-card__badge">0 arquivos</span>
+          <h3 class="mat-card__title">Preenchedores Faciais</h3>
+        </div>
+      </button>
+
+      <!-- Card 3: Bioestimuladores de Colágeno -->
       <button class="mat-card" data-folder="bioestimuladores" type="button">
         <div class="mat-card__img">
           <img src="./covers/cover_bioestimuladores.png" alt="Bioestimuladores de Colágeno" loading="lazy" width="600" height="400">
@@ -738,18 +749,29 @@
         </div>
       </button>
 
-      <!-- Card 3: Full Face -->
-      <button class="mat-card" data-folder="fullface" type="button">
+      <!-- Card 4: Moduladores de Matriz Extracelular (em breve) -->
+      <button class="mat-card" data-folder="moduladores" type="button">
         <div class="mat-card__img">
-          <img src="./covers/cover_full_face.png" alt="Full Face" loading="lazy" width="600" height="400">
+          <img src="./covers/cover_moduladores_matriz.png" alt="Moduladores de Matriz Extracelular" loading="lazy" width="600" height="400">
         </div>
         <div class="mat-card__overlay">
-          <span class="mat-card__badge">2 arquivos</span>
-          <h3 class="mat-card__title">Full Face</h3>
+          <span class="mat-card__badge">0 arquivos</span>
+          <h3 class="mat-card__title">Moduladores de Matriz Extracelular</h3>
         </div>
       </button>
 
-      <!-- Card 4: IA na Medicina -->
+      <!-- Card 5: Método NaturalUp® -->
+      <button class="mat-card" data-folder="naturalup" type="button">
+        <div class="mat-card__img">
+          <img src="./covers/cover_metodo_naturalup.png" alt="Método NaturalUp®" loading="lazy" width="600" height="400">
+        </div>
+        <div class="mat-card__overlay">
+          <span class="mat-card__badge">2 arquivos</span>
+          <h3 class="mat-card__title">Método NaturalUp®</h3>
+        </div>
+      </button>
+
+      <!-- Card 6: IA na Medicina -->
       <button class="mat-card" data-folder="ia" type="button">
         <div class="mat-card__img">
           <img src="./covers/cover_ia_medicina.png" alt="IA na Medicina" loading="lazy" width="600" height="400">
@@ -935,6 +957,10 @@
         }
       ]
     },
+    preenchedores: {
+      title: 'Preenchedores Faciais',
+      subcategories: []
+    },
     bioestimuladores: {
       title: 'Bioestimuladores de Colágeno',
       subcategories: [
@@ -951,8 +977,13 @@
         }
       ]
     },
-    fullface: {
-      title: 'Full Face',
+    moduladores: {
+      title: 'Moduladores de Matriz Extracelular',
+      subcategories: []
+    },
+    naturalup: {
+      title: 'Método NaturalUp®',
+      subtitle: 'Abordagem Full Face',
       subcategories: [
         {
           name: 'Todos os Materiais',
@@ -1018,6 +1049,24 @@
 
     folderTitle.textContent = data.title;
     folderContent.innerHTML = '';
+
+    if (data.subtitle) {
+      var subtitleEl = document.createElement('p');
+      subtitleEl.style.cssText = 'text-align:center;color:#999;margin-top:-0.5rem;margin-bottom:1.5rem;font-size:1rem;';
+      subtitleEl.textContent = data.subtitle;
+      folderContent.appendChild(subtitleEl);
+    }
+
+    if (data.subcategories.length === 0) {
+      var emptyMsg = document.createElement('p');
+      emptyMsg.className = 'mat-empty';
+      emptyMsg.textContent = 'Conteúdo em breve';
+      folderContent.appendChild(emptyMsg);
+      grid.style.display = 'none';
+      folder.hidden = false;
+      document.getElementById('materiais').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      return;
+    }
 
     data.subcategories.forEach(function(sub) {
       var group = document.createElement('div');

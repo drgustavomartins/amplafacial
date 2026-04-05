@@ -567,8 +567,8 @@ h1, h2, h3, h4 {
 .naturalup-watermark {
   position: absolute;
   bottom: -5%;
-  left: -5%;
-  width: 340px;
+  left: 0;
+  width: 280px;
   height: auto;
   opacity: 0.03;
   pointer-events: none;

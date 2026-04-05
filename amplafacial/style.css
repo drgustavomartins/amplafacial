@@ -579,9 +579,9 @@ h1, h2, h3, h4 {
 
 .naturalup-watermark--right {
   left: auto;
-  right: -3%;
+  right: 0;
   bottom: -8%;
-  width: 300px;
+  width: 240px;
 }
 
 @media (max-width: 767px) {
@@ -1458,6 +1458,7 @@ h1, h2, h3, h4 {
 .cta-section {
   text-align: center;
   background: var(--color-bg-alt);
+  overflow: hidden;
 }
 
 .cta-section h2 {

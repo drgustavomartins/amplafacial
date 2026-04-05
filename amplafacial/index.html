@@ -19,9 +19,13 @@
 <meta property="og:locale" content="pt_BR">
 <meta property="og:image" content="https://amplafacial.com.br/assets/hero.png">
 
+<!-- Instrument Serif from Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+<!-- Satoshi from Fontshare -->
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
 
 <!-- Security Headers (meta tags) -->
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
@@ -115,14 +119,8 @@
   </div>
 </section>
 
-<!-- ===== DECORATIVE DIVIDER: About → NaturalUp ===== -->
-<div class="section-divider-deco fade-in">
-  <svg viewBox="0 0 120 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <line x1="0" y1="8" x2="52" y2="8" stroke="#D4A843" stroke-width="1"/>
-    <rect x="56" y="4" width="8" height="8" transform="rotate(45 60 8)" fill="#D4A843"/>
-    <line x1="68" y1="8" x2="120" y2="8" stroke="#D4A843" stroke-width="1"/>
-  </svg>
-</div>
+<!-- ===== THIN DIVIDER ===== -->
+<div class="section-divider-deco fade-in"></div>
 
 <!-- ===== NATURALUP® STRIP ===== -->
 <div class="naturalup-strip naturalup-bg" id="conceito">
@@ -226,14 +224,8 @@
   </div>
 </div>
 
-<!-- ===== DECORATIVE DIVIDER: Resultados → Pilares ===== -->
-<div class="section-divider-deco fade-in">
-  <svg viewBox="0 0 120 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <line x1="0" y1="8" x2="52" y2="8" stroke="#D4A843" stroke-width="1"/>
-    <rect x="56" y="4" width="8" height="8" transform="rotate(45 60 8)" fill="#D4A843"/>
-    <line x1="68" y1="8" x2="120" y2="8" stroke="#D4A843" stroke-width="1"/>
-  </svg>
-</div>
+<!-- ===== THIN DIVIDER ===== -->
+<div class="section-divider-deco fade-in"></div>
 
 <!-- ===== 7. THE 3 PILLARS (TIMELINE) ===== -->
 <section class="section section--default" id="pilares">
@@ -298,17 +290,23 @@
       <p class="acomp-section-block__schedule" style="text-align:center;max-width:60ch;margin-inline:auto;">Além dos encontros em grupo, cada aluno tem um <strong>canal exclusivo e direto</strong> com o Dr. Gustavo Martins, <strong>a qualquer momento</strong>.</p>
       <div class="suporte-strip">
         <div class="suporte-strip__item fade-in">
-          <span class="suporte-strip__icon">✉</span>
+          <span class="suporte-strip__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </span>
           <h4>Contato Exclusivo</h4>
           <p>Acesso direto por mensagem, sem intermediários, sem espera.</p>
         </div>
         <div class="suporte-strip__item fade-in">
-          <span class="suporte-strip__icon">⏰</span>
+          <span class="suporte-strip__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </span>
           <h4>Disponível Sempre</h4>
           <p>Dúvidas sobre diagnóstico, planejamento ou conduta? Mande quando precisar.</p>
         </div>
         <div class="suporte-strip__item fade-in">
-          <span class="suporte-strip__icon">🎯</span>
+          <span class="suporte-strip__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          </span>
           <h4>Do Diagnóstico ao Resultado</h4>
           <p>Planeje cada caso do início ao fim com maestria e previsibilidade.</p>
         </div>
@@ -328,15 +326,15 @@
       </div>
       <div class="base-teorica-compact__pills">
         <div class="teorica-pill">
-          <span class="teorica-pill__icon">💉</span>
+          <span class="teorica-pill__icon" aria-hidden="true">&bull;</span>
           <span class="teorica-pill__label">Toxina Botulínica</span>
         </div>
         <div class="teorica-pill">
-          <span class="teorica-pill__icon">✦</span>
+          <span class="teorica-pill__icon" aria-hidden="true">&bull;</span>
           <span class="teorica-pill__label">Preenchedores Faciais</span>
         </div>
         <div class="teorica-pill">
-          <span class="teorica-pill__icon">◆</span>
+          <span class="teorica-pill__icon" aria-hidden="true">&bull;</span>
           <span class="teorica-pill__label">Bioestimuladores de Colágeno</span>
         </div>
       </div>
@@ -345,17 +343,11 @@
   </div>
 </section>
 
-<!-- ===== DECORATIVE DIVIDER: Encontros → Pricing ===== -->
-<div class="section-divider-deco fade-in">
-  <svg viewBox="0 0 120 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <line x1="0" y1="8" x2="52" y2="8" stroke="#D4A843" stroke-width="1"/>
-    <rect x="56" y="4" width="8" height="8" transform="rotate(45 60 8)" fill="#D4A843"/>
-    <line x1="68" y1="8" x2="120" y2="8" stroke="#D4A843" stroke-width="1"/>
-  </svg>
-</div>
+<!-- ===== THIN DIVIDER ===== -->
+<div class="section-divider-deco fade-in"></div>
 
 <!-- ===== 10. PRICING ===== -->
-<section class="section section--generous bg-alt section--gradient-top" id="investimento">
+<section class="section section--generous bg-alt" id="investimento">
   <div class="container">
     <span class="section-label fade-in" style="text-align:center;display:block;">Processo Seletivo</span>
     <h2 class="section-heading fade-in" style="text-align:center;">Comparativo de Planos</h2>

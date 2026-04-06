@@ -1,810 +1,784 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Favicon -->
-<link rel="icon" href="./favicon.ico?v=2" sizes="32x32">
-<link rel="icon" type="image/svg+xml" href="./assets/logo-ampla-icon.svg?v=2">
-<link rel="apple-touch-icon" href="./apple-touch-icon.png?v=2">
-<link rel="canonical" href="https://amplafacial.com.br/">
-<title>Ampla Facial | Acompanhamento VIP | Dr. Gustavo Martins</title>
-<meta name="description" content="Ampla Facial | Acompanhamento VIP em Harmonização Facial com Método NaturalUp®. Planejamento Evolutivo para Resultados de Longo Prazo. By Dr. Gustavo Martins.">
-<meta property="og:title" content="Ampla Facial | Acompanhamento VIP | Dr. Gustavo Martins">
-<meta property="og:description" content="Evolução clínica é uma decisão. Acompanhamento VIP em Harmonização Facial com Método NaturalUp®.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://amplafacial.com.br/">
-<meta property="og:locale" content="pt_BR">
-<meta property="og:image" content="https://amplafacial.com.br/assets/hero.png">
-
-<!-- Instrument Serif from Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-
-<!-- Satoshi from Fontshare -->
-<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
-
-<!-- Security Headers (meta tags) -->
-<meta http-equiv="X-Content-Type-Options" content="nosniff">
-<meta http-equiv="X-Frame-Options" content="DENY">
-<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()">
-<meta name="referrer" content="strict-origin-when-cross-origin">
-
-<link rel="stylesheet" href="./base.css">
-<link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ampla Facial — Mentoria em Harmonização Facial · Dr. Gustavo Martins</title>
+  <meta name="description" content="Da graduação ao domínio completo da harmonização orofacial. Plano Observador, Plataforma Digital e VIP NaturalUp® com o Dr. Gustavo Martins." />
+  <link rel="icon" href="logo-transparent.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<!-- ===== 1. HEADER + NAV ===== -->
-<header class="site-header" id="header">
-  <div class="container">
-    <div class="header-inner">
-      <a href="#" class="logo" aria-label="Ampla Facial">
-        <img src="./assets/logo-ampla-header.png" alt="Ampla Facial" class="logo-img">
-      </a>
-
-      <nav class="nav-desktop" aria-label="Navegação principal">
-        <a href="#sobre">Sobre</a>
-        <a href="#metodo">Método</a>
-        <a href="#resultados">Resultados</a>
-        <a href="#pilares">Pilares</a>
-        <a href="#encontros">Encontros</a>
-        <a href="#investimento">Processo Seletivo</a>
-        <a href="#contato">Contato</a>
-      </nav>
-
-      <button class="menu-toggle" aria-label="Abrir menu" onclick="document.querySelector('.nav-mobile').classList.add('is-open')">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-      </button>
-    </div>
+<!-- ═══════════════════════════════════════ NAV ═══════════════════════════════════════ -->
+<nav class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#hero" class="nav__logo" aria-label="Ampla Facial — início">
+      <img src="logo-transparent.png" alt="Ampla Facial" class="nav__logo-img" />
+    </a>
+    <ul class="nav__links" role="list">
+      <li><a href="#modulos">Conteúdo</a></li>
+      <li><a href="#observador">Observador</a></li>
+      <li><a href="#plataforma">Plataforma</a></li>
+      <li><a href="#vip">VIP NaturalUp®</a></li>
+      <li><a href="#gustavo">Dr. Gustavo</a></li>
+    </ul>
+    <a href="https://wa.me/5521976263881?text=Olá!%20Quero%20saber%20mais%20sobre%20a%20mentoria%20Ampla%20Facial." target="_blank" rel="noopener" class="btn btn--outline nav__cta">Falar com a Amanda</a>
+    <button class="nav__hamburger" id="navHamburger" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
-</header>
-
-<!-- Mobile Nav Overlay -->
-<nav class="nav-mobile" aria-label="Navegação mobile">
-  <button class="nav-close" aria-label="Fechar menu" onclick="this.parentElement.classList.remove('is-open')">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
-  </button>
-  <a href="#sobre" onclick="this.parentElement.classList.remove('is-open')">Sobre</a>
-  <a href="#metodo" onclick="this.parentElement.classList.remove('is-open')">Método</a>
-  <a href="#resultados" onclick="this.parentElement.classList.remove('is-open')">Resultados</a>
-  <a href="#pilares" onclick="this.parentElement.classList.remove('is-open')">Pilares</a>
-  <a href="#encontros" onclick="this.parentElement.classList.remove('is-open')">Encontros</a>
-  <a href="#investimento" onclick="this.parentElement.classList.remove('is-open')">Processo Seletivo</a>
-  <a href="#contato" onclick="this.parentElement.classList.remove('is-open')">Contato</a>
+  <div class="nav__mobile" id="navMobile" aria-hidden="true">
+    <a href="#modulos" class="nav__mobile-link">Conteúdo</a>
+    <a href="#observador" class="nav__mobile-link">Observador</a>
+    <a href="#plataforma" class="nav__mobile-link">Plataforma</a>
+    <a href="#vip" class="nav__mobile-link">VIP NaturalUp®</a>
+    <a href="#gustavo" class="nav__mobile-link">Dr. Gustavo</a>
+    <a href="https://wa.me/5521976263881?text=Olá!%20Quero%20saber%20mais%20sobre%20a%20mentoria%20Ampla%20Facial." target="_blank" rel="noopener" class="btn btn--gold nav__mobile-cta">Falar com a Amanda</a>
+  </div>
 </nav>
 
-<!-- ===== 2. HERO ===== -->
-<section class="hero" id="inicio">
-  <div class="hero-bg">
-    <img src="./assets/hero.png" alt="" width="1536" height="1024" loading="eager">
+<!-- ═══════════════════════════════════════ HERO ═══════════════════════════════════════ -->
+<section class="hero" id="hero">
+  <div class="hero__orbs" aria-hidden="true">
+    <div class="hero__orb hero__orb--1"></div>
+    <div class="hero__orb hero__orb--2"></div>
+    <div class="hero__orb hero__orb--3"></div>
   </div>
-  <div class="hero-content">
-    <span class="hero-badge">Acompanhamento VIP</span>
-    <h1>Evolução clínica<br>é uma decisão.</h1>
-    <p class="hero-subtitle">Ampla Facial | Acompanhamento VIP com Método NaturalUp®<br>Planejamento Evolutivo para Resultados de Longo Prazo</p>
-    <p class="hero-byline">by Dr. Gustavo Martins</p>
-    <a href="#investimento" class="btn btn--gold">Quero Evoluir</a>
-  </div>
-</section>
-
-<!-- ===== 3. ABOUT DR. GUSTAVO ===== -->
-<section class="section section--generous" id="sobre">
-  <div class="container">
-    <span class="section-label fade-in">Sobre</span>
-    <div class="about-grid">
-      <div class="about-photo-wrap fade-in">
-        <img src="./assets/gustavo-zoom.jpg" alt="Dr. Gustavo Martins, Cirurgião-dentista e Biomédico" width="600" height="750" loading="lazy">
-      </div>
-      <div>
-        <h2 class="about-name fade-in">Dr. Gustavo Martins</h2>
-        <p class="about-location fade-in">Rio de Janeiro, RJ</p>
-        <ul class="credentials-list fade-in" role="list">
-          <li><strong>Cirurgião-dentista e Biomédico</strong></li>
-          <li><strong>Mestre</strong> em Harmonização Orofacial</li>
-          <li><strong>Especialista</strong> em Harmonização Orofacial</li>
-          <li><strong>Especialista</strong> em Odontogeriatria</li>
-          <li><strong>Speaker</strong> Merz Aesthetics</li>
-          <li><strong>Membro</strong> da Academia Brasileira de Cirurgias Estéticas da Face</li>
-          <li><strong>Professor</strong> de pós-graduação e cursos livres</li>
-        </ul>
-        <div class="about-social fade-in">
-          <a href="https://www.instagram.com/dr.gustavomartins" target="_blank" rel="noopener noreferrer">@dr.gustavomartins</a>
-        </div>
-      </div>
+  <div class="hero__inner container">
+    <p class="hero__eyebrow">Dr. Gustavo Martins · Método NaturalUp®</p>
+    <h1 class="hero__title">Qual é o seu<br /><em>momento?</em></h1>
+    <p class="hero__sub">Da graduação ao domínio completo da harmonização orofacial.<br />Há um caminho desenhado para cada fase da sua carreira.</p>
+    <div class="hero__actions">
+      <a href="#trilha" class="btn btn--gold">Encontrar minha trilha</a>
+      <a href="#gustavo" class="btn btn--outline">Conhecer o Dr. Gustavo</a>
     </div>
   </div>
+  <div class="hero__scroll" aria-hidden="true"><span>SCROLL</span><div class="hero__scroll-line"></div></div>
 </section>
 
-<!-- ===== THIN DIVIDER ===== -->
-<div class="section-divider-deco fade-in"></div>
-
-<!-- ===== NATURALUP® STRIP ===== -->
-<div class="naturalup-strip naturalup-bg" id="conceito">
-  <img src="./assets/naturalup-logo.jpg" alt="" class="naturalup-watermark" aria-hidden="true" loading="lazy">
+<!-- ═══════════════════════════════════════ MÓDULOS ═══════════════════════════════════════ -->
+<section class="section modules-section" id="modulos">
   <div class="container">
-    <p class="naturalup-strip__tagline fade-in">NaturalUp® | Planejamento evolutivo e otimização contínua da face ao longo do tempo.</p>
-    <p class="naturalup-strip__sub fade-in">Não é um protocolo. É uma filosofia de tratamento que transcende a correção pontual.</p>
+    <div class="section__header">
+      <p class="section__eyebrow">O que você vai aprender</p>
+      <h2 class="section__title">Módulos disponíveis na plataforma</h2>
+      <p class="section__sub">Vídeo-aulas gravadas e estruturadas para cada fase da harmonização orofacial. Clique em qualquer módulo para ver uma prévia do conteúdo.</p>
+    </div>
+
+    <div class="modules-grid">
+
+      <!-- MÓDULO 1 -->
+      <article class="module-card" data-preview-url="">
+        <div class="module-card__media">
+          <img src="cover_toxina_botulinica.png" alt="Módulo Toxina Botulínica" class="module-card__img" loading="lazy" />
+          <div class="module-card__overlay">
+            <button class="module-card__play" aria-label="Ver preview: Toxina Botulínica">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+          </div>
+          <span class="module-card__badge">Módulo 1</span>
+        </div>
+        <div class="module-card__body">
+          <div class="module-card__meta">
+            <span class="module-card__count">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+              8 aulas
+            </span>
+            <div class="module-card__tags">
+              <span class="tag tag--obs">Observador</span>
+              <span class="tag tag--plat">Plataforma</span>
+              <span class="tag tag--vip">VIP</span>
+            </div>
+          </div>
+          <h3 class="module-card__title">Toxina Botulínica</h3>
+          <button class="module-card__expand-toggle" aria-expanded="false">
+            <span>Ver aulas incluídas</span>
+            <svg class="expand-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+          </button>
+          <div class="module-card__lessons" hidden>
+            <ul class="lesson-list">
+              <li class="lesson-list__item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Anatomia da expressão facial</span></li>
+              <li class="lesson-list__item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Farmacologia e diluição</span></li>
+              <li class="lesson-list__item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Frontalis e glabela</span></li>
+              <li class="lesson-list__item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Região periocular</span></li>
+              <li class="lesson-list__item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Protocolo nasal e perioral</span></li>
+              <li class="lesson-list__item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Lifting facial com toxina</span></li>
+              <li class="lesson-list__item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Dosagem e personalização</span></li>
+              <li class="lesson-list__item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Manejo de complicações</span></li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- MÓDULO 2 -->
+      <article class="module-card" data-preview-url="">
+        <div class="module-card__media">
+          <img src="cover_preenchedores_faciais.png" alt="Módulo Preenchedores com AH" class="module-card__img" loading="lazy" />
+          <div class="module-card__overlay">
+            <button class="module-card__play" aria-label="Ver preview: Preenchedores">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+          </div>
+          <span class="module-card__badge">Módulo 2</span>
+        </div>
+        <div class="module-card__body">
+          <div class="module-card__meta">
+            <span class="module-card__count">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+              10 aulas
+            </span>
+            <div class="module-card__tags">
+              <span class="tag tag--obs">Observador</span>
+              <span class="tag tag--plat">Plataforma</span>
+              <span class="tag tag--vip">VIP</span>
+            </div>
+          </div>
+          <h3 class="module-card__title">Preenchedores com AH</h3>
+          <button class="module-card__expand-toggle" aria-expanded="false">
+            <span>Ver aulas incluídas</span>
+            <svg class="expand-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+          </button>
+          <div class="module-card__lessons" hidden>
+            <ul class="lesson-list">
+              <li class="lesson-list__item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Anatomia vascular de risco</span></li>
+              <li class="lesson-list__item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Tipos e reologia do AH</span></li>
+              <li class="lesson-list__item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Lábios: técnica e proporção</span></li>
+              <li class="lesson-list__item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Malar e médio-face</span></li>
+              <li class="lesson-list__item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Contorno mandibular</span></li>
+              <li class="lesson-list__item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Perfiloplastia e queixo</span></li>
+              <li class="lesson-list__item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Nariz não cirúrgico</span></li>
+              <li class="lesson-list__item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Olheiras e região periorbital</span></li>
+              <li class="lesson-list__item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Dissolução com hialuronidase</span></li>
+              <li class="lesson-list__item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Complicações vasculares</span></li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- MÓDULO 3 -->
+      <article class="module-card" data-preview-url="">
+        <div class="module-card__media">
+          <img src="cover_bioestimuladores.png" alt="Módulo Bioestimuladores de Colágeno" class="module-card__img" loading="lazy" />
+          <div class="module-card__overlay">
+            <button class="module-card__play" aria-label="Ver preview: Bioestimuladores">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+          </div>
+          <span class="module-card__badge">Módulo 3</span>
+        </div>
+        <div class="module-card__body">
+          <div class="module-card__meta">
+            <span class="module-card__count">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+              7 aulas
+            </span>
+            <div class="module-card__tags">
+              <span class="tag tag--obs">Observador</span>
+              <span class="tag tag--plat">Plataforma</span>
+              <span class="tag tag--vip">VIP</span>
+            </div>
+          </div>
+          <h3 class="module-card__title">Bioestimuladores de Colágeno</h3>
+          <button class="module-card__expand-toggle" aria-expanded="false">
+            <span>Ver aulas incluídas</span>
+            <svg class="expand-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+          </button>
+          <div class="module-card__lessons" hidden>
+            <ul class="lesson-list">
+              <li class="lesson-list__item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Mecanismo de ação dos bioestimuladores</span></li>
+              <li class="lesson-list__item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Hidroxiapatita de cálcio</span></li>
+              <li class="lesson-list__item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>PLLA: técnica e diluição</span></li>
+              <li class="lesson-list__item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Polynucleotídeos e PDRN</span></li>
+              <li class="lesson-list__item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Indicações e contraindicações</span></li>
+              <li class="lesson-list__item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Resultados progressivos</span></li>
+              <li class="lesson-list__item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Combinação com outros recursos</span></li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- MÓDULO 4 -->
+      <article class="module-card" data-preview-url="">
+        <div class="module-card__media">
+          <img src="cover_moduladores_matriz.png" alt="Módulo Moduladores de Matriz" class="module-card__img" loading="lazy" />
+          <div class="module-card__overlay">
+            <button class="module-card__play" aria-label="Ver preview: Moduladores de Matriz">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+          </div>
+          <span class="module-card__badge">Módulo 4</span>
+        </div>
+        <div class="module-card__body">
+          <div class="module-card__meta">
+            <span class="module-card__count">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+              6 aulas
+            </span>
+            <div class="module-card__tags">
+              <span class="tag tag--obs">Observador</span>
+              <span class="tag tag--plat">Plataforma</span>
+              <span class="tag tag--vip">VIP</span>
+            </div>
+          </div>
+          <h3 class="module-card__title">Moduladores de Matriz</h3>
+          <button class="module-card__expand-toggle" aria-expanded="false">
+            <span>Ver aulas incluídas</span>
+            <svg class="expand-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+          </button>
+          <div class="module-card__lessons" hidden>
+            <ul class="lesson-list">
+              <li class="lesson-list__item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Bases da regeneração tecidual</span></li>
+              <li class="lesson-list__item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>PRF e suas variações</span></li>
+              <li class="lesson-list__item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Exossomos: mecanismo e uso</span></li>
+              <li class="lesson-list__item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Protocolos combinados</span></li>
+              <li class="lesson-list__item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Controle de qualidade do produto</span></li>
+              <li class="lesson-list__item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Casos clínicos integrados</span></li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- MÓDULO 5 -->
+      <article class="module-card module-card--bonus" data-preview-url="">
+        <div class="module-card__media">
+          <img src="cover_metodo_naturalup.png" alt="Método NaturalUp®" class="module-card__img" loading="lazy" />
+          <div class="module-card__overlay">
+            <button class="module-card__play" aria-label="Ver preview: NaturalUp®">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+          </div>
+          <span class="module-card__badge module-card__badge--gold">Exclusivo VIP</span>
+        </div>
+        <div class="module-card__body">
+          <div class="module-card__meta">
+            <span class="module-card__count">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+              Acesso exclusivo
+            </span>
+            <div class="module-card__tags">
+              <span class="tag tag--vip">VIP</span>
+            </div>
+          </div>
+          <h3 class="module-card__title">Método NaturalUp®</h3>
+          <button class="module-card__expand-toggle" aria-expanded="false">
+            <span>Ver o que está incluído</span>
+            <svg class="expand-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+          </button>
+          <div class="module-card__lessons" hidden>
+            <ul class="lesson-list">
+              <li class="lesson-list__item lesson-list__item--locked"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Protocolo completo e sequenciado</span></li>
+              <li class="lesson-list__item lesson-list__item--locked"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Licença de uso do NaturalUp®</span></li>
+              <li class="lesson-list__item lesson-list__item--locked"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Material de prática clínica</span></li>
+            </ul>
+            <p class="lesson-list__vip-note">Conteúdo liberado exclusivamente no Acompanhamento VIP NaturalUp®</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- BÔNUS: IA -->
+      <article class="module-card module-card--bonus" data-preview-url="">
+        <div class="module-card__media">
+          <img src="cover_ia_medicina.png" alt="IA na Medicina" class="module-card__img" loading="lazy" />
+          <div class="module-card__overlay">
+            <button class="module-card__play" aria-label="Ver preview: IA na Medicina">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+          </div>
+          <span class="module-card__badge module-card__badge--gold">Bônus</span>
+        </div>
+        <div class="module-card__body">
+          <div class="module-card__meta">
+            <span class="module-card__count">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+              5 aulas
+            </span>
+            <div class="module-card__tags">
+              <span class="tag tag--plat">Plataforma</span>
+              <span class="tag tag--vip">VIP</span>
+            </div>
+          </div>
+          <h3 class="module-card__title">IA na Medicina</h3>
+          <button class="module-card__expand-toggle" aria-expanded="false">
+            <span>Ver aulas incluídas</span>
+            <svg class="expand-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+          </button>
+          <div class="module-card__lessons" hidden>
+            <ul class="lesson-list">
+              <li class="lesson-list__item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Ferramentas de IA no consultório</span></li>
+              <li class="lesson-list__item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Diagnóstico assistido por IA</span></li>
+              <li class="lesson-list__item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Documentação e prontuários inteligentes</span></li>
+              <li class="lesson-list__item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>IA na comunicação com pacientes</span></li>
+              <li class="lesson-list__item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Fluxos de trabalho automatizados</span></li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <p class="modules-note">Novos módulos sendo adicionados continuamente ao portal.</p>
+  </div>
+</section>
+
+<!-- ═══════════ MODAL DE PREVIEW ═══════════ -->
+<div class="preview-modal" id="previewModal" aria-modal="true" aria-label="Preview do módulo" hidden>
+  <div class="preview-modal__backdrop" id="previewBackdrop"></div>
+  <div class="preview-modal__content">
+    <button class="preview-modal__close" id="previewClose" aria-label="Fechar preview">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="preview-modal__video">
+      <iframe id="previewIframe" src="" allow="autoplay; fullscreen" allowfullscreen title="Preview do módulo"></iframe>
+    </div>
+    <p class="preview-modal__coming" id="previewComing" hidden>Preview em breve. Fale com a Amanda para saber mais sobre o conteúdo.</p>
   </div>
 </div>
 
-<!-- ===== 4+5 MERGED: TRANSFORMAÇÃO ===== -->
-<section class="section section--default bg-alt" id="metodo">
-  <div class="container container--narrow">
-    <span class="section-label fade-in" style="text-align:center;display:block;">Método</span>
-    <h2 class="section-heading fade-in" style="text-align:center;">Transformação</h2>
-    <p class="section-intro fade-in" style="text-align:center;max-width:60ch;margin-inline:auto;">A formação em estética facial muitas vezes foca em técnicas isoladas, criando uma lacuna no raciocínio clínico profundo. O Ampla Facial muda isso.</p>
-
-    <div class="transformacao-grid fade-in">
-      <div class="transformacao-col transformacao-col--problema">
-        <h3 class="transformacao-col__title">O Problema</h3>
-        <ul class="transformacao-list">
-          <li><span class="transformacao-icon transformacao-icon--x">&times;</span><span><strong>Dependência de Protocolos</strong> Profissionais confiam em receitas prontas, sem entender os fundamentos.</span></li>
-          <li><span class="transformacao-icon transformacao-icon--x">&times;</span><span><strong>Insegurança Clínica</strong> Dificuldade em tomar decisões autônomas e adaptar tratamentos.</span></li>
-          <li><span class="transformacao-icon transformacao-icon--x">&times;</span><span><strong>Comunicação Limitada</strong> Problemas em explicar o raciocínio terapêutico aos pacientes de forma clara.</span></li>
-          <li><span class="transformacao-icon transformacao-icon--x">&times;</span><span><strong>Planos Incompletos</strong> Incapacidade de estruturar abordagens terapêuticas integradas e duradouras.</span></li>
-        </ul>
-      </div>
-      <div class="transformacao-col transformacao-col--solucao">
-        <h3 class="transformacao-col__title">A Solução</h3>
-        <ul class="transformacao-list">
-          <li><span class="transformacao-icon transformacao-icon--arrow">&rarr;</span><span><strong>Não Dependa de Protocolos</strong> Desenvolva seu próprio plano de tratamento individualizado.</span></li>
-          <li><span class="transformacao-icon transformacao-icon--arrow">&rarr;</span><span><strong>Segurança Clínica</strong> Tome decisões baseadas em evidências e aprenda a buscar as informações quando necessário.</span></li>
-          <li><span class="transformacao-icon transformacao-icon--arrow">&rarr;</span><span><strong>Comunicação Clara</strong> Aprenda a explicar seu raciocínio para que o seu paciente compre a ideia e entenda a real necessidade.</span></li>
-          <li><span class="transformacao-icon transformacao-icon--arrow">&rarr;</span><span><strong>Planos Completos</strong> Planeje um FULL FACE com maestria e entregue resultados reais para seus pacientes com segurança.</span></li>
-        </ul>
-      </div>
-    </div>
-
-    <blockquote class="blockquote fade-in">
-      A verdadeira autoridade clínica surge da compreensão profunda dos princípios de cada intervenção.
-    </blockquote>
-  </div>
-</section>
-
-<!-- ===== 6.5 RESULTADOS / CASES ===== -->
-<section class="section section--default" id="resultados">
+<!-- ═══════════════════════════════════════ TRILHA ═══════════════════════════════════════ -->
+<section class="section trail-section" id="trilha">
   <div class="container">
-    <span class="section-label fade-in" style="text-align:center;display:block;">Resultados</span>
-    <h2 class="section-heading fade-in" style="text-align:center;">Casos Reais com Método NaturalUp®</h2>
-    <p class="section-intro fade-in" style="text-align:center;max-width:60ch;margin-inline:auto;">Cada caso é único. O planejamento evolutivo respeita a individualidade e entrega resultados naturais e duradouros.</p>
-
-    <div class="cases-grid">
-      <div class="case-card case-card--wide fade-in">
-        <img src="./assets/cases/case-11.jpg" alt="Caso clínico NaturalUp®, evolução completa" width="800" height="450" loading="lazy">
-      </div>
-      <div class="case-card fade-in">
-        <img src="./assets/cases/case-12.jpg" alt="Caso clínico NaturalUp®, antes e depois" width="800" height="868" loading="lazy">
-      </div>
-      <div class="case-card fade-in">
-        <img src="./assets/cases/case-13.jpg" alt="Caso clínico NaturalUp®, antes e depois" width="1080" height="1080" loading="lazy">
-      </div>
-      <div class="case-card fade-in">
-        <img src="./assets/cases/case-01.jpg" alt="Caso clínico NaturalUp®, antes e depois" width="800" height="1000" loading="lazy">
-      </div>
-      <div class="case-card fade-in">
-        <img src="./assets/cases/case-07.jpg" alt="Caso clínico NaturalUp®, antes e depois" width="800" height="800" loading="lazy">
-      </div>
-      <div class="case-card fade-in">
-        <img src="./assets/cases/case-03.jpg" alt="Caso clínico NaturalUp®, antes e depois" width="800" height="800" loading="lazy">
-      </div>
-      <div class="case-card fade-in">
-        <img src="./assets/cases/case-08.jpg" alt="Caso clínico NaturalUp®, antes e depois" width="800" height="1000" loading="lazy">
-      </div>
-      <div class="case-card fade-in">
-        <img src="./assets/cases/case-09.jpg" alt="Caso clínico NaturalUp®, antes e depois" width="800" height="800" loading="lazy">
-      </div>
-      <div class="case-card fade-in">
-        <img src="./assets/cases/case-06.jpg" alt="Caso clínico NaturalUp®, antes e depois" width="800" height="1000" loading="lazy">
-      </div>
-      <div class="case-card fade-in">
-        <img src="./assets/cases/case-10.jpg" alt="Caso clínico NaturalUp®, antes e depois" width="800" height="1000" loading="lazy">
-      </div>
-      <div class="case-card fade-in">
-        <img src="./assets/cases/case-02.jpg" alt="Caso clínico NaturalUp®, antes e depois" width="800" height="1000" loading="lazy">
-      </div>
-      <div class="case-card fade-in">
-        <img src="./assets/cases/case-04.jpg" alt="Caso clínico NaturalUp®, antes e depois" width="800" height="1000" loading="lazy">
-      </div>
-      <div class="case-card fade-in">
-        <img src="./assets/cases/case-05.jpg" alt="Caso clínico NaturalUp®, antes e depois" width="800" height="1000" loading="lazy">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== PHOTO INTERLUDE ===== -->
-<div class="photo-interlude">
-  <img src="./assets/gustavo.jpg" alt="Dr. Gustavo Martins" loading="lazy">
-  <div class="photo-interlude__overlay">
-    <p class="photo-interlude__text fade-in">Cada face tem uma história.<br>O planejamento começa por entendê-la.</p>
-  </div>
-</div>
-
-<!-- ===== THIN DIVIDER ===== -->
-<div class="section-divider-deco fade-in"></div>
-
-<!-- ===== 7. THE 3 PILLARS (TIMELINE) ===== -->
-<section class="section section--default" id="pilares">
-  <div class="container">
-    <span class="section-label fade-in" style="text-align:center;display:block;">Estrutura</span>
-    <h2 class="section-heading fade-in" style="text-align:center;">Os 3 Pilares do Acompanhamento</h2>
-
-    <div class="timeline-stepper fade-in">
-      <div class="timeline-step">
-        <div class="timeline-step__number">01</div>
-        <h4 class="timeline-step__title">Diagnóstico</h4>
-        <p class="timeline-step__desc">Análise profunda da necessidade do paciente para identificar padrões de envelhecimento e alterações estruturais.</p>
-      </div>
-      <div class="timeline-step">
-        <div class="timeline-step__number">02</div>
-        <h4 class="timeline-step__title">Planejamento Terapêutico de Longo Prazo</h4>
-        <p class="timeline-step__desc">Criação de planos estratégicos, integrando procedimentos para resultados seguros e sustentáveis.</p>
-      </div>
-      <div class="timeline-step">
-        <div class="timeline-step__number">03</div>
-        <h4 class="timeline-step__title">Comunicação Clara e Venda</h4>
-        <p class="timeline-step__desc">Como ter clareza na fala, explicar o plano de tratamento e converter em venda para o paciente.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== 8. MERGED: COMO FUNCIONA O ACOMPANHAMENTO ===== -->
-<section class="section section--default bg-alt" id="encontros">
-  <div class="container">
-    <span class="section-label fade-in" style="text-align:center;display:block;">Dinâmica</span>
-    <h2 class="section-heading fade-in" style="text-align:center;">Como Funciona o Acompanhamento</h2>
-    <p class="section-intro fade-in" style="text-align:center;max-width:65ch;margin-inline:auto;margin-bottom:var(--space-12);">Encontros quinzenais em turma, suporte individual direto com o Dr. Gustavo, e uma comunidade de profissionais comprometidos com a excelência clínica. Você não vai estar sozinho em nenhum momento.</p>
-
-    <!-- Top: Encontros Quinzenais -->
-    <div class="acomp-section-block fade-in">
-      <h3 class="acomp-section-block__title" style="text-align:center;">Encontros Quinzenais</h3>
-      <p class="acomp-section-block__schedule" style="text-align:center;max-width:60ch;margin-inline:auto;">Às quartas-feiras às 10h da manhã, semana sim, semana não. Não conseguiu participar ao vivo? Todos ficam gravados.</p>
-      <div class="encontros-grid-compact">
-        <div class="encontro-card-compact fade-in">
-          <h4>Discussão de Casos Reais</h4>
-          <p>Análise crítica de diagnósticos, planos de tratamento e resultados, seus e dos colegas.</p>
-        </div>
-        <div class="encontro-card-compact fade-in">
-          <h4>Debate de Condutas</h4>
-          <p>Discussão de abordagens terapêuticas para desenvolver pensamento crítico e autonomia clínica.</p>
-        </div>
-        <div class="encontro-card-compact fade-in">
-          <h4>Suporte Direto 24h</h4>
-          <p>Acesso direto ao Dr. Gustavo por mensagem, a qualquer momento, durante toda a vigência do acompanhamento.</p>
-        </div>
-        <div class="encontro-card-compact fade-in">
-          <h4>Networking</h4>
-          <p>Conexão com profissionais que compartilham o mesmo nível de compromisso com a excelência clínica.</p>
-        </div>
-      </div>
+    <div class="section__header">
+      <p class="section__eyebrow">Sua trilha de formação</p>
+      <h2 class="section__title">Cada fase da carreira tem<br />um acompanhamento adequado</h2>
     </div>
 
-    <!-- Bottom: Suporte Individual -->
-    <div class="acomp-section-block fade-in" style="margin-top:var(--space-12);">
-      <h3 class="acomp-section-block__title" style="text-align:center;">Suporte Individual</h3>
-      <p class="acomp-section-block__schedule" style="text-align:center;max-width:60ch;margin-inline:auto;">Além dos encontros em grupo, cada aluno tem um <strong>canal exclusivo e direto</strong> com o Dr. Gustavo Martins, <strong>a qualquer momento</strong>.</p>
-      <div class="suporte-strip">
-        <div class="suporte-strip__item fade-in">
-          <span class="suporte-strip__icon" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </span>
-          <h4>Contato Exclusivo</h4>
-          <p>Acesso direto por mensagem, sem intermediários, sem espera.</p>
+    <!-- ──────── OBSERVADOR ──────── -->
+    <div class="trail-item" id="observador">
+      <div class="trail-item__header" data-accordion="observador-body" aria-expanded="false">
+        <div class="trail-item__header-left">
+          <div class="trail-item__num">01</div>
+          <div>
+            <p class="trail-item__level">Acadêmico / Iniciante</p>
+            <h3 class="trail-item__name">Plano Observador</h3>
+            <p class="trail-item__tagline">Aprenda observando casos reais antes de atender pacientes, com suporte teórico completo e acompanhamento clínico.</p>
+          </div>
         </div>
-        <div class="suporte-strip__item fade-in">
-          <span class="suporte-strip__icon" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </span>
-          <h4>Disponível Sempre</h4>
-          <p>Dúvidas sobre diagnóstico, planejamento ou conduta? Mande quando precisar.</p>
-        </div>
-        <div class="suporte-strip__item fade-in">
-          <span class="suporte-strip__icon" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-          </span>
-          <h4>Do Diagnóstico ao Resultado</h4>
-          <p>Planeje cada caso do início ao fim com maestria e previsibilidade.</p>
-        </div>
+        <button class="trail-item__toggle" aria-label="Expandir detalhes do Plano Observador">
+          <span class="trail-item__toggle-text">Ver o que está incluído</span>
+          <svg class="trail-item__toggle-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
       </div>
-    </div>
-  </div>
-</section>
 
-<!-- ===== 9. BASE TEÓRICA (COMPACT) ===== -->
-<section class="section section--compact">
-  <div class="container container--narrow">
-    <div class="base-teorica-compact fade-in">
-      <div class="base-teorica-compact__header">
-        <span class="section-label">Conteúdo</span>
-        <h2 class="section-heading" style="margin-bottom:var(--space-3);">Aulas Gravadas: Base Teórica</h2>
-        <p class="base-teorica-compact__desc">O fundamento teórico que sustenta toda a metodologia NaturalUp®, do básico ao avançado.</p>
-      </div>
-      <div class="base-teorica-compact__pills">
-        <div class="teorica-pill">
-          <span class="teorica-pill__icon" aria-hidden="true">&bull;</span>
-          <span class="teorica-pill__label">Toxina Botulínica</span>
-        </div>
-        <div class="teorica-pill">
-          <span class="teorica-pill__icon" aria-hidden="true">&bull;</span>
-          <span class="teorica-pill__label">Preenchedores Faciais</span>
-        </div>
-        <div class="teorica-pill">
-          <span class="teorica-pill__icon" aria-hidden="true">&bull;</span>
-          <span class="teorica-pill__label">Bioestimuladores de Colágeno</span>
-        </div>
-      </div>
-      <p class="base-teorica-compact__access">Todas as aulas disponíveis para assistir quantas vezes quiser, no seu ritmo, durante toda a vigência do acompanhamento.</p>
-    </div>
-  </div>
-</section>
+      <div class="trail-item__body" id="observador-body">
+        <div class="trail-item__content">
 
-<!-- ===== THIN DIVIDER ===== -->
-<div class="section-divider-deco fade-in"></div>
-
-<!-- ===== 10. PRICING ===== -->
-<section class="section section--generous bg-alt" id="investimento">
-  <div class="container">
-    <span class="section-label fade-in" style="text-align:center;display:block;">Processo Seletivo</span>
-    <h2 class="section-heading fade-in" style="text-align:center;">Comparativo de Planos</h2>
-    <p class="section-intro fade-in" style="text-align:center;margin-inline:auto;margin-bottom:var(--space-10);">Confira em detalhe o que cada modalidade inclui. As vagas são limitadas e a participação está sujeita a aprovação em processo seletivo.</p>
-
-    <!-- Comparison Table -->
-    <div class="comparison-table-wrap fade-in">
-      <table class="comparison-table">
-        <thead>
-          <tr>
-            <th class="ct-feature-col">Entregáveis</th>
-            <th class="ct-plan-col">Online</th>
-            <th class="ct-plan-col">Presencial</th>
-            <th class="ct-plan-col ct-featured">Completo<span class="ct-badge">Recomendado</span></th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Group: Acompanhamento -->
-          <tr class="ct-group-header">
-            <td colspan="4">Acompanhamento</td>
-          </tr>
-          <tr>
-            <td class="ct-feature">Acompanhamento individual com Dr. Gustavo</td>
-            <td class="ct-value"><span class="ct-check"></span> 6 meses</td>
-            <td class="ct-value"><span class="ct-check"></span> 3 meses</td>
-            <td class="ct-value ct-featured-cell"><span class="ct-check"></span> 6 meses</td>
-          </tr>
-          <tr>
-            <td class="ct-feature">Canal exclusivo e direto por mensagem</td>
-            <td class="ct-value"><span class="ct-check"></span> 6 meses</td>
-            <td class="ct-value"><span class="ct-check"></span> 3 meses</td>
-            <td class="ct-value ct-featured-cell"><span class="ct-check"></span> 6 meses</td>
-          </tr>
-          <tr>
-            <td class="ct-feature">Suporte para dúvidas clínicas</td>
-            <td class="ct-value"><span class="ct-check"></span> 6 meses</td>
-            <td class="ct-value"><span class="ct-check"></span> 3 meses</td>
-            <td class="ct-value ct-featured-cell"><span class="ct-check"></span> 6 meses</td>
-          </tr>
-          <tr>
-            <td class="ct-feature">Discussão de casos e orientação de condutas</td>
-            <td class="ct-value"><span class="ct-check"></span> 6 meses</td>
-            <td class="ct-value"><span class="ct-check"></span> 3 meses</td>
-            <td class="ct-value ct-featured-cell"><span class="ct-check"></span> 6 meses</td>
-          </tr>
-
-          <!-- Group: Encontros -->
-          <tr class="ct-group-header">
-            <td colspan="4">Encontros Quinzenais (Online em Turma)</td>
-          </tr>
-          <tr>
-            <td class="ct-feature">Participação nos encontros ao vivo</td>
-            <td class="ct-value"><span class="ct-check"></span> 6 meses</td>
-            <td class="ct-value"><span class="ct-na">Não incluso</span></td>
-            <td class="ct-value ct-featured-cell"><span class="ct-check"></span> 6 meses</td>
-          </tr>
-          <tr>
-            <td class="ct-feature">Acesso às gravações dos encontros</td>
-            <td class="ct-value"><span class="ct-check"></span> 6 meses</td>
-            <td class="ct-value"><span class="ct-na">Não incluso</span></td>
-            <td class="ct-value ct-featured-cell"><span class="ct-check"></span> 6 meses</td>
-          </tr>
-          <tr>
-            <td class="ct-feature">Networking com outros profissionais da turma</td>
-            <td class="ct-value"><span class="ct-check"></span> 6 meses</td>
-            <td class="ct-value"><span class="ct-na">Não incluso</span></td>
-            <td class="ct-value ct-featured-cell"><span class="ct-check"></span> 6 meses</td>
-          </tr>
-
-          <!-- Group: Atendimento Presencial -->
-          <tr class="ct-group-header">
-            <td colspan="4">Atendimento Clínico Presencial (16h: 2 dias de 8h ou 4 dias de 4h)</td>
-          </tr>
-          <tr>
-            <td class="ct-feature">Atendimento presencial na clínica (RJ)</td>
-            <td class="ct-value"><span class="ct-na">Não incluso</span></td>
-            <td class="ct-value"><span class="ct-check"></span> 16h</td>
-            <td class="ct-value ct-featured-cell"><span class="ct-check"></span> 16h</td>
-          </tr>
-          <tr>
-            <td class="ct-feature">Vivência prática clínica com pacientes reais</td>
-            <td class="ct-value"><span class="ct-na">Não incluso</span></td>
-            <td class="ct-value"><span class="ct-check"></span> 16h</td>
-            <td class="ct-value ct-featured-cell"><span class="ct-check"></span> 16h</td>
-          </tr>
-          <tr>
-            <td class="ct-feature">Supervisão direta do Dr. Gustavo no atendimento</td>
-            <td class="ct-value"><span class="ct-na">Não incluso</span></td>
-            <td class="ct-value"><span class="ct-check"></span> 16h</td>
-            <td class="ct-value ct-featured-cell"><span class="ct-check"></span> 16h</td>
-          </tr>
-
-          <!-- Group: Base Teórica -->
-          <tr class="ct-group-header">
-            <td colspan="4">Base Teórica (Aulas Gravadas)</td>
-          </tr>
-          <tr>
-            <td class="ct-feature">Curso de Toxina Botulínica</td>
-            <td class="ct-value"><span class="ct-check"></span> 6 meses</td>
-            <td class="ct-value"><span class="ct-check"></span> 3 meses</td>
-            <td class="ct-value ct-featured-cell"><span class="ct-check"></span> 6 meses</td>
-          </tr>
-          <tr>
-            <td class="ct-feature">Curso de Preenchedores Faciais</td>
-            <td class="ct-value"><span class="ct-check"></span> 6 meses</td>
-            <td class="ct-value"><span class="ct-check"></span> 3 meses</td>
-            <td class="ct-value ct-featured-cell"><span class="ct-check"></span> 6 meses</td>
-          </tr>
-          <tr>
-            <td class="ct-feature">Curso de Bioestimuladores de Colágeno</td>
-            <td class="ct-value"><span class="ct-check"></span> 6 meses</td>
-            <td class="ct-value"><span class="ct-check"></span> 3 meses</td>
-            <td class="ct-value ct-featured-cell"><span class="ct-check"></span> 6 meses</td>
-          </tr>
-
-          <!-- Group: Método -->
-          <tr class="ct-group-header">
-            <td colspan="4">Método NaturalUp®</td>
-          </tr>
-          <tr>
-            <td class="ct-feature">Raciocínio clínico e diagnóstico facial</td>
-            <td class="ct-value"><span class="ct-check"></span> 6 meses</td>
-            <td class="ct-value"><span class="ct-check"></span> 3 meses</td>
-            <td class="ct-value ct-featured-cell"><span class="ct-check"></span> 6 meses</td>
-          </tr>
-          <tr>
-            <td class="ct-feature">Planejamento terapêutico de longo prazo</td>
-            <td class="ct-value"><span class="ct-check"></span> 6 meses</td>
-            <td class="ct-value"><span class="ct-check"></span> 3 meses</td>
-            <td class="ct-value ct-featured-cell"><span class="ct-check"></span> 6 meses</td>
-          </tr>
-          <tr>
-            <td class="ct-feature">Comunicação clara e técnicas de venda</td>
-            <td class="ct-value"><span class="ct-check"></span> 6 meses</td>
-            <td class="ct-value"><span class="ct-check"></span> 3 meses</td>
-            <td class="ct-value ct-featured-cell"><span class="ct-check"></span> 6 meses</td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr class="ct-cta-row">
-            <td></td>
-            <td class="ct-cta-cell" colspan="3" style="text-align:center;">
-              <div class="processo-seletivo-banner">
-                <span class="processo-seletivo-badge">Vagas Limitadas</span>
-                <p class="processo-seletivo-text">A mentoria Ampla Facial é exclusiva para profissionais selecionados. Agende uma reunião com nossa equipe para avaliarmos juntos se este é o momento ideal para a sua evolução clínica.</p>
-                <a href="https://wa.me/5521976263881?text=Oi%20Amanda%2C%20vim%20do%20site%20e%20gostaria%20de%20agendar%20uma%20reuni%C3%A3o%20para%20o%20processo%20seletivo%20do%20Ampla%20Facial%20com%20o%20Dr%20Gustavo%20Martins" target="_blank" rel="noopener noreferrer" class="btn btn--gold">Quero Participar do Processo Seletivo</a>
+          <div class="inclusions">
+            <h4 class="inclusions__title">O que está incluído</h4>
+            <div class="inclusions__grid">
+              <div class="inclusion-item">
+                <div class="inclusion-item__icon">📹</div>
+                <div>
+                  <strong>4 módulos gravados completos</strong>
+                  <span>Toxina · Preenchedores · Bioestimuladores · Moduladores de Matriz</span>
+                </div>
               </div>
-            </td>
-          </tr>
-        </tfoot>
-      </table>
-    </div>
+              <div class="inclusion-item">
+                <div class="inclusion-item__icon">🏥</div>
+                <div>
+                  <strong>Acompanhamento clínico presencial</strong>
+                  <span>Observação de atendimentos reais em clínica. Foco na leitura facial e raciocínio clínico, sem manuseio de materiais.</span>
+                </div>
+              </div>
+              <div class="inclusion-item">
+                <div class="inclusion-item__icon">📊</div>
+                <div>
+                  <strong>Dimensão comercial e gestão</strong>
+                  <span>Como estruturar seu atendimento, precificar e crescer com consistência.</span>
+                </div>
+              </div>
+              <div class="inclusion-item">
+                <div class="inclusion-item__icon">🎓</div>
+                <div>
+                  <strong>Certificado de conclusão</strong>
+                  <span>Após 80% das aulas e 70% dos turnos concluídos.</span>
+                </div>
+              </div>
+              <div class="inclusion-item">
+                <div class="inclusion-item__icon">📋</div>
+                <div>
+                  <strong>Termo de confidencialidade</strong>
+                  <span>Acesso aos atendimentos clínicos mediante assinatura de termo.</span>
+                </div>
+              </div>
+            </div>
+          </div>
 
-    <!-- Mobile: Sectioned Cards -->
-    <div class="comparison-mobile fade-in">
+          <div class="obs-plans">
+            <h4 class="inclusions__title">Escolha seu ritmo de presença clínica</h4>
+            <div class="obs-plans__grid">
+              <div class="obs-plan-card">
+                <p class="obs-plan-card__name">Essencial</p>
+                <p class="obs-plan-card__detail">24h presenciais</p>
+                <p class="obs-plan-card__detail">~6 turnos de 4h</p>
+                <p class="obs-plan-card__freq">1× por mês</p>
+              </div>
+              <div class="obs-plan-card obs-plan-card--featured">
+                <p class="obs-plan-card__star">⭐ Mais escolhido</p>
+                <p class="obs-plan-card__name">Avançado</p>
+                <p class="obs-plan-card__detail">48h presenciais</p>
+                <p class="obs-plan-card__detail">~12 turnos de 4h</p>
+                <p class="obs-plan-card__freq">2× por mês</p>
+              </div>
+              <div class="obs-plan-card">
+                <p class="obs-plan-card__name">Intensivo</p>
+                <p class="obs-plan-card__detail">96h presenciais</p>
+                <p class="obs-plan-card__detail">~24 turnos de 4h</p>
+                <p class="obs-plan-card__freq">1× por semana</p>
+              </div>
+            </div>
+          </div>
 
-      <!-- Seção: Acompanhamento -->
-      <div class="cm-section">
-        <div class="cm-section-header">Acompanhamento</div>
-        <div class="cm-item">
-          <div class="cm-item-name">Acompanhamento individual com Dr. Gustavo</div>
-          <div class="cm-plans">
-            <div class="cm-plan"><span class="cm-plan-label">Online</span><span class="cm-plan-value"><span class="ct-check"></span> 6 meses</span></div>
-            <div class="cm-plan"><span class="cm-plan-label">Presencial</span><span class="cm-plan-value"><span class="ct-check"></span> 3 meses</span></div>
-            <div class="cm-plan cm-plan--featured"><span class="cm-plan-label">Completo</span><span class="cm-plan-value"><span class="ct-check"></span> 6 meses</span></div>
+          <div class="trail-item__cta-wrap">
+            <a href="https://wa.me/5521976263881?text=Olá!%20Tenho%20interesse%20no%20Plano%20Observador%20da%20Ampla%20Facial.%20Pode%20me%20contar%20mais?" target="_blank" rel="noopener" class="btn btn--gold btn--lg">Quero saber mais sobre o Observador</a>
           </div>
         </div>
-        <div class="cm-item">
-          <div class="cm-item-name">Canal exclusivo e direto por mensagem</div>
-          <div class="cm-plans">
-            <div class="cm-plan"><span class="cm-plan-label">Online</span><span class="cm-plan-value"><span class="ct-check"></span> 6 meses</span></div>
-            <div class="cm-plan"><span class="cm-plan-label">Presencial</span><span class="cm-plan-value"><span class="ct-check"></span> 3 meses</span></div>
-            <div class="cm-plan cm-plan--featured"><span class="cm-plan-label">Completo</span><span class="cm-plan-value"><span class="ct-check"></span> 6 meses</span></div>
-          </div>
-        </div>
-        <div class="cm-item">
-          <div class="cm-item-name">Suporte para dúvidas clínicas</div>
-          <div class="cm-plans">
-            <div class="cm-plan"><span class="cm-plan-label">Online</span><span class="cm-plan-value"><span class="ct-check"></span> 6 meses</span></div>
-            <div class="cm-plan"><span class="cm-plan-label">Presencial</span><span class="cm-plan-value"><span class="ct-check"></span> 3 meses</span></div>
-            <div class="cm-plan cm-plan--featured"><span class="cm-plan-label">Completo</span><span class="cm-plan-value"><span class="ct-check"></span> 6 meses</span></div>
-          </div>
-        </div>
-        <div class="cm-item">
-          <div class="cm-item-name">Discussão de casos e orientação de condutas</div>
-          <div class="cm-plans">
-            <div class="cm-plan"><span class="cm-plan-label">Online</span><span class="cm-plan-value"><span class="ct-check"></span> 6 meses</span></div>
-            <div class="cm-plan"><span class="cm-plan-label">Presencial</span><span class="cm-plan-value"><span class="ct-check"></span> 3 meses</span></div>
-            <div class="cm-plan cm-plan--featured"><span class="cm-plan-label">Completo</span><span class="cm-plan-value"><span class="ct-check"></span> 6 meses</span></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Seção: Encontros -->
-      <div class="cm-section">
-        <div class="cm-section-header">Encontros Quinzenais (Online em Turma)</div>
-        <div class="cm-item">
-          <div class="cm-item-name">Participação nos encontros ao vivo</div>
-          <div class="cm-plans">
-            <div class="cm-plan"><span class="cm-plan-label">Online</span><span class="cm-plan-value"><span class="ct-check"></span> 6 meses</span></div>
-            <div class="cm-plan"><span class="cm-plan-label">Presencial</span><span class="cm-plan-value"><span class="ct-na">Não incluso</span></span></div>
-            <div class="cm-plan cm-plan--featured"><span class="cm-plan-label">Completo</span><span class="cm-plan-value"><span class="ct-check"></span> 6 meses</span></div>
-          </div>
-        </div>
-        <div class="cm-item">
-          <div class="cm-item-name">Acesso às gravações dos encontros</div>
-          <div class="cm-plans">
-            <div class="cm-plan"><span class="cm-plan-label">Online</span><span class="cm-plan-value"><span class="ct-check"></span> 6 meses</span></div>
-            <div class="cm-plan"><span class="cm-plan-label">Presencial</span><span class="cm-plan-value"><span class="ct-na">Não incluso</span></span></div>
-            <div class="cm-plan cm-plan--featured"><span class="cm-plan-label">Completo</span><span class="cm-plan-value"><span class="ct-check"></span> 6 meses</span></div>
-          </div>
-        </div>
-        <div class="cm-item">
-          <div class="cm-item-name">Networking com outros profissionais da turma</div>
-          <div class="cm-plans">
-            <div class="cm-plan"><span class="cm-plan-label">Online</span><span class="cm-plan-value"><span class="ct-check"></span> 6 meses</span></div>
-            <div class="cm-plan"><span class="cm-plan-label">Presencial</span><span class="cm-plan-value"><span class="ct-na">Não incluso</span></span></div>
-            <div class="cm-plan cm-plan--featured"><span class="cm-plan-label">Completo</span><span class="cm-plan-value"><span class="ct-check"></span> 6 meses</span></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Seção: Atendimento Presencial -->
-      <div class="cm-section">
-        <div class="cm-section-header">Atendimento Clínico Presencial (16h: 2 dias de 8h ou 4 dias de 4h)</div>
-        <div class="cm-item">
-          <div class="cm-item-name">Atendimento presencial na clínica (RJ)</div>
-          <div class="cm-plans">
-            <div class="cm-plan"><span class="cm-plan-label">Online</span><span class="cm-plan-value"><span class="ct-na">Não incluso</span></span></div>
-            <div class="cm-plan"><span class="cm-plan-label">Presencial</span><span class="cm-plan-value"><span class="ct-check"></span> 16h</span></div>
-            <div class="cm-plan cm-plan--featured"><span class="cm-plan-label">Completo</span><span class="cm-plan-value"><span class="ct-check"></span> 16h</span></div>
-          </div>
-        </div>
-        <div class="cm-item">
-          <div class="cm-item-name">Vivência prática clínica com pacientes reais</div>
-          <div class="cm-plans">
-            <div class="cm-plan"><span class="cm-plan-label">Online</span><span class="cm-plan-value"><span class="ct-na">Não incluso</span></span></div>
-            <div class="cm-plan"><span class="cm-plan-label">Presencial</span><span class="cm-plan-value"><span class="ct-check"></span> 16h</span></div>
-            <div class="cm-plan cm-plan--featured"><span class="cm-plan-label">Completo</span><span class="cm-plan-value"><span class="ct-check"></span> 16h</span></div>
-          </div>
-        </div>
-        <div class="cm-item">
-          <div class="cm-item-name">Supervisão direta do Dr. Gustavo no atendimento</div>
-          <div class="cm-plans">
-            <div class="cm-plan"><span class="cm-plan-label">Online</span><span class="cm-plan-value"><span class="ct-na">Não incluso</span></span></div>
-            <div class="cm-plan"><span class="cm-plan-label">Presencial</span><span class="cm-plan-value"><span class="ct-check"></span> 16h</span></div>
-            <div class="cm-plan cm-plan--featured"><span class="cm-plan-label">Completo</span><span class="cm-plan-value"><span class="ct-check"></span> 16h</span></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Seção: Base Teórica -->
-      <div class="cm-section">
-        <div class="cm-section-header">Base Teórica (Aulas Gravadas)</div>
-        <div class="cm-item">
-          <div class="cm-item-name">Curso de Toxina Botulínica</div>
-          <div class="cm-plans">
-            <div class="cm-plan"><span class="cm-plan-label">Online</span><span class="cm-plan-value"><span class="ct-check"></span> 6 meses</span></div>
-            <div class="cm-plan"><span class="cm-plan-label">Presencial</span><span class="cm-plan-value"><span class="ct-check"></span> 3 meses</span></div>
-            <div class="cm-plan cm-plan--featured"><span class="cm-plan-label">Completo</span><span class="cm-plan-value"><span class="ct-check"></span> 6 meses</span></div>
-          </div>
-        </div>
-        <div class="cm-item">
-          <div class="cm-item-name">Curso de Preenchedores Faciais</div>
-          <div class="cm-plans">
-            <div class="cm-plan"><span class="cm-plan-label">Online</span><span class="cm-plan-value"><span class="ct-check"></span> 6 meses</span></div>
-            <div class="cm-plan"><span class="cm-plan-label">Presencial</span><span class="cm-plan-value"><span class="ct-check"></span> 3 meses</span></div>
-            <div class="cm-plan cm-plan--featured"><span class="cm-plan-label">Completo</span><span class="cm-plan-value"><span class="ct-check"></span> 6 meses</span></div>
-          </div>
-        </div>
-        <div class="cm-item">
-          <div class="cm-item-name">Curso de Bioestimuladores de Colágeno</div>
-          <div class="cm-plans">
-            <div class="cm-plan"><span class="cm-plan-label">Online</span><span class="cm-plan-value"><span class="ct-check"></span> 6 meses</span></div>
-            <div class="cm-plan"><span class="cm-plan-label">Presencial</span><span class="cm-plan-value"><span class="ct-check"></span> 3 meses</span></div>
-            <div class="cm-plan cm-plan--featured"><span class="cm-plan-label">Completo</span><span class="cm-plan-value"><span class="ct-check"></span> 6 meses</span></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Seção: Método -->
-      <div class="cm-section">
-        <div class="cm-section-header">Método NaturalUp®</div>
-        <div class="cm-item">
-          <div class="cm-item-name">Raciocínio clínico e diagnóstico facial</div>
-          <div class="cm-plans">
-            <div class="cm-plan"><span class="cm-plan-label">Online</span><span class="cm-plan-value"><span class="ct-check"></span> 6 meses</span></div>
-            <div class="cm-plan"><span class="cm-plan-label">Presencial</span><span class="cm-plan-value"><span class="ct-check"></span> 3 meses</span></div>
-            <div class="cm-plan cm-plan--featured"><span class="cm-plan-label">Completo</span><span class="cm-plan-value"><span class="ct-check"></span> 6 meses</span></div>
-          </div>
-        </div>
-        <div class="cm-item">
-          <div class="cm-item-name">Planejamento terapêutico de longo prazo</div>
-          <div class="cm-plans">
-            <div class="cm-plan"><span class="cm-plan-label">Online</span><span class="cm-plan-value"><span class="ct-check"></span> 6 meses</span></div>
-            <div class="cm-plan"><span class="cm-plan-label">Presencial</span><span class="cm-plan-value"><span class="ct-check"></span> 3 meses</span></div>
-            <div class="cm-plan cm-plan--featured"><span class="cm-plan-label">Completo</span><span class="cm-plan-value"><span class="ct-check"></span> 6 meses</span></div>
-          </div>
-        </div>
-        <div class="cm-item">
-          <div class="cm-item-name">Comunicação clara e técnicas de venda</div>
-          <div class="cm-plans">
-            <div class="cm-plan"><span class="cm-plan-label">Online</span><span class="cm-plan-value"><span class="ct-check"></span> 6 meses</span></div>
-            <div class="cm-plan"><span class="cm-plan-label">Presencial</span><span class="cm-plan-value"><span class="ct-check"></span> 3 meses</span></div>
-            <div class="cm-plan cm-plan--featured"><span class="cm-plan-label">Completo</span><span class="cm-plan-value"><span class="ct-check"></span> 6 meses</span></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Processo Seletivo CTA Mobile -->
-      <div class="processo-seletivo-banner processo-seletivo-banner--mobile fade-in">
-        <span class="processo-seletivo-badge">Vagas Limitadas</span>
-        <p class="processo-seletivo-text">A mentoria Ampla Facial é exclusiva para profissionais selecionados. Agende uma reunião com nossa equipe para avaliarmos juntos se este é o momento ideal para a sua evolução clínica.</p>
-        <a href="https://wa.me/5521976263881?text=Oi%20Amanda%2C%20vim%20do%20site%20e%20gostaria%20de%20agendar%20uma%20reuni%C3%A3o%20para%20o%20processo%20seletivo%20do%20Ampla%20Facial%20com%20o%20Dr%20Gustavo%20Martins" target="_blank" rel="noopener noreferrer" class="btn btn--gold">Quero Participar do Processo Seletivo</a>
       </div>
     </div>
 
-    <blockquote class="blockquote fade-in" style="margin-top:var(--space-12);text-align:center;margin-inline:auto;">
-      A verdadeira autoridade clínica surge da compreensão profunda dos princípios de cada intervenção.
-    </blockquote>
+    <!-- ──────── PLATAFORMA ──────── -->
+    <div class="trail-item" id="plataforma">
+      <div class="trail-item__header" data-accordion="plataforma-body" aria-expanded="false">
+        <div class="trail-item__header-left">
+          <div class="trail-item__num">02</div>
+          <div>
+            <p class="trail-item__level">Profissional em formação</p>
+            <h3 class="trail-item__name">Plataforma Digital</h3>
+            <p class="trail-item__tagline">Acesso completo ao portal de aulas por assinatura mensal, com todos os módulos, bônus e materiais complementares.</p>
+          </div>
+        </div>
+        <button class="trail-item__toggle" aria-label="Expandir detalhes da Plataforma Digital">
+          <span class="trail-item__toggle-text">Ver o que está incluído</span>
+          <svg class="trail-item__toggle-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+      </div>
+
+      <div class="trail-item__body" id="plataforma-body">
+        <div class="trail-item__content">
+
+          <div class="inclusions">
+            <h4 class="inclusions__title">Acesso completo ao portal</h4>
+            <div class="inclusions__grid">
+              <div class="inclusion-item">
+                <div class="inclusion-item__icon">📹</div>
+                <div>
+                  <strong>4 módulos NaturalUp® completos</strong>
+                  <span>Toxina, Preenchedores, Bioestimuladores e Moduladores com todas as aulas e atualizações.</span>
+                </div>
+              </div>
+              <div class="inclusion-item">
+                <div class="inclusion-item__icon">🧬</div>
+                <div>
+                  <strong>Método NaturalUp® (módulo bônus)</strong>
+                  <span>O protocolo sequencial completo, integrado, passo a passo.</span>
+                </div>
+              </div>
+              <div class="inclusion-item">
+                <div class="inclusion-item__icon">🤖</div>
+                <div>
+                  <strong>IA na Medicina (módulo bônus)</strong>
+                  <span>Inteligência artificial na prática clínica e gestão do consultório.</span>
+                </div>
+              </div>
+              <div class="inclusion-item">
+                <div class="inclusion-item__icon">📚</div>
+                <div>
+                  <strong>Materiais complementares</strong>
+                  <span>Artigos científicos, protocolos em PDF, compilados e áudios organizados por tema.</span>
+                </div>
+              </div>
+              <div class="inclusion-item">
+                <div class="inclusion-item__icon">🔄</div>
+                <div>
+                  <strong>Conteúdo em constante atualização</strong>
+                  <span>Novos módulos e materiais adicionados continuamente pelo Dr. Gustavo.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SAVINGS COMPARISON -->
+          <div class="savings-block">
+            <h4 class="inclusions__title">Por que a Plataforma faz sentido financeiramente</h4>
+            <p class="savings-block__intro">Se você fosse adquirir cada módulo de forma isolada, o investimento seria:</p>
+            <div class="savings-table">
+              <div class="savings-row">
+                <span>Toxina Botulínica (curso avulso)</span>
+                <span class="savings-row__price">R$ 2.490</span>
+              </div>
+              <div class="savings-row">
+                <span>Preenchedores com AH (curso avulso)</span>
+                <span class="savings-row__price">R$ 2.490</span>
+              </div>
+              <div class="savings-row">
+                <span>Bioestimuladores de Colágeno (curso avulso)</span>
+                <span class="savings-row__price">R$ 2.490</span>
+              </div>
+              <div class="savings-row">
+                <span>Moduladores de Matriz (curso avulso)</span>
+                <span class="savings-row__price">R$ 2.490</span>
+              </div>
+              <div class="savings-row savings-row--total">
+                <span>Total (4 módulos avulsos)</span>
+                <span class="savings-row__price savings-row__price--crossed">R$ 9.960</span>
+              </div>
+              <div class="savings-row savings-row--bonus">
+                <span>+ Método NaturalUp® (incluído)</span>
+                <span class="savings-row__price savings-row__price--bonus">bônus</span>
+              </div>
+              <div class="savings-row savings-row--bonus">
+                <span>+ IA na Medicina (incluído)</span>
+                <span class="savings-row__price savings-row__price--bonus">bônus</span>
+              </div>
+              <div class="savings-row savings-row--bonus">
+                <span>+ Materiais complementares (incluído)</span>
+                <span class="savings-row__price savings-row__price--bonus">bônus</span>
+              </div>
+              <div class="savings-highlight">
+                <div class="savings-highlight__inner">
+                  <p class="savings-highlight__label">Com a assinatura da Plataforma Digital</p>
+                  <p class="savings-highlight__price">R$ 207<span>/mês</span></p>
+                  <p class="savings-highlight__economy">Economia de <strong>R$ 7.476 por ano</strong> em relação aos cursos avulsos</p>
+                </div>
+              </div>
+            </div>
+            <p class="savings-note">A Plataforma é o ponto de partida natural para uma mentoria individual, e em muitos casos é o caminho para o acompanhamento VIP.</p>
+          </div>
+
+          <div class="trail-item__cta-wrap">
+            <a href="https://wa.me/5521976263881?text=Olá!%20Quero%20saber%20mais%20sobre%20a%20Plataforma%20Digital%20por%20R%24%20207%2Fmês%20da%20Ampla%20Facial." target="_blank" rel="noopener" class="btn btn--gold btn--lg">Quero assinar a Plataforma Digital</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ──────── VIP ──────── -->
+    <div class="trail-item" id="vip">
+      <div class="trail-item__header" data-accordion="vip-body" aria-expanded="false">
+        <div class="trail-item__header-left">
+          <div class="trail-item__num">03</div>
+          <div>
+            <p class="trail-item__level">Profissional avançado</p>
+            <h3 class="trail-item__name">Acompanhamento VIP NaturalUp®</h3>
+            <p class="trail-item__tagline">Mentoria individual com o Dr. Gustavo, com licença de uso do Método NaturalUp® e vagas extremamente limitadas.</p>
+          </div>
+        </div>
+        <button class="trail-item__toggle" aria-label="Expandir detalhes do VIP NaturalUp">
+          <span class="trail-item__toggle-text">Ver o que está incluído</span>
+          <svg class="trail-item__toggle-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+      </div>
+
+      <div class="trail-item__body" id="vip-body">
+        <div class="trail-item__content">
+
+          <div class="inclusions">
+            <h4 class="inclusions__title">Acompanhamento individualizado completo</h4>
+            <div class="inclusions__grid">
+              <div class="inclusion-item">
+                <div class="inclusion-item__icon">💬</div>
+                <div>
+                  <strong>Canal direto com o Dr. Gustavo</strong>
+                  <span>Acesso por mensagem para tirar dúvidas clínicas, discutir casos e receber orientações personalizadas.</span>
+                </div>
+              </div>
+              <div class="inclusion-item">
+                <div class="inclusion-item__icon">📅</div>
+                <div>
+                  <strong>Encontros ao vivo quinzenais</strong>
+                  <span>Quartas-feiras, 10h. Discussão de casos, novidades clínicas e mentoria em grupo pequeno.</span>
+                </div>
+              </div>
+              <div class="inclusion-item">
+                <div class="inclusion-item__icon">🏥</div>
+                <div>
+                  <strong>Prática clínica presencial</strong>
+                  <span>16 horas de prática supervisionada na clínica, disponível nos planos Presencial e Completo.</span>
+                </div>
+              </div>
+              <div class="inclusion-item">
+                <div class="inclusion-item__icon">🔬</div>
+                <div>
+                  <strong>Todos os módulos do portal</strong>
+                  <span>Acesso completo ao conteúdo gravado, materiais e atualizações.</span>
+                </div>
+              </div>
+              <div class="inclusion-item inclusion-item--highlight">
+                <div class="inclusion-item__icon">®</div>
+                <div>
+                  <strong>Licença de uso do Método NaturalUp®</strong>
+                  <span>Autorização formal para aplicar e divulgar o protocolo NaturalUp® na sua prática clínica, mediante assinatura de termo de uso.</span>
+                </div>
+              </div>
+              <div class="inclusion-item">
+                <div class="inclusion-item__icon">🎯</div>
+                <div>
+                  <strong>Processo seletivo com vagas limitadas</strong>
+                  <span>O acompanhamento VIP é por seleção para garantir a qualidade do acompanhamento individual.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="vip-plans">
+            <h4 class="inclusions__title">Formato de acompanhamento</h4>
+            <div class="vip-plans__grid">
+              <div class="vip-plan-card">
+                <p class="vip-plan-card__name">Online</p>
+                <ul class="vip-plan-card__list">
+                  <li>6 meses de acompanhamento</li>
+                  <li>Encontros ao vivo quinzenais</li>
+                  <li>Canal direto por mensagem</li>
+                  <li>Portal completo</li>
+                  <li>Disponível para dupla com desconto</li>
+                </ul>
+              </div>
+              <div class="vip-plan-card">
+                <p class="vip-plan-card__name">Presencial</p>
+                <ul class="vip-plan-card__list">
+                  <li>3 meses de acompanhamento</li>
+                  <li>16h de prática clínica supervisionada</li>
+                  <li>Canal direto por mensagem</li>
+                  <li>Portal completo</li>
+                  <li>Disponível para dupla com desconto</li>
+                </ul>
+              </div>
+              <div class="vip-plan-card vip-plan-card--featured">
+                <p class="vip-plan-card__star">⭐ Mais completo</p>
+                <p class="vip-plan-card__name">Completo</p>
+                <ul class="vip-plan-card__list">
+                  <li>6 meses de acompanhamento</li>
+                  <li>16h de prática clínica supervisionada</li>
+                  <li>Encontros ao vivo quinzenais</li>
+                  <li>Canal direto por mensagem</li>
+                  <li>Portal completo</li>
+                  <li>Disponível para dupla com desconto</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="trail-item__cta-wrap">
+            <a href="https://wa.me/5521976263881?text=Olá!%20Tenho%20interesse%20em%20iniciar%20o%20processo%20seletivo%20para%20o%20Acompanhamento%20VIP%20NaturalUp®%20com%20o%20Dr.%20Gustavo." target="_blank" rel="noopener" class="btn btn--gold btn--lg">Iniciar processo seletivo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- ===== 11. FOR WHOM / NOT FOR WHOM ===== -->
-<section class="section section--default">
-  <div class="container container--narrow">
-    <div class="for-whom-grid">
-      <div class="for-whom-block not-for fade-in">
-        <h3>NÃO é para quem busca</h3>
-        <ul class="for-whom-list" role="list">
-          <li>Apenas aprender mais uma técnica isolada.</li>
-          <li>Resultados imediatos sem desenvolver raciocínio clínico ou aprofundamento teórico.</li>
-          <li>Atalhos rápidos ou fórmulas prontas.</li>
-          <li>Um curso básico ou de iniciação.</li>
-        </ul>
-      </div>
-      <div class="for-whom-block is-for fade-in">
-        <h3>É para quem deseja</h3>
-        <ul class="for-whom-list" role="list">
-          <li>Profissional já formado que busca aperfeiçoamento técnico de alto nível.</li>
-          <li>Aprender a planejar um caso do início ao fim com maestria e previsibilidade.</li>
-          <li>Desenvolver visão clínica, raciocínio profundo e autonomia nas decisões.</li>
-          <li>Dar segurança ao paciente através de um planejamento sólido e evolutivo.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== 12. CTA / CONTACT ===== -->
-<section class="section section--generous cta-section naturalup-bg" id="contato">
-  <img src="./assets/naturalup-logo.jpg" alt="" class="naturalup-watermark naturalup-watermark--right" aria-hidden="true" loading="lazy">
+<!-- ═══════════════════════════════════════ MÉTODO ═══════════════════════════════════════ -->
+<section class="section method-section" id="naturalup">
   <div class="container">
-    <h2 class="fade-in">Evolução clínica<br>é uma decisão.</h2>
-    <p class="fade-in">Ampla Facial | Acompanhamento VIP com Método NaturalUp® by Dr. Gustavo Martins</p>
-    <div class="cta-buttons fade-in">
-      <a href="https://wa.me/5521976263881?text=Oi%20Amanda%2C%20vim%20do%20site%20e%20gostaria%20de%20conversar%20sobre%20o%20acompanhamento%20Ampla%20Facial%20do%20Dr%20Gustavo%20Martins%20e%20o%20m%C3%A9todo%20NaturalUp%C2%AE" target="_blank" rel="noopener noreferrer" class="btn btn--gold">Falar com a Amanda</a>
-      <a href="https://www.instagram.com/amplafacial" target="_blank" rel="noopener noreferrer" class="cta-instagram">@amplafacial</a>
+    <div class="method-inner">
+      <div class="method-text">
+        <p class="section__eyebrow section__eyebrow--light">Protocolo registrado · Artigo registrado</p>
+        <h2 class="section__title section__title--light">Método NaturalUp®</h2>
+        <p class="method-desc">Um protocolo criado e documentado pelo Dr. Gustavo Martins que integra de forma sequencial os principais recursos da harmonização orofacial moderna, gerando resultados naturais e duradouros.</p>
+        <div class="method-pillars">
+          <div class="method-pillar">
+            <p class="method-pillar__title">Integrado</p>
+            <p class="method-pillar__desc">Cada etapa é planejada para potencializar o resultado da anterior, criando um fluxo clínico coerente e reprodutível.</p>
+          </div>
+          <div class="method-pillar">
+            <p class="method-pillar__title">Natural</p>
+            <p class="method-pillar__desc">Resultado harmonioso e duradouro, sem marcadores evidentes de procedimento.</p>
+          </div>
+          <div class="method-pillar">
+            <p class="method-pillar__title">Exclusivo</p>
+            <p class="method-pillar__desc">Conteúdo completo e licença de uso concedidos exclusivamente aos alunos do Acompanhamento VIP.</p>
+          </div>
+        </div>
+        <p class="method-note">A sequência completa do protocolo, incluindo técnicas e critérios de aplicação, é compartilhada exclusivamente dentro do Acompanhamento VIP NaturalUp®.</p>
+      </div>
+      <div class="method-img-wrap">
+        <img src="naturalup-v2.png" alt="Método NaturalUp® Dr. Gustavo Martins" class="method-img" loading="lazy" />
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ===== WHATSAPP FLOATING BUTTON ===== -->
-<a href="https://wa.me/5521976263881?text=Oi%20Amanda%2C%20vim%20do%20site%20do%20Ampla%20Facial%20e%20gostaria%20de%20conversar%20sobre%20o%20acompanhamento%20do%20Dr%20Gustavo%20Martins%20e%20o%20m%C3%A9todo%20NaturalUp%C2%AE" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Fale conosco pelo WhatsApp">
-  <svg viewBox="0 0 32 32" fill="currentColor" width="28" height="28"><path d="M16.004 0h-.008C7.174 0 0 7.176 0 16.004c0 3.5 1.128 6.744 3.046 9.378L1.054 31.4l6.256-2.006A15.91 15.91 0 0016.004 32C24.826 32 32 24.826 32 16.004 32 7.176 24.826 0 16.004 0zm9.31 22.606c-.39 1.1-1.932 2.014-3.168 2.282-.846.18-1.95.324-5.67-1.218-4.762-1.972-7.826-6.8-8.064-7.114-.23-.314-1.932-2.572-1.932-4.904s1.222-3.476 1.656-3.952c.434-.476.948-.596 1.264-.596.314 0 .63.002.904.016.29.014.68-.11 1.064.812.39.94 1.33 3.248 1.446 3.484.116.236.194.512.04.826-.156.314-.234.51-.468.786-.234.274-.492.612-.702.822-.234.234-.478.488-.206.958.274.468 1.216 2.006 2.61 3.248 1.794 1.6 3.306 2.096 3.774 2.33.468.234.742.196 1.016-.118.274-.314 1.178-1.374 1.492-1.848.314-.476.63-.39 1.064-.234.434.156 2.742 1.292 3.21 1.528.468.234.78.352.896.546.116.194.116 1.124-.274 2.226z"/></svg>
-</a>
-
-<!-- ===== 13. FOOTER ===== -->
-<footer class="site-footer">
+<!-- ═══════════════════════════════════════ DR. GUSTAVO ═══════════════════════════════════════ -->
+<section class="section about-section" id="gustavo">
   <div class="container">
-    <div class="footer-inner">
-      <p class="footer-brand">
-        <img src="./assets/logo-ampla-header.png" alt="Ampla Facial" class="footer-logo-img">
-      </p>
-      <div class="footer-links">
-        <a href="https://www.instagram.com/dr.gustavomartins" target="_blank" rel="noopener noreferrer">@dr.gustavomartins</a>
-        <a href="https://www.instagram.com/amplafacial" target="_blank" rel="noopener noreferrer">@amplafacial</a>
-        <a href="https://wa.me/5521976263881?text=Oi%20Amanda%2C%20vim%20do%20site%20e%20gostaria%20de%20conversar%20sobre%20o%20acompanhamento%20Ampla%20Facial%20do%20Dr%20Gustavo%20Martins%20e%20o%20m%C3%A9todo%20NaturalUp%C2%AE" target="_blank" rel="noopener noreferrer">+55 21 97626-3881</a>
+    <div class="about-inner">
+      <div class="about-photo-wrap">
+        <img src="dr-gustavo.jpg" alt="Dr. Gustavo Martins — Cirurgião-dentista, Biomédico, Mestre em HOF" class="about-photo" />
       </div>
-      <p class="footer-attribution">
-        &copy; 2026 Ampla Facial&reg; — Todos os direitos reservados.
-      </p>
+      <div class="about-text">
+        <p class="section__eyebrow">Quem ensina</p>
+        <h2 class="about-name">Dr. Gustavo Martins</h2>
+        <p class="about-credentials">Cirurgião-dentista · Biomédico · Mestre e Especialista em Harmonização Orofacial</p>
+        <p class="about-desc">Atua em Rio de Janeiro com foco em harmonia facial natural e duradoura. Desenvolveu o Método NaturalUp®, protocolo com artigo em publicação, e forma profissionais em um acompanhamento que vai da teoria à licença de uso do protocolo.</p>
+        <div class="about-stats">
+          <div class="about-stat">
+            <p class="about-stat__num">5</p>
+            <p class="about-stat__label">Clínicas em RJ</p>
+          </div>
+          <div class="about-stat">
+            <p class="about-stat__num">4+</p>
+            <p class="about-stat__label">Módulos no portal</p>
+          </div>
+          <div class="about-stat">
+            <p class="about-stat__num">HOF</p>
+            <p class="about-stat__label">Mestre e Especialista</p>
+          </div>
+        </div>
+        <div class="about-socials">
+          <a href="https://instagram.com/dr.gustavomartins" target="_blank" rel="noopener" class="about-social-link">@dr.gustavomartins</a>
+          <span class="about-social-sep">·</span>
+          <a href="https://instagram.com/amplafacial" target="_blank" rel="noopener" class="about-social-link">@amplafacial</a>
+        </div>
+      </div>
     </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ CTA FINAL ═══════════════════════════════════════ -->
+<section class="section cta-section">
+  <div class="container">
+    <div class="cta-inner">
+      <p class="cta-eyebrow">Cada fase tem seu caminho</p>
+      <h2 class="cta-title">Evolução clínica<br />é uma decisão.</h2>
+      <p class="cta-sub">Identifique seu momento atual e comece pelo passo certo: pelo conteúdo gravado, pela plataforma completa ou pelo acompanhamento individual.</p>
+      <a href="https://wa.me/5521976263881?text=Olá!%20Quero%20entender%20qual%20a%20trilha%20mais%20adequada%20para%20o%20meu%20momento%20na%20Ampla%20Facial." target="_blank" rel="noopener" class="btn btn--gold btn--lg">Falar com a Amanda</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ FOOTER ═══════════════════════════════════════ -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <img src="AmplaFacial.jpg" alt="Ampla Facial" class="footer__logo" />
+    </div>
+    <div class="footer__links">
+      <a href="#modulos">Conteúdo</a>
+      <a href="#observador">Observador</a>
+      <a href="#plataforma">Plataforma Digital</a>
+      <a href="#vip">VIP NaturalUp®</a>
+      <a href="#gustavo">Dr. Gustavo</a>
+    </div>
+    <div class="footer__contact">
+      <a href="https://wa.me/5521976263881" target="_blank" rel="noopener">(21) 97626-3881</a>
+      <a href="https://instagram.com/amplafacial" target="_blank" rel="noopener">@amplafacial</a>
+      <a href="https://instagram.com/dr.gustavomartins" target="_blank" rel="noopener">@dr.gustavomartins</a>
+    </div>
+    <p class="footer__copy">© 2026 Ampla Facial · Dr. Gustavo Martins CRO RJ-CD-49765 · Todos os direitos reservados.</p>
   </div>
 </footer>
 
-<script>
-// Sticky header scroll state
-(function() {
-  const header = document.getElementById('header');
-  window.addEventListener('scroll', function() {
-    if (window.scrollY > 80) {
-      header.classList.add('site-header--scrolled');
-    } else {
-      header.classList.remove('site-header--scrolled');
-    }
-  }, { passive: true });
-})();
-</script>
+<!-- ═══════════════════════════════════════ WhatsApp FAB ═══════════════════════════════════════ -->
+<a href="https://wa.me/5521976263881?text=Olá!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20a%20Ampla%20Facial." target="_blank" rel="noopener" class="whatsapp-fab" aria-label="Falar no WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
 
-<!-- Lightbox for cases gallery -->
-<div class="lightbox-overlay" id="lightbox">
-  <button class="lightbox-close" aria-label="Fechar">
-    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
-  </button>
-  <button class="lightbox-nav lightbox-prev" aria-label="Anterior">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-  </button>
-  <img src="" alt="Caso clínico ampliado">
-  <button class="lightbox-nav lightbox-next" aria-label="Próximo">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
-  </button>
-</div>
-
-<script>
-// Lightbox gallery
-(function() {
-  const overlay = document.getElementById('lightbox');
-  if (!overlay) return;
-  const lbImg = overlay.querySelector('img');
-  const cards = document.querySelectorAll('.case-card');
-  const srcs = Array.from(cards).map(c => c.querySelector('img').src);
-  let idx = 0;
-
-  function open(i) {
-    idx = i;
-    lbImg.src = srcs[idx];
-    overlay.classList.add('is-open');
-    document.body.style.overflow = 'hidden';
-  }
-  function close() {
-    overlay.classList.remove('is-open');
-    document.body.style.overflow = '';
-  }
-  function nav(dir) {
-    idx = (idx + dir + srcs.length) % srcs.length;
-    lbImg.src = srcs[idx];
-  }
-
-  cards.forEach((c, i) => {
-    c.style.cursor = 'zoom-in';
-    c.addEventListener('click', () => open(i));
-  });
-
-  overlay.querySelector('.lightbox-close').addEventListener('click', close);
-  overlay.querySelector('.lightbox-prev').addEventListener('click', (e) => { e.stopPropagation(); nav(-1); });
-  overlay.querySelector('.lightbox-next').addEventListener('click', (e) => { e.stopPropagation(); nav(1); });
-  overlay.addEventListener('click', (e) => { if (e.target === overlay) close(); });
-
-  document.addEventListener('keydown', (e) => {
-    if (!overlay.classList.contains('is-open')) return;
-    if (e.key === 'Escape') close();
-    if (e.key === 'ArrowLeft') nav(-1);
-    if (e.key === 'ArrowRight') nav(1);
-  });
-})();
-</script>
-
+<script src="main.js"></script>
 </body>
 </html>

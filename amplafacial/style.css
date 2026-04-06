@@ -185,7 +185,7 @@ h1, h2, h3, h4, h5 {
 
 .nav__logo { display: flex; align-items: center; flex-shrink: 0; }
 .nav__logo-img {
-  height: 52px;
+  height: 72px;
   width: auto;
   object-fit: contain;
   object-position: top center;

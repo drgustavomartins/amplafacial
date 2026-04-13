@@ -176,7 +176,7 @@ h1, h2, h3, h4, h5 {
   max-width: var(--content-wide);
   margin-inline: auto;
   padding-inline: clamp(var(--space-6), 4vw, var(--space-10));
-  height: 68px;
+  height: 80px;
   display: flex;
   align-items: center;
   gap: var(--space-5);
@@ -199,7 +199,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .nav__logo-img {
-  height: 64px;
+  height: 52px;
   width: auto;
   object-fit: contain;
   flex-shrink: 0;

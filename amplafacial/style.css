@@ -199,11 +199,10 @@ h1, h2, h3, h4, h5 {
 }
 
 .nav__logo-img {
-  height: 48px;
+  height: 44px;
   width: auto;
   object-fit: contain;
   flex-shrink: 0;
-  border-radius: 4px;
 }
 
 .nav__logo-name {
@@ -1356,6 +1355,12 @@ h1, h2, h3, h4, h5 {
   margin-bottom: var(--space-10);
   line-height: 1.7;
 }
+.cta-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
 /* ─── FOOTER ─── */
 .footer {
@@ -1548,6 +1553,19 @@ h1, h2, h3, h4, h5 {
   color: rgba(255,255,255,0.4);
   text-align: center;
   margin: 0;
+}
+.quiz-banner__link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  color: var(--gold);
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+.quiz-banner__link:hover {
+  opacity: 1;
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {

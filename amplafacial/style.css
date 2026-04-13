@@ -199,7 +199,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .nav__logo-img {
-  height: 44px;
+  height: 64px;
   width: auto;
   object-fit: contain;
   flex-shrink: 0;

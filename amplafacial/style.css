@@ -1326,6 +1326,38 @@ h1, h2, h3, h4, h5 {
 .about-social-link:hover { color: var(--gold); }
 .about-social-sep { color: var(--border); }
 
+/* ─── DEPOIMENTOS ─── */
+.testimonial-section {
+  background: var(--bg-card);
+  text-align: center;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.testimonial-video-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin-inline: auto;
+  margin-top: var(--space-10);
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-gold);
+  box-shadow: 0 0 40px var(--gold-glow);
+}
+.testimonial-video-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.testimonial-caption {
+  margin-top: var(--space-6);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  font-style: italic;
+}
+
 /* ─── CTA FINAL ─── */
 .cta-section {
   background: var(--bg-card);

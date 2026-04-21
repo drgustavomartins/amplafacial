@@ -82,7 +82,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
-  scroll-padding-top: 80px;
+  scroll-padding-top: 120px;
 }
 
 body {
@@ -162,7 +162,7 @@ h1, h2, h3, h4, h5 {
 /* ─── NAV ─── */
 .nav {
   position: sticky;
-  top: 0;
+  top: 38px;
   z-index: 100;
   background: rgba(10,22,40,0.92);
   backdrop-filter: blur(20px);
@@ -1657,4 +1657,116 @@ h1, h2, h3, h4, h5 {
     width: 100%;
     justify-content: center;
   }
+}
+
+/* ─── TOP BAR (COUNTDOWN FIXED) ─── */
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 110;
+  background: var(--bg-deepest);
+  border-bottom: 1px solid var(--border-gold);
+  text-align: center;
+}
+.topbar__link {
+  display: block;
+  padding: 0.55rem var(--space-4);
+  text-decoration: none;
+  color: var(--gold-light);
+  transition: background 180ms;
+}
+.topbar__link:hover {
+  background: rgba(212,168,67,0.08);
+}
+.topbar__text {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+#topbar-countdown {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* Push body content below fixed topbar (~38px) */
+body {
+  padding-top: 38px;
+}
+
+/* ─── VITALÍCIO CARD ─── */
+.vitalicio-card {
+  background: var(--bg);
+  border: 2px solid var(--gold);
+  border-radius: var(--radius-lg);
+  padding: clamp(var(--space-6), 4vw, var(--space-8));
+  margin-bottom: var(--space-4);
+  text-align: center;
+  position: relative;
+  box-shadow: 0 0 40px rgba(212,168,67,0.12), var(--shadow-md);
+}
+.vitalicio-card__badge {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--bg-deepest);
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.35em 1em;
+  border-radius: 100px;
+  margin-bottom: var(--space-4);
+}
+.vitalicio-card__title {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: var(--space-4);
+}
+.vitalicio-card__pricing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  margin-bottom: var(--space-6);
+}
+.vitalicio-card__old-price {
+  font-size: var(--text-sm);
+  color: var(--text-faint);
+  text-decoration: line-through;
+}
+.vitalicio-card__price {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 5vw, 4rem);
+  font-weight: 400;
+  color: var(--gold-light);
+  line-height: 1;
+}
+.vitalicio-card__price-note {
+  font-size: var(--text-sm);
+  color: var(--gold-muted);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+.vitalicio-card__bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  max-width: 400px;
+  margin: 0 auto var(--space-8);
+  text-align: left;
+}
+.vitalicio-card__bullets li {
+  font-size: var(--text-base);
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+.vitalicio-card__cta {
+  font-size: var(--text-base);
 }

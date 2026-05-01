@@ -92,11 +92,15 @@
 </head>
 <body>
 
-<!-- ═══════════════════════════════════════ TOP BAR (COUNTDOWN) ═══════════════════════════════════════ -->
-<div class="topbar" id="topbar">
-  <a href="https://portal.amplafacial.com.br/?utm_source=site&utm_medium=topbar&utm_campaign=vitalicio_197#/planos-publicos" target="_blank" rel="noopener" class="topbar__link">
-    <span class="topbar__text">🎓 Acesso Vitalício por R$197 — oferta termina em <span id="topbar-countdown">--:--:--:--</span></span>
-  </a>
+<!-- ═══════════════════════════════════════ TOP BAR (LOGIN ALUNOS) ═══════════════════════════════════════ -->
+<div class="loginbar" id="loginbar">
+  <div class="loginbar__inner">
+    <span class="loginbar__text">Já é aluno?</span>
+    <a href="https://portal.amplafacial.com.br/?utm_source=site&utm_medium=loginbar&utm_campaign=acesso_aluno#/login" target="_blank" rel="noopener" class="loginbar__btn">
+      Acessar o portal
+      <svg class="loginbar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+    </a>
+  </div>
 </div>
 
 <!-- ═══════════════════════════════════════ NAV ═══════════════════════════════════════ -->
@@ -946,31 +950,5 @@
 </a>
 
 <script src="main.js"></script>
-<script>
-(function(){
-  var deadline = new Date('2026-04-30T23:59:00-03:00').getTime();
-  var el = document.getElementById('topbar-countdown');
-  var bar = document.getElementById('topbar');
-  function tick(){
-    var now = Date.now();
-    var diff = deadline - now;
-    if(diff <= 0){
-      bar.innerHTML = '<span class="topbar__link topbar__text" style="cursor:default">Oferta encerrada</span>';
-      return;
-    }
-    var d = Math.floor(diff / 86400000);
-    var h = Math.floor((diff % 86400000) / 3600000);
-    var m = Math.floor((diff % 3600000) / 60000);
-    var s = Math.floor((diff % 60000) / 1000);
-    el.textContent =
-      String(d).padStart(2,'0') + ':' +
-      String(h).padStart(2,'0') + ':' +
-      String(m).padStart(2,'0') + ':' +
-      String(s).padStart(2,'0');
-  }
-  tick();
-  setInterval(tick, 1000);
-})();
-</script>
 </body>
 </html>

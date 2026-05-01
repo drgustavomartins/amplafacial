@@ -1659,42 +1659,75 @@ h1, h2, h3, h4, h5 {
   }
 }
 
-/* ─── TOP BAR (COUNTDOWN FIXED) ─── */
-.topbar {
+/* Push body content below fixed loginbar (~38px) */
+body {
+  padding-top: 38px;
+}
+
+/* ─── LOGIN BAR (PARA ALUNOS EXISTENTES) ─── */
+.loginbar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 110;
-  background: var(--bg-deepest);
+  background: linear-gradient(90deg, rgba(212,168,67,0.12) 0%, rgba(212,168,67,0.18) 50%, rgba(212,168,67,0.12) 100%);
   border-bottom: 1px solid var(--border-gold);
-  text-align: center;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
-.topbar__link {
-  display: block;
-  padding: 0.55rem var(--space-4);
-  text-decoration: none;
-  color: var(--gold-light);
-  transition: background 180ms;
+.loginbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  padding: 0.5rem var(--space-4);
+  flex-wrap: wrap;
 }
-.topbar__link:hover {
-  background: rgba(212,168,67,0.08);
-}
-.topbar__text {
+.loginbar__text {
   font-family: var(--font-body);
   font-size: var(--text-sm);
-  font-weight: 600;
-  letter-spacing: 0.02em;
+  font-weight: 500;
+  color: var(--gold-light);
+  letter-spacing: 0.01em;
 }
-#topbar-countdown {
-  font-variant-numeric: tabular-nums;
+.loginbar__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
   font-weight: 700;
-  color: #fff;
+  color: #0A0D14;
+  background: var(--gold);
+  padding: 0.4rem 0.95rem;
+  border-radius: 999px;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: background 180ms, transform 180ms, box-shadow 180ms;
+  box-shadow: 0 1px 8px rgba(212,168,67,0.25);
 }
-
-/* Push body content below fixed topbar (~38px) */
-body {
-  padding-top: 38px;
+.loginbar__btn:hover {
+  background: var(--gold-light, #E5BC5C);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 14px rgba(212,168,67,0.4);
+}
+.loginbar__icon {
+  width: 14px;
+  height: 14px;
+}
+@media (max-width: 480px) {
+  .loginbar__inner {
+    gap: 0.55rem;
+    padding: 0.4rem 0.75rem;
+  }
+  .loginbar__text {
+    font-size: 0.78rem;
+  }
+  .loginbar__btn {
+    padding: 0.32rem 0.75rem;
+    font-size: 0.78rem;
+  }
 }
 
 /* ─── VITALÍCIO CARD ─── */

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#0a1628">
 <title>Dr. Gustavo Martins — Harmonização Facial Natural · NaturalUp®</title>
-<meta name="description" content="Mestre e especialista em harmonização facial. Criador do Método NaturalUp®. Atendemos na Barra, Copacabana e Santa Cruz. CRO-RJ 49765.">
+<meta name="description" content="Mestre em Harmonização Facial. Criador do Método NaturalUp®. Pacientes em 3 unidades no Rio. Mentoria para dentistas e biomédicos. CRO-RJ 49765.">
 <meta name="author" content="Dr. Gustavo Martins">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://links.clinicagustavomartins.com.br/">
@@ -13,14 +13,15 @@
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Dr. Gustavo Martins — Harmonização Facial Natural">
-<meta property="og:description" content="Mestre em harmonização facial. Criador do Método NaturalUp®. Resultados naturais e duradouros.">
+<meta property="og:description" content="Método NaturalUp® · 3 unidades no Rio · Mentoria para profissionais da saúde">
 <meta property="og:url" content="https://links.clinicagustavomartins.com.br/">
+<meta property="og:image" content="https://www.clinicagustavomartins.com.br/assets/dr-gustavo-novo.jpg">
 <meta property="og:locale" content="pt_BR">
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <!-- Favicon -->
 <link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="%230a1628"/><text x="16" y="22" font-family="Georgia,serif" font-size="18" font-weight="700" fill="%23c9a961" text-anchor="middle">GM</text></svg>'>
@@ -30,21 +31,35 @@
     --bg:#0a1628;
     --bg-soft:#0f1c33;
     --bg-card:#13243f;
-    --bg-card-hover:#172b4a;
-    --border:rgba(201,169,97,0.12);
-    --border-strong:rgba(201,169,97,0.28);
+    --border:rgba(201,169,97,0.14);
+    --border-strong:rgba(201,169,97,0.32);
     --text:#f5f0e8;
     --text-soft:#c8c5be;
     --text-muted:#8b8a85;
     --gold:#c9a961;
     --gold-soft:#d4b876;
-    --gold-glow:rgba(201,169,97,0.35);
+    --gold-deep:#a8884a;
     --whatsapp:#25d366;
+
+    /* Cores acentuadas por serviço (estilo outdoor) */
+    --rose:#d4889a;
+    --rose-deep:#8b3a4f;
+    --emerald:#7fb89a;
+    --emerald-deep:#2d5a47;
+    --terracotta:#c87f5d;
+    --terracotta-deep:#7a3f2a;
+    --plum:#9b7ba8;
+    --plum-deep:#4a3057;
+    --cream:#e8d5b7;
+
+    --shadow-lg:0 20px 50px rgba(0,0,0,0.5);
     --shadow:0 10px 30px rgba(0,0,0,0.35);
-    --radius:14px;
+    --radius:16px;
     --radius-sm:10px;
-    --maxw:520px;
+    --radius-lg:24px;
+    --maxw:540px;
   }
+
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
   body{
@@ -61,232 +76,433 @@
     content:"";
     position:fixed;inset:0;
     background:
-      radial-gradient(circle at 20% 0%, rgba(201,169,97,0.08) 0%, transparent 45%),
-      radial-gradient(circle at 80% 100%, rgba(201,169,97,0.05) 0%, transparent 50%);
+      radial-gradient(ellipse at 15% 5%, rgba(212,136,154,0.08) 0%, transparent 40%),
+      radial-gradient(ellipse at 85% 30%, rgba(201,169,97,0.08) 0%, transparent 45%),
+      radial-gradient(ellipse at 50% 85%, rgba(127,184,154,0.06) 0%, transparent 50%);
     pointer-events:none;z-index:0;
   }
-  .container{position:relative;z-index:1;max-width:var(--maxw);margin:0 auto;padding:32px 20px 80px}
+  .container{position:relative;z-index:1;max-width:var(--maxw);margin:0 auto;padding:24px 18px 60px}
 
-  /* ─── HERO ─── */
-  .hero{text-align:center;margin-bottom:36px;animation:fadeInUp .8s ease both}
-  .avatar-wrap{position:relative;width:120px;height:120px;margin:0 auto 22px}
-  .avatar-ring{
-    position:absolute;inset:-6px;border-radius:50%;
-    background:conic-gradient(from 135deg,var(--gold) 0%,var(--gold-soft) 25%,transparent 50%,var(--gold) 75%,var(--gold-soft) 100%);
-    animation:spin 20s linear infinite;opacity:.6;
+  /* ════════ HERO EDITORIAL ════════ */
+  .hero{
+    position:relative;border-radius:var(--radius-lg);overflow:hidden;
+    margin-bottom:28px;background:var(--bg-soft);
+    box-shadow:var(--shadow-lg);
+    animation:fadeInUp .9s ease both;
   }
-  .avatar{
-    position:relative;width:100%;height:100%;border-radius:50%;
-    object-fit:cover;border:3px solid var(--bg);
-    box-shadow:0 0 0 1px var(--gold),0 8px 24px rgba(0,0,0,.4);
+  .hero-photo{
+    position:relative;aspect-ratio:4/5;overflow:hidden;
+    background:linear-gradient(135deg,#1a2d4a 0%,#0a1628 100%);
   }
-  .verified{
-    position:absolute;bottom:4px;right:4px;width:30px;height:30px;
-    background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;
-    border:3px solid var(--bg);z-index:2;
+  .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+  .hero-photo::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,
+      rgba(10,22,40,0) 0%,
+      rgba(10,22,40,0) 35%,
+      rgba(10,22,40,0.55) 65%,
+      rgba(10,22,40,0.95) 100%);
   }
-  .verified svg{width:14px;height:14px;color:var(--bg)}
-  h1{
+  .hero-badge{
+    position:absolute;top:16px;left:50%;transform:translateX(-50%);
+    background:rgba(10,22,40,0.7);backdrop-filter:blur(12px);
+    border:1px solid var(--border-strong);
+    padding:6px 14px;border-radius:100px;
+    font-size:9.5px;letter-spacing:2px;color:var(--gold);
+    text-transform:uppercase;font-weight:600;z-index:2;
+    display:inline-flex;align-items:center;gap:6px;
+    white-space:nowrap;
+  }
+  .hero-badge::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 8px var(--gold)}
+  .hero-text{
+    position:absolute;bottom:0;left:0;right:0;
+    padding:22px 22px 24px;z-index:2;text-align:center;
+  }
+  .hero-supertitle{
+    font-size:10px;letter-spacing:3.5px;color:var(--gold);
+    text-transform:uppercase;font-weight:600;margin-bottom:6px;
+  }
+  .hero-name{
     font-family:'Cormorant Garamond',serif;
-    font-size:34px;font-weight:600;letter-spacing:.2px;
-    line-height:1.1;margin-bottom:6px;
+    font-size:36px;font-weight:600;line-height:1;
+    color:var(--cream);
+    text-shadow:0 2px 20px rgba(0,0,0,0.5);
+    margin-bottom:8px;letter-spacing:.5px;
   }
-  .title-soft{display:block;font-family:'Inter',sans-serif;font-size:11px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:8px;font-weight:500}
-  .tagline{
-    font-size:13px;color:var(--gold);text-transform:uppercase;letter-spacing:2.5px;
-    font-weight:500;margin-bottom:14px;
+  .hero-tagline{
+    font-size:11px;letter-spacing:2.5px;color:var(--text-soft);
+    text-transform:uppercase;font-weight:500;
   }
-  .bio{font-size:15px;color:var(--text-soft);max-width:380px;margin:0 auto;line-height:1.6}
-  .bio strong{color:var(--text);font-weight:500}
-  .credentials{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-top:16px}
+  .hero-tagline span{color:var(--gold)}
+  .hero-credentials{
+    display:flex;justify-content:center;gap:6px;
+    padding:14px 18px 18px;background:var(--bg-card);
+    border-top:1px solid var(--border);flex-wrap:wrap;
+  }
   .credential{
-    font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);
-    padding:5px 10px;border:1px solid var(--border-strong);border-radius:100px;
-    background:rgba(201,169,97,0.04);font-weight:500;
-  }
-  .divider{
-    height:1px;width:64px;margin:28px auto;
-    background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.7;
+    font-size:10px;letter-spacing:1.5px;color:var(--gold);
+    text-transform:uppercase;font-weight:600;
+    padding:6px 10px;background:rgba(201,169,97,0.08);
+    border:1px solid var(--border);border-radius:100px;
   }
 
-  /* ─── SECTION LABELS ─── */
-  .section-label{
-    font-family:'Inter',sans-serif;font-size:11px;font-weight:600;letter-spacing:3.5px;
-    color:var(--gold);text-transform:uppercase;margin:32px 0 14px;text-align:center;
-  }
-  .section-sub{text-align:center;font-size:13px;color:var(--text-muted);margin-bottom:18px;margin-top:-6px}
-
-  /* ─── PRIMARY CTA (Agendamento WhatsApp) ─── */
+  /* ════════ CTA PRINCIPAL ════════ */
   .cta-primary{
     display:flex;align-items:center;gap:14px;
-    background:linear-gradient(135deg,#1e7f3a 0%,#25d366 100%);
-    color:#fff;padding:18px 22px;border-radius:var(--radius);
-    text-decoration:none;font-weight:600;
-    box-shadow:0 8px 24px rgba(37,211,102,.28);
+    background:linear-gradient(135deg,#25d366 0%,#1ea952 100%);
+    color:#fff;padding:18px 22px;
+    border-radius:var(--radius);text-decoration:none;
+    margin-bottom:32px;font-weight:600;
+    box-shadow:0 12px 28px rgba(37,211,102,0.32);
     transition:transform .25s ease,box-shadow .25s ease;
-    position:relative;overflow:hidden;
+    animation:fadeInUp .9s ease .1s both;
   }
-  .cta-primary:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(37,211,102,.4)}
-  .cta-primary::after{
-    content:"";position:absolute;top:0;left:-100%;width:60%;height:100%;
-    background:linear-gradient(90deg,transparent,rgba(255,255,255,.18),transparent);
-    animation:shine 3.5s ease-in-out infinite;
-  }
-  .cta-primary .icon-wrap{
-    width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.18);
-    display:flex;align-items:center;justify-content:center;flex-shrink:0;
-  }
-  .cta-primary .icon-wrap svg{width:24px;height:24px;color:#fff}
-  .cta-primary .cta-text{flex:1}
-  .cta-primary .cta-label{font-size:15px;line-height:1.2;margin-bottom:2px}
-  .cta-primary .cta-sub{font-size:12.5px;opacity:.92;font-weight:400;letter-spacing:.3px}
-  .cta-primary .arrow{margin-left:auto;font-size:18px}
+  .cta-primary:hover{transform:translateY(-2px);box-shadow:0 16px 36px rgba(37,211,102,0.42)}
+  .cta-primary svg{flex-shrink:0;width:30px;height:30px}
+  .cta-primary-text{flex:1;text-align:left;line-height:1.3}
+  .cta-primary-text small{display:block;font-size:11px;opacity:.85;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:2px}
+  .cta-primary-text strong{display:block;font-size:17px;font-weight:700;letter-spacing:.3px}
+  .cta-primary .arrow{font-size:22px;opacity:.85}
 
-  /* ─── LINK CARDS ─── */
-  .links{display:flex;flex-direction:column;gap:11px}
-  .link-card{
+  /* ════════ SECTION HEADERS ════════ */
+  .section{margin-bottom:36px;animation:fadeInUp .9s ease both}
+  .section-head{text-align:center;margin-bottom:18px}
+  .section-eyebrow{
+    font-size:10px;letter-spacing:3.5px;color:var(--gold);
+    text-transform:uppercase;font-weight:600;margin-bottom:6px;
+  }
+  .section-title{
+    font-family:'Cormorant Garamond',serif;
+    font-size:26px;font-weight:600;line-height:1.15;color:var(--text);
+  }
+  .section-divider{
+    width:40px;height:1px;background:var(--gold);
+    margin:10px auto 14px;opacity:.6;
+  }
+
+  /* ════════ UNIDADES ════════ */
+  .units{display:grid;grid-template-columns:1fr;gap:10px}
+  .unit{
     display:flex;align-items:center;gap:14px;
     background:var(--bg-card);border:1px solid var(--border);
-    padding:15px 17px;border-radius:var(--radius);
+    padding:14px 16px;border-radius:var(--radius-sm);
     text-decoration:none;color:var(--text);
     transition:all .25s ease;position:relative;overflow:hidden;
   }
-  .link-card:hover{
-    background:var(--bg-card-hover);border-color:var(--border-strong);
-    transform:translateY(-2px);box-shadow:var(--shadow);
+  .unit::before{
+    content:"";position:absolute;left:0;top:0;bottom:0;width:3px;
+    background:var(--gold);opacity:0;transition:opacity .25s ease;
   }
-  .link-icon{
-    width:42px;height:42px;border-radius:11px;flex-shrink:0;
-    background:rgba(201,169,97,.08);border:1px solid var(--border);
-    display:flex;align-items:center;justify-content:center;color:var(--gold);
+  .unit:hover{border-color:var(--border-strong);transform:translateX(3px)}
+  .unit:hover::before{opacity:1}
+  .unit-icon{
+    flex-shrink:0;width:36px;height:36px;border-radius:50%;
+    background:rgba(201,169,97,0.12);display:flex;align-items:center;justify-content:center;
+    color:var(--gold);
   }
-  .link-icon svg{width:20px;height:20px}
-  .link-content{flex:1;min-width:0}
-  .link-label{font-size:14.5px;font-weight:600;line-height:1.25;margin-bottom:2px}
-  .link-sublabel{font-size:12.5px;color:var(--text-muted);line-height:1.3;font-weight:400}
-  .link-arrow{width:18px;height:18px;color:var(--text-muted);opacity:.6;flex-shrink:0;transition:transform .25s ease}
-  .link-card:hover .link-arrow{transform:translateX(3px);color:var(--gold);opacity:1}
-  .link-badge{
-    font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;
-    background:var(--gold);color:var(--bg);padding:3px 7px;border-radius:5px;
-    margin-left:6px;vertical-align:middle;
+  .unit-info{flex:1;min-width:0}
+  .unit-name{font-size:13px;font-weight:600;color:var(--text);margin-bottom:2px;letter-spacing:.3px}
+  .unit-addr{font-size:11.5px;color:var(--text-muted);line-height:1.35}
+  .unit-arrow{color:var(--gold);font-size:16px;opacity:.6}
+
+  /* ════════ EXPERTISE CARDS ════════ */
+  .expertise{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .expertise-card{
+    background:var(--bg-card);border:1px solid var(--border);
+    padding:18px 14px;border-radius:var(--radius-sm);
+    text-align:center;transition:all .25s ease;
+  }
+  .expertise-card:hover{border-color:var(--border-strong);transform:translateY(-2px)}
+  .expertise-icon{
+    width:42px;height:42px;margin:0 auto 10px;
+    border-radius:50%;background:rgba(201,169,97,0.1);
+    display:flex;align-items:center;justify-content:center;
+    color:var(--gold);
+  }
+  .expertise-title{
+    font-size:11px;letter-spacing:1.5px;color:var(--text);
+    text-transform:uppercase;font-weight:600;line-height:1.3;
   }
 
-  /* ─── EXPERTISE GRID ─── */
-  .expertise{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:6px}
-  .exp-card{
-    background:var(--bg-card);border:1px solid var(--border);
-    padding:18px 14px;border-radius:var(--radius);text-align:center;
+  /* ════════ SERVIÇOS — CARDS OUTDOOR ════════ */
+  .services-grid{display:grid;grid-template-columns:1fr;gap:14px}
+  .service-card{
+    position:relative;overflow:hidden;
+    border-radius:var(--radius);text-decoration:none;
+    aspect-ratio:1.85/1;display:block;
+    background:var(--bg-card);
+    box-shadow:var(--shadow);
+    transition:transform .3s ease,box-shadow .3s ease;
+    border:1px solid var(--border);
+  }
+  .service-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+  .service-card img{
+    width:100%;height:100%;object-fit:cover;display:block;
+    transition:transform .6s ease;
+  }
+  .service-card:hover img{transform:scale(1.06)}
+  .service-card::before{
+    content:"";position:absolute;inset:0;z-index:1;
+    background:linear-gradient(120deg,
+      var(--card-tint,rgba(10,22,40,0.85)) 0%,
+      var(--card-tint-soft,rgba(10,22,40,0.5)) 45%,
+      rgba(10,22,40,0.2) 100%);
+  }
+  .service-card::after{
+    content:"";position:absolute;inset:0;z-index:1;
+    background:linear-gradient(180deg,
+      transparent 50%,
+      rgba(10,22,40,0.6) 100%);
+  }
+  .service-content{
+    position:absolute;inset:0;z-index:2;
+    padding:18px 20px;display:flex;flex-direction:column;justify-content:space-between;
+  }
+  .service-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
+  .service-tag{
+    font-size:9px;letter-spacing:2.5px;font-weight:700;
+    text-transform:uppercase;
+    padding:5px 9px;border-radius:100px;
+    background:rgba(255,255,255,0.12);backdrop-filter:blur(8px);
+    border:1px solid rgba(255,255,255,0.18);color:#fff;
+  }
+  .service-arrow{
+    width:34px;height:34px;border-radius:50%;
+    background:rgba(255,255,255,0.16);backdrop-filter:blur(8px);
+    border:1px solid rgba(255,255,255,0.22);
+    display:flex;align-items:center;justify-content:center;color:#fff;
+    flex-shrink:0;transition:transform .25s ease;
+  }
+  .service-card:hover .service-arrow{transform:translate(2px,-2px) rotate(-8deg)}
+  .service-bottom{}
+  .service-name{
+    font-family:'Cormorant Garamond',serif;
+    font-size:28px;font-weight:600;line-height:1;
+    color:#fff;margin-bottom:4px;
+    text-shadow:0 2px 12px rgba(0,0,0,0.4);letter-spacing:.3px;
+  }
+  .service-desc{
+    font-size:12px;color:rgba(255,255,255,0.85);
+    line-height:1.4;letter-spacing:.2px;
+    text-shadow:0 1px 6px rgba(0,0,0,0.35);
+  }
+
+  /* Tints específicos por card */
+  .card-rose{--card-tint:rgba(139,58,79,0.78);--card-tint-soft:rgba(139,58,79,0.35)}
+  .card-emerald{--card-tint:rgba(45,90,71,0.78);--card-tint-soft:rgba(45,90,71,0.35)}
+  .card-terracotta{--card-tint:rgba(122,63,42,0.78);--card-tint-soft:rgba(122,63,42,0.35)}
+  .card-plum{--card-tint:rgba(74,48,87,0.8);--card-tint-soft:rgba(74,48,87,0.35)}
+  .card-gold{--card-tint:rgba(168,136,74,0.78);--card-tint-soft:rgba(168,136,74,0.35)}
+  .card-navy{--card-tint:rgba(20,40,70,0.82);--card-tint-soft:rgba(20,40,70,0.4)}
+
+  /* ════════ SEÇÃO EDUCACIONAL GIGANTE ════════ */
+  .education-block{
+    position:relative;border-radius:var(--radius-lg);overflow:hidden;
+    background:linear-gradient(135deg,#1a2d4a 0%,#0f1c33 100%);
+    margin-bottom:36px;box-shadow:var(--shadow-lg);
+    border:1px solid var(--border-strong);
+    animation:fadeInUp .9s ease both;
+  }
+  .education-photo{
+    position:relative;aspect-ratio:4/3;overflow:hidden;
+    background:#0a1628;
+  }
+  .education-photo img{width:100%;height:100%;object-fit:cover;object-position:center 25%;display:block}
+  .education-photo::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,
+      rgba(10,22,40,0) 0%,
+      rgba(10,22,40,0.3) 50%,
+      rgba(10,22,40,0.98) 100%),
+      linear-gradient(90deg,
+      rgba(168,136,74,0.18) 0%,
+      transparent 60%);
+  }
+  .education-tag-overlay{
+    position:absolute;top:18px;left:18px;z-index:2;
+    background:linear-gradient(135deg,var(--gold) 0%,var(--gold-deep) 100%);
+    color:var(--bg);padding:8px 14px;border-radius:100px;
+    font-size:10px;font-weight:700;letter-spacing:2.5px;
+    text-transform:uppercase;
+    box-shadow:0 8px 20px rgba(201,169,97,0.35);
+  }
+  .education-photo-title{
+    position:absolute;bottom:24px;left:22px;right:22px;z-index:2;
+  }
+  .education-photo-title h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:32px;font-weight:600;line-height:1.05;
+    color:var(--cream);letter-spacing:.3px;
+    text-shadow:0 4px 20px rgba(0,0,0,0.6);
+  }
+  .education-photo-title h2 em{
+    font-style:normal;color:var(--gold-soft);
+    background:linear-gradient(90deg,var(--gold-soft),var(--cream));
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  }
+  .education-body{padding:24px 22px 28px}
+  .education-intro{
+    font-size:14.5px;color:var(--text-soft);line-height:1.65;
+    margin-bottom:20px;
+  }
+  .education-intro strong{color:var(--cream);font-weight:600}
+  .education-features{
+    list-style:none;display:grid;gap:10px;margin-bottom:24px;
+  }
+  .education-features li{
+    display:flex;align-items:flex-start;gap:12px;
+    font-size:13.5px;color:var(--text-soft);line-height:1.5;
+  }
+  .education-features svg{
+    flex-shrink:0;width:22px;height:22px;color:var(--gold);
+    margin-top:1px;
+  }
+  .education-features strong{color:var(--cream);font-weight:600}
+  .education-ctas{display:grid;gap:10px}
+  .education-cta{
+    display:flex;align-items:center;gap:14px;
+    padding:16px 18px;border-radius:var(--radius);
+    text-decoration:none;font-weight:600;
     transition:all .25s ease;
   }
-  .exp-card:hover{border-color:var(--border-strong);transform:translateY(-2px)}
-  .exp-icon{width:32px;height:32px;margin:0 auto 8px;color:var(--gold)}
-  .exp-title{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:600;color:var(--text);margin-bottom:2px;line-height:1.2}
-  .exp-desc{font-size:11.5px;color:var(--text-muted);line-height:1.4}
-
-  /* ─── SERVICES (Procedures) ─── */
-  .services{display:flex;flex-direction:column;gap:10px}
-  .service-card{
-    background:var(--bg-card);border:1px solid var(--border);
-    padding:16px 18px;border-radius:var(--radius);text-decoration:none;color:inherit;
-    display:block;transition:all .25s ease;
+  .education-cta-main{
+    background:linear-gradient(135deg,var(--gold) 0%,var(--gold-deep) 100%);
+    color:var(--bg);
+    box-shadow:0 12px 24px rgba(201,169,97,0.32);
   }
-  .service-card:hover{background:var(--bg-card-hover);border-color:var(--border-strong);transform:translateY(-2px)}
-  .service-head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
-  .service-icon{width:36px;height:36px;border-radius:10px;background:rgba(201,169,97,.08);display:flex;align-items:center;justify-content:center;color:var(--gold);flex-shrink:0}
-  .service-icon svg{width:18px;height:18px}
-  .service-name{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:var(--text);line-height:1.1}
-  .service-desc{font-size:12.5px;color:var(--text-muted);line-height:1.5;padding-left:48px}
+  .education-cta-main:hover{transform:translateY(-2px);box-shadow:0 16px 32px rgba(201,169,97,0.42)}
+  .education-cta-secondary{
+    background:rgba(255,255,255,0.04);border:1px solid var(--border-strong);
+    color:var(--text);
+  }
+  .education-cta-secondary:hover{background:rgba(255,255,255,0.08);border-color:var(--gold)}
+  .education-cta-icon{
+    flex-shrink:0;width:38px;height:38px;border-radius:50%;
+    background:rgba(0,0,0,0.18);display:flex;align-items:center;justify-content:center;
+  }
+  .education-cta-main .education-cta-icon{background:rgba(0,0,0,0.18);color:var(--bg)}
+  .education-cta-secondary .education-cta-icon{background:rgba(201,169,97,0.14);color:var(--gold)}
+  .education-cta-text{flex:1;line-height:1.3}
+  .education-cta-text small{display:block;font-size:9.5px;letter-spacing:1.8px;text-transform:uppercase;font-weight:600;opacity:.75;margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .education-cta-text strong{display:block;font-size:15px;font-weight:700}
+  .education-cta .arrow{font-size:20px;opacity:.7}
+  .education-stats{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:8px;
+    padding-top:22px;margin-top:22px;border-top:1px solid var(--border);
+  }
+  .education-stat{text-align:center}
+  .education-stat-num{
+    font-family:'Cormorant Garamond',serif;
+    font-size:26px;font-weight:600;color:var(--gold);
+    line-height:1;margin-bottom:3px;
+  }
+  .education-stat-label{
+    font-size:10px;letter-spacing:1.5px;color:var(--text-muted);
+    text-transform:uppercase;font-weight:500;line-height:1.3;
+  }
 
-  /* ─── REVIEWS / DEPOIMENTOS ─── */
-  .reviews-wrap{position:relative;margin:0 -20px}
-  .reviews-strip{
-    display:flex;gap:12px;overflow-x:auto;padding:6px 20px 18px;
+  /* ════════ REVIEWS ════════ */
+  .reviews-wrap{position:relative;margin:0 -18px}
+  .reviews-scroll{
+    display:flex;gap:12px;overflow-x:auto;
+    padding:6px 18px 18px;
     scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
     scrollbar-width:none;
   }
-  .reviews-strip::-webkit-scrollbar{display:none}
-  .reviews-wrap::after{
-    content:"";position:absolute;top:0;right:0;width:50px;height:100%;pointer-events:none;
-    background:linear-gradient(90deg,transparent,var(--bg) 90%);
-  }
-  .reviews-hint{
-    display:flex;align-items:center;justify-content:center;gap:6px;
-    font-size:11px;color:var(--gold-soft);letter-spacing:1.5px;text-transform:uppercase;
-    margin-top:-4px;margin-bottom:6px;opacity:.8;font-weight:500;
-  }
-  .reviews-hint svg{width:14px;height:14px;animation:swipeHint 2s ease-in-out infinite}
-  @keyframes swipeHint{0%,100%{transform:translateX(0)}50%{transform:translateX(6px)}}
+  .reviews-scroll::-webkit-scrollbar{display:none}
   .review{
-    flex:0 0 280px;scroll-snap-align:start;
+    flex:0 0 86%;max-width:340px;scroll-snap-align:center;
     background:var(--bg-card);border:1px solid var(--border);
-    padding:18px;border-radius:var(--radius);
+    padding:18px 18px 16px;border-radius:var(--radius-sm);
   }
-  .review-stars{color:var(--gold);font-size:13px;letter-spacing:2px;margin-bottom:10px}
-  .review-text{font-size:13.5px;line-height:1.55;color:var(--text-soft);font-style:italic;margin-bottom:10px}
-  .review-author{font-size:11.5px;color:var(--text-muted);font-weight:500;letter-spacing:.5px}
-  .reviews-cta{text-align:center;margin-top:6px}
-  .reviews-cta a{color:var(--gold);font-size:12.5px;text-decoration:none;font-weight:500;letter-spacing:.5px}
-  .reviews-cta a:hover{text-decoration:underline}
+  .review-stars{color:#fbbf24;font-size:13px;margin-bottom:8px;letter-spacing:1px}
+  .review-text{
+    font-size:13.5px;color:var(--text-soft);line-height:1.55;
+    margin-bottom:14px;
+  }
+  .review-author{
+    display:flex;align-items:center;gap:10px;
+    border-top:1px solid var(--border);padding-top:12px;
+  }
+  .review-avatar{
+    width:34px;height:34px;border-radius:50%;
+    background:linear-gradient(135deg,var(--gold) 0%,var(--gold-deep) 100%);
+    display:flex;align-items:center;justify-content:center;
+    color:var(--bg);font-weight:700;font-size:13px;flex-shrink:0;
+  }
+  .review-name{font-size:12.5px;color:var(--text);font-weight:600;line-height:1.2}
+  .review-meta{font-size:10.5px;color:var(--text-muted);margin-top:2px;letter-spacing:.3px}
+  .scroll-hint{
+    text-align:center;font-size:11px;color:var(--text-muted);
+    letter-spacing:2px;text-transform:uppercase;margin-top:6px;
+    display:flex;align-items:center;justify-content:center;gap:10px;
+  }
+  .scroll-hint svg{width:14px;height:14px;animation:slideRight 1.6s ease-in-out infinite;color:var(--gold)}
+  .reviews-link{
+    display:block;text-align:center;font-size:12px;letter-spacing:2px;
+    color:var(--gold);text-transform:uppercase;font-weight:600;
+    text-decoration:none;margin-top:14px;padding:10px;
+  }
+  .reviews-link:hover{color:var(--gold-soft)}
 
-  /* ─── LOCATIONS ─── */
-  .locations{display:flex;flex-direction:column;gap:10px}
-  .loc-card{
-    display:flex;align-items:flex-start;gap:14px;
+  /* ════════ LINKS LIST (sites, redes) ════════ */
+  .link-list{display:grid;gap:10px}
+  .link-item{
+    display:flex;align-items:center;gap:14px;
     background:var(--bg-card);border:1px solid var(--border);
-    padding:15px 17px;border-radius:var(--radius);
-    text-decoration:none;color:var(--text);transition:all .25s ease;
+    padding:14px 16px;border-radius:var(--radius-sm);
+    text-decoration:none;color:var(--text);
+    transition:all .25s ease;
   }
-  .loc-card:hover{background:var(--bg-card-hover);border-color:var(--border-strong);transform:translateY(-2px)}
-  .loc-icon{
-    width:42px;height:42px;border-radius:11px;flex-shrink:0;
-    background:rgba(201,169,97,.08);border:1px solid var(--border);
-    display:flex;align-items:center;justify-content:center;color:var(--gold);
+  .link-item:hover{border-color:var(--border-strong);background:var(--bg-soft);transform:translateX(3px)}
+  .link-icon{
+    flex-shrink:0;width:40px;height:40px;border-radius:10px;
+    display:flex;align-items:center;justify-content:center;
+    font-weight:700;font-size:14px;
   }
-  .loc-icon svg{width:20px;height:20px}
-  .loc-content{flex:1;min-width:0}
-  .loc-name{font-size:14.5px;font-weight:600;line-height:1.25;margin-bottom:3px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-  .loc-tag{font-size:9px;background:var(--gold);color:var(--bg);padding:2px 7px;border-radius:4px;font-weight:700;letter-spacing:1px;text-transform:uppercase}
-  .loc-address{font-size:12.5px;color:var(--text-muted);line-height:1.4}
-  .loc-hours{font-size:11.5px;color:var(--gold-soft);margin-top:4px;font-weight:500}
-  .loc-arrow{width:18px;height:18px;color:var(--text-muted);opacity:.6;transition:all .25s ease;align-self:center}
-  .loc-card:hover .loc-arrow{transform:translateX(3px);color:var(--gold);opacity:1}
+  .icon-clinic{background:linear-gradient(135deg,var(--gold),var(--gold-deep));color:var(--bg)}
+  .icon-naturalup{background:linear-gradient(135deg,#d4889a,#8b3a4f);color:#fff}
+  .icon-ampla{background:linear-gradient(135deg,#7fb89a,#2d5a47);color:#fff}
+  .icon-insta{background:linear-gradient(135deg,#f58529 0%,#dd2a7b 35%,#8134af 70%,#515bd4 100%);color:#fff}
+  .icon-insta-ampla{background:linear-gradient(135deg,#7fb89a,#2d5a47);color:#fff}
+  .icon-tiktok{background:#000;color:#fff;border:1px solid #25f4ee;position:relative}
+  .link-info{flex:1;min-width:0}
+  .link-supertitle{font-size:10px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;font-weight:600;margin-bottom:2px}
+  .link-title{font-size:14px;color:var(--text);font-weight:600;line-height:1.25}
+  .link-sub{font-size:11.5px;color:var(--text-muted);margin-top:2px}
+  .link-arrow{color:var(--gold);font-size:16px;opacity:.6}
 
-  /* ─── FOOTER ─── */
-  footer{
-    margin-top:48px;text-align:center;padding-top:24px;
+  /* ════════ FOOTER ════════ */
+  .footer{
+    margin-top:32px;padding-top:24px;
     border-top:1px solid var(--border);
+    text-align:center;color:var(--text-muted);
+    font-size:11px;letter-spacing:.5px;line-height:1.7;
   }
-  .footer-brand{
-    font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--text);margin-bottom:4px;
+  .footer a{color:var(--gold);text-decoration:none}
+  .footer-cro{
+    display:inline-block;font-size:10px;letter-spacing:2px;
+    color:var(--gold);text-transform:uppercase;font-weight:600;
+    padding:5px 11px;border:1px solid var(--border-strong);
+    border-radius:100px;margin-bottom:12px;
   }
-  .footer-meta{font-size:11px;color:var(--text-muted);letter-spacing:1px;margin-bottom:18px}
-  .footer-links{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin-bottom:18px}
-  .footer-links a{font-size:11.5px;color:var(--text-muted);text-decoration:none;letter-spacing:.5px}
-  .footer-links a:hover{color:var(--gold)}
-  .footer-credit{font-size:10.5px;color:var(--text-muted);opacity:.7}
-  .footer-credit a{color:var(--gold-soft);text-decoration:none}
+  .footer-disclaimer{margin-top:12px;color:var(--text-muted);font-size:10.5px;opacity:.7;font-style:normal;line-height:1.55}
+  .footer-credit{margin-top:14px;font-size:10px;letter-spacing:1.5px;color:var(--text-muted);opacity:.6;text-transform:uppercase}
 
-  /* ─── ANIMATIONS ─── */
+  /* ════════ ANIMATIONS ════════ */
   @keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-  @keyframes spin{to{transform:rotate(360deg)}}
-  @keyframes shine{0%{left:-100%}50%,100%{left:200%}}
+  @keyframes slideRight{0%,100%{transform:translateX(0)}50%{transform:translateX(5px)}}
 
-  /* Reveal on scroll */
-  .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
-  .reveal.in{opacity:1;transform:none}
-
-  /* ─── RESPONSIVE ─── */
-  @media (max-width:420px){
-    .container{padding:24px 16px 60px}
-    h1{font-size:30px}
-    .avatar-wrap{width:108px;height:108px}
-    .review{flex-basis:260px}
-    .reviews-strip{margin:0 -16px;padding-left:16px;padding-right:16px}
+  /* ════════ RESPONSIVE ════════ */
+  @media (min-width:520px){
+    .hero-name{font-size:42px}
+    .education-photo-title h2{font-size:38px}
   }
-  @media (prefers-reduced-motion:reduce){
-    *,*::before,*::after{animation:none!important;transition:none!important}
-    .reveal{opacity:1;transform:none}
+  @media (max-width:380px){
+    .container{padding:18px 14px 50px}
+    .hero-name{font-size:30px}
+    .service-name{font-size:24px}
+    .education-photo-title h2{font-size:26px}
   }
 </style>
 
@@ -296,356 +512,452 @@
   "@context":"https://schema.org",
   "@type":"Physician",
   "name":"Dr. Gustavo Martins",
-  "image":"https://links.clinicagustavomartins.com.br/avatar.jpg",
+  "alternateName":"Clínica Gustavo Martins",
+  "medicalSpecialty":"Harmonização Orofacial",
   "url":"https://links.clinicagustavomartins.com.br/",
+  "image":"https://www.clinicagustavomartins.com.br/assets/dr-gustavo-novo.jpg",
   "telephone":"+5521995523509",
-  "medicalSpecialty":"Cosmetic Dentistry",
-  "description":"Mestre e especialista em Harmonização Orofacial. Criador do Método NaturalUp®. CRO-RJ 49765.",
-  "sameAs":[
-    "https://www.instagram.com/dr.gustavomartins",
-    "https://www.instagram.com/amplafacial",
-    "https://www.tiktok.com/@drgustavomartins",
-    "https://clinicagustavomartins.com.br"
+  "identifier":"CRO-RJ 49765",
+  "address":[
+    {"@type":"PostalAddress","streetAddress":"Av. das Américas, 4790 sl. 314","addressLocality":"Barra da Tijuca","addressRegion":"RJ","addressCountry":"BR"},
+    {"@type":"PostalAddress","streetAddress":"Rua Constante Ramos, 60","addressLocality":"Copacabana","addressRegion":"RJ","addressCountry":"BR"},
+    {"@type":"PostalAddress","streetAddress":"Rua Felipe Cardoso, 540 sl. 219","addressLocality":"Santa Cruz","addressRegion":"RJ","addressCountry":"BR"}
   ]
 }
 </script>
 </head>
-<body>
 
+<body>
 <main class="container">
 
-  <!-- ═══ HERO ═══ -->
+  <!-- ════════ HERO EDITORIAL ════════ -->
   <section class="hero">
-    <div class="avatar-wrap">
-      <div class="avatar-ring"></div>
-      <img src="data:image/jpeg;base64,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" alt="Dr. Gustavo Martins" class="avatar" width="120" height="120">
-      <div class="verified" aria-label="Perfil verificado">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+    <div class="hero-photo">
+      <div class="hero-badge">Método NaturalUp® Premium</div>
+      <img src="assets/dr-gustavo.jpg" alt="Dr. Gustavo Martins" loading="eager">
+      <div class="hero-text">
+        <div class="hero-supertitle">Clínica Gustavo Martins</div>
+        <h1 class="hero-name">Dr. Gustavo Martins</h1>
+        <div class="hero-tagline">Harmonização Facial <span>·</span> NaturalUp®</div>
       </div>
     </div>
-    <span class="title-soft">Clínica Gustavo Martins</span>
-    <h1>Dr. Gustavo Martins</h1>
-    <div class="tagline">Harmonização Facial · NaturalUp®</div>
-    <p class="bio">Mestre e especialista em <strong>Harmonização Orofacial</strong>. Criador do <strong>Método NaturalUp®</strong> — resultados naturais, progressivos e duradouros.</p>
-    <div class="credentials">
+    <div class="hero-credentials">
       <span class="credential">CRO-RJ 49765</span>
       <span class="credential">Mestre HOF</span>
       <span class="credential">3 unidades · RJ</span>
     </div>
   </section>
 
-  <div class="divider"></div>
-
-  <!-- ═══ AGENDAMENTO PRIMÁRIO ═══ -->
-  <a href="https://wa.me/5521995523509?text=Ol%C3%A1%2C%20vim%20do%20link%20da%20bio%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20o%20Dr.%20Gustavo%20Martins" target="_blank" rel="noopener noreferrer" class="cta-primary" data-track="cta-agendar">
-    <div class="icon-wrap">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/></svg>
+  <!-- ════════ CTA PRINCIPAL WHATSAPP ════════ -->
+  <a href="https://wa.me/5521995523509?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20o%20Dr.%20Gustavo." class="cta-primary" target="_blank" rel="noopener" data-track="cta-whatsapp-principal">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    <div class="cta-primary-text">
+      <small>Atendimento Exclusivo</small>
+      <strong>Agendar Avaliação</strong>
     </div>
-    <div class="cta-text">
-      <div class="cta-label">Agendar Avaliação</div>
-      <div class="cta-sub">WhatsApp · resposta rápida</div>
-    </div>
-    <span class="arrow">→</span>
+    <span class="arrow">›</span>
   </a>
 
-  <!-- ═══ NOSSAS UNIDADES ═══ -->
-  <p class="section-label reveal">Escolha sua Unidade</p>
-  <p class="section-sub reveal">Atendemos em Barra da Tijuca, Copacabana e Santa Cruz</p>
-  <div class="locations">
+  <!-- ════════ UNIDADES ════════ -->
+  <section class="section">
+    <div class="section-head">
+      <div class="section-eyebrow">Escolha sua unidade</div>
+      <h2 class="section-title">Nossas Clínicas no Rio</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="units">
+      <a href="https://www.google.com/maps/search/?api=1&query=Av.+das+Am%C3%A9ricas+4790+sala+314+Barra+da+Tijuca+RJ" class="unit" target="_blank" rel="noopener" data-track="unit-barra">
+        <div class="unit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M12 22s8-7 8-13a8 8 0 1 0-16 0c0 6 8 13 8 13z"/><circle cx="12" cy="9" r="3"/></svg></div>
+        <div class="unit-info">
+          <div class="unit-name">Barra da Tijuca · SEDE</div>
+          <div class="unit-addr">Av. das Américas 4790, sala 314 · Seg-Sex 9h-19h</div>
+        </div>
+        <span class="unit-arrow">›</span>
+      </a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Rua+Constante+Ramos+60+Copacabana+RJ" class="unit" target="_blank" rel="noopener" data-track="unit-copa">
+        <div class="unit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M12 22s8-7 8-13a8 8 0 1 0-16 0c0 6 8 13 8 13z"/><circle cx="12" cy="9" r="3"/></svg></div>
+        <div class="unit-info">
+          <div class="unit-name">Copacabana · Zona Sul</div>
+          <div class="unit-addr">Rua Constante Ramos 60 · Atendimento sob agendamento</div>
+        </div>
+        <span class="unit-arrow">›</span>
+      </a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Rua+Felipe+Cardoso+540+sala+219+Santa+Cruz+RJ" class="unit" target="_blank" rel="noopener" data-track="unit-sc">
+        <div class="unit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M12 22s8-7 8-13a8 8 0 1 0-16 0c0 6 8 13 8 13z"/><circle cx="12" cy="9" r="3"/></svg></div>
+        <div class="unit-info">
+          <div class="unit-name">Santa Cruz · Zona Oeste</div>
+          <div class="unit-addr">Rua Felipe Cardoso 540, sala 219 · Atendimento sob agendamento</div>
+        </div>
+        <span class="unit-arrow">›</span>
+      </a>
+    </div>
+  </section>
 
-    <a href="https://www.google.com/maps/place/Cl%C3%ADnica+Gustavo+Martins+-+Especialista+em+Face/@-23.0026332,-43.4080283,12z/data=!4m6!3m5!1s0x9bdb7eea6fb0a3:0x31e314fa063a24cd!8m2!3d-23.003346!4d-43.3256189!16s%2Fg%2F11lgthp0yc" target="_blank" rel="noopener noreferrer" class="loc-card reveal" data-track="loc-barra">
-      <div class="loc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-      <div class="loc-content">
-        <div class="loc-name">Barra da Tijuca <span class="loc-tag">Sede</span></div>
-        <div class="loc-address">Av. das Américas, 1155 · Barra Space Center</div>
-        <div class="loc-hours">Seg–Sex · 10:00 às 19:00</div>
+  <!-- ════════ EXPERTISE ════════ -->
+  <section class="section">
+    <div class="section-head">
+      <div class="section-eyebrow">Nossa Expertise</div>
+      <h2 class="section-title">Por que NaturalUp®</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="expertise">
+      <div class="expertise-card">
+        <div class="expertise-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="22" height="22"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg></div>
+        <div class="expertise-title">Mestre em<br>Harmonização</div>
       </div>
-      <svg class="loc-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
-
-    <a href="https://www.google.com/maps/place/Shopping+195/@-22.9655583,-43.1796802,17z/data=!3m2!4b1!5s0x9bd55134f008bd:0x9e037f689f5df245!4m6!3m5!1s0x9bd555a80ad687:0x4be7c6e53a56ca84!8m2!3d-22.9655633!4d-43.1771053!16s%2Fg%2F11h6s2k0q7" target="_blank" rel="noopener noreferrer" class="loc-card reveal" data-track="loc-copa">
-      <div class="loc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-      <div class="loc-content">
-        <div class="loc-name">Copacabana</div>
-        <div class="loc-address">Shopping 195 · Av. Nossa Sra. de Copacabana</div>
-        <div class="loc-hours">Atendimento por agendamento</div>
+      <div class="expertise-card">
+        <div class="expertise-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="22" height="22"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <div class="expertise-title">Método<br>NaturalUp®</div>
       </div>
-      <svg class="loc-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
-
-    <a href="https://www.google.com/maps/place/Amplavida/@-22.918707,-43.6865027,17z/data=!3m1!4b1!4m5!3m4!1s0x9bfa5b3fdbffc5:0x6be54b403fc9704e!8m2!3d-22.918707!4d-43.684314" target="_blank" rel="noopener noreferrer" class="loc-card reveal" data-track="loc-santa">
-      <div class="loc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-      <div class="loc-content">
-        <div class="loc-name">Santa Cruz</div>
-        <div class="loc-address">Amplavida · Rua Lopes de Moura, 80</div>
-        <div class="loc-hours">Atendimento por agendamento</div>
+      <div class="expertise-card">
+        <div class="expertise-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="22" height="22"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+        <div class="expertise-title">Resultados<br>Naturais</div>
       </div>
-      <svg class="loc-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
+      <div class="expertise-card">
+        <div class="expertise-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="22" height="22"><circle cx="9" cy="7" r="4"/><path d="M3 21v-1a6 6 0 0 1 12 0v1M17 11l2 2 4-4"/></svg></div>
+        <div class="expertise-title">Atendimento<br>Humano</div>
+      </div>
+    </div>
+  </section>
 
-  </div>
+  <!-- ════════ SERVIÇOS — CARDS OUTDOOR ════════ -->
+  <section class="section">
+    <div class="section-head">
+      <div class="section-eyebrow">Nossos Serviços</div>
+      <h2 class="section-title">Procedimentos</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="services-grid">
 
-  <!-- ═══ EXPERTISE ═══ -->
-  <p class="section-label reveal">Nossa Expertise</p>
-  <div class="expertise">
+      <a href="https://wa.me/5521995523509?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20Toxina%20Botul%C3%ADnica%20com%20o%20Dr.%20Gustavo." class="service-card card-rose" target="_blank" rel="noopener" data-track="serv-toxina">
+        <img src="assets/proc-botox.jpg" alt="Toxina Botulínica">
+        <div class="service-content">
+          <div class="service-top">
+            <span class="service-tag">Indicação · 4 a 6 meses</span>
+            <span class="service-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="14" height="14"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+          </div>
+          <div class="service-bottom">
+            <div class="service-name">Toxina<br>Botulínica</div>
+            <div class="service-desc">Suaviza rugas e linhas de expressão preservando naturalidade</div>
+          </div>
+        </div>
+      </a>
 
-    <div class="exp-card reveal">
-      <svg class="exp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.39 7.36H22l-6.19 4.5 2.36 7.36L12 16.72l-6.17 4.5 2.36-7.36L2 9.36h7.61z"/></svg>
-      <div class="exp-title">Mestre em HOF</div>
-      <div class="exp-desc">Especialista certificado</div>
+      <a href="https://wa.me/5521995523509?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20Preenchimento%20Facial%20com%20o%20Dr.%20Gustavo." class="service-card card-terracotta" target="_blank" rel="noopener" data-track="serv-preench">
+        <img src="assets/proc-preench.jpg" alt="Preenchimento Facial">
+        <div class="service-content">
+          <div class="service-top">
+            <span class="service-tag">Ácido Hialurônico Premium</span>
+            <span class="service-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="14" height="14"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+          </div>
+          <div class="service-bottom">
+            <div class="service-name">Preenchimento<br>Facial</div>
+            <div class="service-desc">Lábios, olheiras, mandíbula, malar, mento — volumetria precisa</div>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://wa.me/5521995523509?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20Bioestimuladores%20de%20Col%C3%A1geno%20com%20o%20Dr.%20Gustavo." class="service-card card-gold" target="_blank" rel="noopener" data-track="serv-bio">
+        <img src="assets/proc-naturalup.jpg" alt="Bioestimuladores de Colágeno">
+        <div class="service-content">
+          <div class="service-top">
+            <span class="service-tag">Sculptra · Radiesse · Elleva</span>
+            <span class="service-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="14" height="14"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+          </div>
+          <div class="service-bottom">
+            <div class="service-name">Bioestimu-<br>ladores</div>
+            <div class="service-desc">Estimulam a produção natural de colágeno · firmeza progressiva</div>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://wa.me/5521995523509?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20Biorregeneradores%20com%20o%20Dr.%20Gustavo." class="service-card card-emerald" target="_blank" rel="noopener" data-track="serv-biorreg">
+        <img src="assets/proc-labios.jpg" alt="Biorregeneradores">
+        <div class="service-content">
+          <div class="service-top">
+            <span class="service-tag">PDRN · PRF · Skinbooster</span>
+            <span class="service-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="14" height="14"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+          </div>
+          <div class="service-bottom">
+            <div class="service-name">Biorrege-<br>neradores</div>
+            <div class="service-desc">Regeneração celular profunda · vitalidade e luminosidade</div>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://wa.me/5521995523509?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20Fios%20de%20PDO%20com%20o%20Dr.%20Gustavo." class="service-card card-plum" target="_blank" rel="noopener" data-track="serv-fios">
+        <img src="assets/proc-botox.jpg" alt="Fios de PDO">
+        <div class="service-content">
+          <div class="service-top">
+            <span class="service-tag">Lifting sem cirurgia</span>
+            <span class="service-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="14" height="14"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+          </div>
+          <div class="service-bottom">
+            <div class="service-name">Fios<br>de PDO</div>
+            <div class="service-desc">Eleva tecidos faciais e estimula colágeno · efeito lifting</div>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://wa.me/5521995523509?text=Ol%C3%A1%21%20Gostaria%20de%20conhecer%20o%20Protocolo%20NaturalUp%C2%AE%20com%20o%20Dr.%20Gustavo." class="service-card card-navy" target="_blank" rel="noopener" data-track="serv-naturalup">
+        <img src="assets/proc-naturalup.jpg" alt="Protocolo NaturalUp®">
+        <div class="service-content">
+          <div class="service-top">
+            <span class="service-tag">⭐ Protocolo Exclusivo</span>
+            <span class="service-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="14" height="14"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+          </div>
+          <div class="service-bottom">
+            <div class="service-name">Protocolo<br>NaturalUp®</div>
+            <div class="service-desc">Metodologia própria · resultado natural com técnica autoral</div>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ════════ SEÇÃO EDUCACIONAL — MENTORIA PARA PROFISSIONAIS ════════ -->
+  <section class="education-block">
+    <div class="education-photo">
+      <span class="education-tag-overlay">★ Para profissionais da saúde</span>
+      <img src="assets/dr-gustavo.jpg" alt="Dr. Gustavo Martins · Mentoria Ampla Facial">
+      <div class="education-photo-title">
+        <h2>Você é profissional da saúde<br>e quer <em>aprender a fazer</em> com o Dr. Gustavo?</h2>
+      </div>
     </div>
 
-    <div class="exp-card reveal">
-      <svg class="exp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8 6 5 9 5 13a7 7 0 0014 0c0-4-3-7-7-11z"/></svg>
-      <div class="exp-title">NaturalUp®</div>
-      <div class="exp-desc">Protocolo exclusivo</div>
+    <div class="education-body">
+      <p class="education-intro">
+        A <strong>Ampla Facial</strong> é a mentoria do Dr. Gustavo para dentistas e biomédicos que querem dominar a harmonização facial com a metodologia <strong>NaturalUp®</strong> — protocolos validados, técnica autoral e acompanhamento real do mentor.
+      </p>
+
+      <ul class="education-features">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg>
+          <span><strong>Aulas práticas e ao vivo</strong> com casos reais e acompanhamento direto do Dr. Gustavo</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg>
+          <span><strong>Protocolo NaturalUp®</strong> completo: toxina, preenchedores, bioestimuladores e biorregeneradores</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg>
+          <span><strong>Comunidade exclusiva</strong> de profissionais da saúde com mentoria contínua</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg>
+          <span><strong>Certificação e material didático</strong> exclusivos da metodologia</span>
+        </li>
+      </ul>
+
+      <div class="education-ctas">
+        <a href="https://wa.me/5521995523509?text=Ol%C3%A1%21%20Sou%20profissional%20da%20sa%C3%BAde%20e%20gostaria%20de%20falar%20com%20a%20equipe%20especialista%20sobre%20a%20Mentoria%20Ampla%20Facial." class="education-cta education-cta-main" target="_blank" rel="noopener" data-track="mentoria-cta-whatsapp">
+          <span class="education-cta-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448L.057 24z"/></svg>
+          </span>
+          <div class="education-cta-text">
+            <small>Atendimento exclusivo</small>
+            <strong>Falar com nosso time</strong>
+          </div>
+          <span class="arrow">›</span>
+        </a>
+        <a href="https://www.amplafacial.com.br" class="education-cta education-cta-secondary" target="_blank" rel="noopener" data-track="mentoria-cta-site">
+          <span class="education-cta-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M4 19V5a2 2 0 0 1 2-2h11l3 3v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M9 9h6M9 13h6M9 17h4"/></svg>
+          </span>
+          <div class="education-cta-text">
+            <small>Conheça a metodologia</small>
+            <strong>Site Ampla Facial</strong>
+          </div>
+          <span class="arrow">›</span>
+        </a>
+      </div>
+
+      <div class="education-stats">
+        <div class="education-stat">
+          <div class="education-stat-num">500+</div>
+          <div class="education-stat-label">Alunos<br>formados</div>
+        </div>
+        <div class="education-stat">
+          <div class="education-stat-num">8</div>
+          <div class="education-stat-label">Anos de<br>experiência</div>
+        </div>
+        <div class="education-stat">
+          <div class="education-stat-num">4.9★</div>
+          <div class="education-stat-label">Avaliação<br>dos alunos</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ AVALIAÇÕES ════════ -->
+  <section class="section">
+    <div class="section-head">
+      <div class="section-eyebrow">★★★★★ Avaliações Reais</div>
+      <h2 class="section-title">O que dizem nossas pacientes</h2>
+      <div class="section-divider"></div>
     </div>
 
-    <div class="exp-card reveal">
-      <svg class="exp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
-      <div class="exp-title">Resultados Naturais</div>
-      <div class="exp-desc">Sem exageros</div>
+    <div class="reviews-wrap">
+      <div class="reviews-scroll">
+        <article class="review">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Resultado natural, sem cara de quem fez. Dr. Gustavo é cuidadoso, explica tudo e respeita a anatomia. Indico de olhos fechados."</p>
+          <div class="review-author">
+            <div class="review-avatar">CR</div>
+            <div>
+              <div class="review-name">Camila R.</div>
+              <div class="review-meta">Paciente · Barra da Tijuca</div>
+            </div>
+          </div>
+        </article>
+        <article class="review">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Faço com o Dr. Gustavo há 3 anos. Os resultados do NaturalUp® falam por si — todo mundo elogia e ninguém percebe que é procedimento."</p>
+          <div class="review-author">
+            <div class="review-avatar">LM</div>
+            <div>
+              <div class="review-name">Letícia M.</div>
+              <div class="review-meta">Paciente · Copacabana</div>
+            </div>
+          </div>
+        </article>
+        <article class="review">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Atendimento humano, clínica linda e técnica impecável. Fiz toxina e preenchimento de mandíbula — superou minhas expectativas."</p>
+          <div class="review-author">
+            <div class="review-avatar">FP</div>
+            <div>
+              <div class="review-name">Fernanda P.</div>
+              <div class="review-meta">Paciente · Santa Cruz</div>
+            </div>
+          </div>
+        </article>
+        <article class="review">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Bioestimulador com o Dr. Gustavo foi o melhor investimento. Pele firme, viço de volta e ninguém imagina meus 45 anos."</p>
+          <div class="review-author">
+            <div class="review-avatar">JS</div>
+            <div>
+              <div class="review-name">Juliana S.</div>
+              <div class="review-meta">Paciente · Barra da Tijuca</div>
+            </div>
+          </div>
+        </article>
+        <article class="review">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Profissional excepcional. Já passei por outros e nenhum me deu tanta confiança e resultado quanto o Dr. Gustavo. Equipe nota 10."</p>
+          <div class="review-author">
+            <div class="review-avatar">PL</div>
+            <div>
+              <div class="review-name">Patrícia L.</div>
+              <div class="review-meta">Paciente · Copacabana</div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="scroll-hint">
+        Arraste para ver mais
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </div>
     </div>
 
-    <div class="exp-card reveal">
-      <svg class="exp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
-      <div class="exp-title">Atendimento Humano</div>
-      <div class="exp-desc">Acolhedor e ético</div>
+    <a href="https://www.google.com/search?q=Cl%C3%ADnica+Gustavo+Martins+Barra+da+Tijuca&stick=H4sIAAAAAAAA" class="reviews-link" target="_blank" rel="noopener" data-track="google-reviews">Ver todas no Google ›</a>
+  </section>
+
+  <!-- ════════ SITES OFICIAIS ════════ -->
+  <section class="section">
+    <div class="section-head">
+      <div class="section-eyebrow">Sites Oficiais</div>
+      <h2 class="section-title">Conheça mais</h2>
+      <div class="section-divider"></div>
     </div>
-
-  </div>
-
-  <!-- ═══ NOSSOS SERVIÇOS ═══ -->
-  <p class="section-label reveal">Nossos Serviços</p>
-  <p class="section-sub reveal">Procedimentos do Método NaturalUp®</p>
-  <div class="services">
-
-    <a href="https://wa.me/5521995523509?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20Toxina%20Botul%C3%ADnica%20com%20o%20Dr.%20Gustavo%20Martins" target="_blank" rel="noopener noreferrer" class="service-card reveal" data-track="svc-botox">
-      <div class="service-head">
-        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 008 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 11-2.83-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H2a2 2 0 010-4h.09A1.65 1.65 0 004.6 8a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V2a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 112.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H22a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg></div>
-        <div class="service-name">Toxina Botulínica</div>
-      </div>
-      <div class="service-desc">Suaviza rugas e linhas de expressão preservando a naturalidade. Xeomin e Dysport — 4 a 6 meses.</div>
-    </a>
-
-    <a href="https://wa.me/5521995523509?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20Preenchimento%20Facial%20com%20o%20Dr.%20Gustavo%20Martins" target="_blank" rel="noopener noreferrer" class="service-card reveal" data-track="svc-preench">
-      <div class="service-head">
-        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8 6 5 9 5 13a7 7 0 0014 0c0-4-3-7-7-11z"/></svg></div>
-        <div class="service-name">Preenchimento Facial</div>
-      </div>
-      <div class="service-desc">Lábios, olheiras, mandíbula, malar, mento e mais — volumetria precisa com ácido hialurônico premium.</div>
-    </a>
-
-    <a href="https://wa.me/5521995523509?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20Bioestimuladores%20com%20o%20Dr.%20Gustavo%20Martins" target="_blank" rel="noopener noreferrer" class="service-card reveal" data-track="svc-bio">
-      <div class="service-head">
-        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
-        <div class="service-name">Bioestimuladores</div>
-      </div>
-      <div class="service-desc">Sculptra®, Radiesse® e Elleva® — estimulam colágeno natural com firmeza progressiva por até 2 anos.</div>
-    </a>
-
-    <a href="https://wa.me/5521995523509?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20Biorregeneradores%20com%20o%20Dr.%20Gustavo%20Martins" target="_blank" rel="noopener noreferrer" class="service-card reveal" data-track="svc-biorreg">
-      <div class="service-head">
-        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
-        <div class="service-name">Biorregeneradores</div>
-      </div>
-      <div class="service-desc">PDRN, PRF e Skinbooster — regeneração celular profunda que devolve vitalidade e luminosidade à pele.</div>
-    </a>
-
-    <a href="https://wa.me/5521995523509?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20Fios%20de%20PDO%20com%20o%20Dr.%20Gustavo%20Martins" target="_blank" rel="noopener noreferrer" class="service-card reveal" data-track="svc-fios">
-      <div class="service-head">
-        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19l16-16M10 4l10 10M4 14l6 6"/></svg></div>
-        <div class="service-name">Fios de PDO</div>
-      </div>
-      <div class="service-desc">Lifting facial minimamente invasivo. Eleva tecidos e estimula colágeno sem cirurgia.</div>
-    </a>
-
-    <a href="https://wa.me/5521995523509?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20iSkinTech%20com%20o%20Dr.%20Gustavo%20Martins" target="_blank" rel="noopener noreferrer" class="service-card reveal" data-track="svc-iskin">
-      <div class="service-head">
-        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></div>
-        <div class="service-name">Protocolo iSkinTech</div>
-      </div>
-      <div class="service-desc">Limpeza profunda e revitalização — pele uniforme, hidratada e com brilho saudável.</div>
-    </a>
-
-  </div>
-
-  <!-- ═══ AVALIAÇÕES ═══ -->
-  <p class="section-label reveal">Avaliações Reais</p>
-  <p class="section-sub reveal">+50 avaliações 5 estrelas no Google</p>
-  <div class="reviews-hint reveal">
-    <span>Arraste para ver mais</span>
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-  </div>
-  <div class="reviews-wrap reveal"><div class="reviews-strip">
-
-    <div class="review">
-      <div class="review-stars">★★★★★</div>
-      <div class="review-text">"O Dr. Gustavo é excepcional! Super atencioso, avalia a sua necessidade com cuidado e te deixa à vontade para esclarecer as dúvidas. Super recomendo!"</div>
-      <div class="review-author">— Camila R. · Google</div>
+    <div class="link-list">
+      <a href="https://www.clinicagustavomartins.com.br" class="link-item" target="_blank" rel="noopener" data-track="site-clinica">
+        <div class="link-icon icon-clinic">GM</div>
+        <div class="link-info">
+          <div class="link-supertitle">Site Oficial</div>
+          <div class="link-title">Clínica Gustavo Martins</div>
+          <div class="link-sub">Harmonização facial · 3 unidades no RJ</div>
+        </div>
+        <span class="link-arrow">›</span>
+      </a>
+      <a href="https://protocolo.clinicagustavomartins.com.br" class="link-item" target="_blank" rel="noopener" data-track="site-naturalup">
+        <div class="link-icon icon-naturalup">NU</div>
+        <div class="link-info">
+          <div class="link-supertitle">Para pacientes</div>
+          <div class="link-title">Protocolo NaturalUp®</div>
+          <div class="link-sub">Metodologia exclusiva de harmonização natural</div>
+        </div>
+        <span class="link-arrow">›</span>
+      </a>
+      <a href="https://www.amplafacial.com.br" class="link-item" target="_blank" rel="noopener" data-track="site-ampla">
+        <div class="link-icon icon-ampla">AF</div>
+        <div class="link-info">
+          <div class="link-supertitle">Para profissionais</div>
+          <div class="link-title">Ampla Facial · Mentoria</div>
+          <div class="link-sub">Mentoria em harmonização para dentistas e biomédicos</div>
+        </div>
+        <span class="link-arrow">›</span>
+      </a>
     </div>
+  </section>
 
-    <div class="review">
-      <div class="review-stars">★★★★★</div>
-      <div class="review-text">"Simplesmente a melhor clínica que já fui! Fiz minha harmonização facial com o Dr. Gustavo e o resultado ficou impecável — super natural, exatamente como eu queria."</div>
-      <div class="review-author">— Letícia M. · Google</div>
+  <!-- ════════ REDES SOCIAIS ════════ -->
+  <section class="section">
+    <div class="section-head">
+      <div class="section-eyebrow">Siga nas Redes</div>
+      <h2 class="section-title">Conteúdo & Bastidores</h2>
+      <div class="section-divider"></div>
     </div>
-
-    <div class="review">
-      <div class="review-stars">★★★★★</div>
-      <div class="review-text">"Há quatro anos conheci o Dr. Gustavo e desde então virou referência nos cuidados com meu rosto. Indico de olhos fechados!"</div>
-      <div class="review-author">— Fernanda P. · Google</div>
+    <div class="link-list">
+      <a href="https://www.instagram.com/dr.gustavomartins/" class="link-item" target="_blank" rel="noopener" data-track="ig-pessoal">
+        <div class="link-icon icon-insta">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </div>
+        <div class="link-info">
+          <div class="link-supertitle">Instagram Pessoal</div>
+          <div class="link-title">@dr.gustavomartins</div>
+          <div class="link-sub">Bastidores, casos e conteúdo da clínica</div>
+        </div>
+        <span class="link-arrow">›</span>
+      </a>
+      <a href="https://www.instagram.com/amplafacial/" class="link-item" target="_blank" rel="noopener" data-track="ig-ampla">
+        <div class="link-icon icon-insta-ampla">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4z"/></svg>
+        </div>
+        <div class="link-info">
+          <div class="link-supertitle">Instagram Mentoria</div>
+          <div class="link-title">@amplafacial</div>
+          <div class="link-sub">Conteúdo para profissionais da harmonização</div>
+        </div>
+        <span class="link-arrow">›</span>
+      </a>
+      <a href="https://www.tiktok.com/@dr.gustavomartins" class="link-item" target="_blank" rel="noopener" data-track="tiktok">
+        <div class="link-icon icon-tiktok">
+          <svg viewBox="0 0 24 24" fill="#fff" width="18" height="18"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+        </div>
+        <div class="link-info">
+          <div class="link-supertitle">TikTok</div>
+          <div class="link-title">@dr.gustavomartins</div>
+          <div class="link-sub">Vídeos rápidos sobre procedimentos</div>
+        </div>
+        <span class="link-arrow">›</span>
+      </a>
     </div>
+  </section>
 
-    <div class="review">
-      <div class="review-stars">★★★★★</div>
-      <div class="review-text">"Profissional maravilhoso! Cuida da minha harmonização com delicadeza e naturalidade. Toxina, preenchimento e mento — resultados impecáveis. Confiança total!"</div>
-      <div class="review-author">— Juliana S. · Google</div>
-    </div>
-
-    <div class="review">
-      <div class="review-stars">★★★★★</div>
-      <div class="review-text">"Cada detalhe foi único! A clínica tem uma energia incrível, com uma vista sensacional da Barra da Tijuca. Encantada com o atendimento."</div>
-      <div class="review-author">— Patrícia L. · Google</div>
-    </div>
-
-  </div></div>
-  <div class="reviews-cta reveal">
-    <a href="https://www.google.com/maps/place/Cl%C3%ADnica+Gustavo+Martins+-+Especialista+em+Face/@-23.0026332,-43.4080283,12z/data=!4m6!3m5!1s0x9bdb7eea6fb0a3:0x31e314fa063a24cd!8m2!3d-23.003346!4d-43.3256189" target="_blank" rel="noopener noreferrer">Ver todas as avaliações no Google →</a>
-  </div>
-
-  <!-- ═══ CONTEÚDOS EM DESTAQUE ═══ -->
-  <p class="section-label reveal">Conteúdos em Destaque</p>
-  <div class="links">
-
-    <a href="https://www.instagram.com/dr.gustavomartins/reels/" target="_blank" rel="noopener noreferrer" class="link-card reveal" data-track="content-reels">
-      <div class="link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><polygon points="10 8 16 12 10 16" fill="currentColor"/></svg></div>
-      <div class="link-content">
-        <div class="link-label">Reels & Vídeos no Instagram</div>
-        <div class="link-sublabel">Antes & depois · Cases reais · Bastidores</div>
-      </div>
-      <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
-
-    <a href="https://www.tiktok.com/@drgustavomartins" target="_blank" rel="noopener noreferrer" class="link-card reveal" data-track="content-tiktok">
-      <div class="link-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 0010.86 4.46V13a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-.81-.07 4.83 4.83 0 01-.38-4.36z"/></svg></div>
-      <div class="link-content">
-        <div class="link-label">Conteúdos no TikTok</div>
-        <div class="link-sublabel">Dicas rápidas e demonstrações</div>
-      </div>
-      <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
-
-  </div>
-
-  <!-- ═══ SITES E PROTOCOLO ═══ -->
-  <p class="section-label reveal">Sites Oficiais</p>
-  <div class="links">
-
-    <a href="https://clinicagustavomartins.com.br/" target="_blank" rel="noopener noreferrer" class="link-card reveal" data-track="site-clinica">
-      <div class="link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-      <div class="link-content">
-        <div class="link-label">Clínica Gustavo Martins</div>
-        <div class="link-sublabel">Conheça toda a clínica e nossos serviços</div>
-      </div>
-      <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
-
-    <a href="https://protocolo.clinicagustavomartins.com.br/" target="_blank" rel="noopener noreferrer" class="link-card reveal" data-track="site-protocolo">
-      <div class="link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 14l2 2 4-4"/></svg></div>
-      <div class="link-content">
-        <div class="link-label">Conheça o Protocolo NaturalUp® <span class="link-badge">Pacientes</span></div>
-        <div class="link-sublabel">Área exclusiva para acompanhamento</div>
-      </div>
-      <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
-
-    <a href="https://www.amplafacial.com.br/" target="_blank" rel="noopener noreferrer" class="link-card reveal" data-track="site-ampla">
-      <div class="link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div>
-      <div class="link-content">
-        <div class="link-label">Ampla Facial <span class="link-badge">Dentistas</span></div>
-        <div class="link-sublabel">Mentoria para profissionais · Método NaturalUp®</div>
-      </div>
-      <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
-
-  </div>
-
-  <!-- ═══ REDES SOCIAIS ═══ -->
-  <p class="section-label reveal">Siga nas Redes</p>
-  <div class="links">
-
-    <a href="https://www.instagram.com/dr.gustavomartins" target="_blank" rel="noopener noreferrer" class="link-card reveal" data-track="ig-personal">
-      <div class="link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></div>
-      <div class="link-content">
-        <div class="link-label">Instagram Pessoal</div>
-        <div class="link-sublabel">@dr.gustavomartins</div>
-      </div>
-      <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
-
-    <a href="https://www.instagram.com/amplafacial" target="_blank" rel="noopener noreferrer" class="link-card reveal" data-track="ig-ampla">
-      <div class="link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></div>
-      <div class="link-content">
-        <div class="link-label">Ampla Facial</div>
-        <div class="link-sublabel">@amplafacial — Mentoria</div>
-      </div>
-      <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
-
-    <a href="https://www.tiktok.com/@drgustavomartins" target="_blank" rel="noopener noreferrer" class="link-card reveal" data-track="tiktok">
-      <div class="link-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 0010.86 4.46V13a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-.81-.07 4.83 4.83 0 01-.38-4.36z"/></svg></div>
-      <div class="link-content">
-        <div class="link-label">TikTok</div>
-        <div class="link-sublabel">@drgustavomartins</div>
-      </div>
-      <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
-
-  </div>
-
-  <!-- ═══ MENTORIA DENTISTAS (CTA secundário) ═══ -->
-  <p class="section-label reveal">Para Profissionais</p>
-  <a href="https://wa.me/5521976263881?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20acompanhamento%20VIP%20Ampla%20Facial%20e%20o%20M%C3%A9todo%20NaturalUp%C2%AE" target="_blank" rel="noopener noreferrer" class="link-card reveal" data-track="mentoria">
-    <div class="link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
-    <div class="link-content">
-      <div class="link-label">Mentoria Ampla Facial</div>
-      <div class="link-sublabel">Acompanhamento VIP para dentistas · WhatsApp</div>
-    </div>
-    <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-  </a>
-
-  <!-- ═══ FOOTER ═══ -->
-  <footer>
-    <div class="footer-brand">Clínica Gustavo Martins</div>
-    <div class="footer-meta">CRO-RJ 49765 · Harmonização Orofacial · RJ</div>
-    <div class="footer-links">
-      <a href="https://clinicagustavomartins.com.br">Site oficial</a>
-      <a href="https://wa.me/5521995523509">Atendimento</a>
-      <a href="mailto:contato@clinicagustavomartins.com.br">E-mail</a>
-    </div>
-    <div class="footer-credit">© 2026 · Criado com <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer">Perplexity Computer</a></div>
+  <!-- ════════ FOOTER ════════ -->
+  <footer class="footer">
+    <div class="footer-cro">CRO-RJ 49765</div>
+    <div>Dr. Gustavo Martins · Mestre em Harmonização Orofacial</div>
+    <div>© 2026 · Clínica Gustavo Martins · Todos os direitos reservados</div>
+    <p class="footer-disclaimer">
+      Resultados podem variar de paciente para paciente. Procedimentos estéticos são procedimentos de saúde realizados exclusivamente por profissional habilitado. Imagens meramente ilustrativas.
+    </p>
+    <div class="footer-credit">Criado com Perplexity Computer</div>
   </footer>
 
 </main>
-
-<!-- Reveal on scroll -->
-<script>
-  if('IntersectionObserver' in window){
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-    },{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
-    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-  } else {
-    document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'));
-  }
-  // Lightweight click tracking (event hook ready for analytics)
-  document.querySelectorAll('[data-track]').forEach(el=>{
-    el.addEventListener('click',()=>{
-      try{ if(window.gtag){ window.gtag('event','link_click',{label:el.dataset.track}); } }catch(e){}
-    });
-  });
-</script>
-
 </body>
 </html>

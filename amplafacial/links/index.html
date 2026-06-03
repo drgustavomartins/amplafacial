@@ -72,13 +72,26 @@
     -webkit-font-smoothing:antialiased;
     -moz-osx-font-smoothing:grayscale;
   }
+  /* Fundo luxuoso esmaecido com imagem + overlay */
   body::before{
     content:"";
     position:fixed;inset:0;
+    background-image:url('/links/assets/bg-lux.jpg');
+    background-size:cover;
+    background-position:center top;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    opacity:.55;
+    pointer-events:none;z-index:0;
+  }
+  body::after{
+    content:"";
+    position:fixed;inset:0;
     background:
-      radial-gradient(ellipse at 15% 5%, rgba(212,136,154,0.08) 0%, transparent 40%),
-      radial-gradient(ellipse at 85% 30%, rgba(201,169,97,0.08) 0%, transparent 45%),
-      radial-gradient(ellipse at 50% 85%, rgba(127,184,154,0.06) 0%, transparent 50%);
+      radial-gradient(ellipse at 15% 5%, rgba(212,136,154,0.10) 0%, transparent 40%),
+      radial-gradient(ellipse at 85% 30%, rgba(201,169,97,0.10) 0%, transparent 45%),
+      radial-gradient(ellipse at 50% 85%, rgba(127,184,154,0.06) 0%, transparent 50%),
+      linear-gradient(180deg, rgba(10,22,40,0.5) 0%, rgba(10,22,40,0.75) 100%);
     pointer-events:none;z-index:0;
   }
   .container{position:relative;z-index:1;max-width:var(--maxw);margin:0 auto;padding:24px 18px 60px}
@@ -658,7 +671,7 @@
       </a>
 
       <a href="https://wa.me/5521995523509?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20Bioestimuladores%20de%20Col%C3%A1geno%20com%20o%20Dr.%20Gustavo." class="service-card card-gold" target="_blank" rel="noopener" data-track="serv-bio">
-        <img src="/links/assets/proc-naturalup.jpg" alt="Bioestimuladores de Colágeno">
+        <img src="/links/assets/proc-bioestim.jpg" alt="Bioestimuladores de Colágeno">
         <div class="service-content">
           <div class="service-top">
             <span class="service-tag">Sculptra · Radiesse · Elleva</span>
@@ -672,7 +685,7 @@
       </a>
 
       <a href="https://wa.me/5521995523509?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20Biorregeneradores%20com%20o%20Dr.%20Gustavo." class="service-card card-emerald" target="_blank" rel="noopener" data-track="serv-biorreg">
-        <img src="/links/assets/proc-labios.jpg" alt="Biorregeneradores">
+        <img src="/links/assets/proc-biorreg.jpg" alt="Biorregeneradores">
         <div class="service-content">
           <div class="service-top">
             <span class="service-tag">PDRN · PRF · Skinbooster</span>

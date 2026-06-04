@@ -1433,8 +1433,7 @@ h1, h2, h3, h4, h5 {
 .footer__logo {
   width: 160px;
   height: auto;
-  border-radius: var(--radius-md);
-  opacity: 0.85;
+  opacity: 0.9;
   transition: opacity 150ms;
 }
 .footer__logo:hover { opacity: 1; }

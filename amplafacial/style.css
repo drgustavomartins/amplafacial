@@ -1831,3 +1831,7 @@ body {
   margin-top: var(--space-8);
   margin-bottom: var(--space-10);
 }
+
+/* <picture> transparente ao layout (etapa 4) */
+.module-card__media picture { display: contents; }
+.method-visual picture, .method-media picture, .method-img-wrap picture { display: contents; }

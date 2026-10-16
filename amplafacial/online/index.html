@@ -550,7 +550,7 @@
     p.set("utm_campaign", q.get("utm_campaign") || "plataforma_online");
     p.set("utm_content", q.get("utm_content") || placement);
     if (q.get("utm_term")) p.set("utm_term", q.get("utm_term"));
-    var hash = "#/planos-publicos" + (q.get("ref") ? "?ref=" + encodeURIComponent(q.get("ref")) : "");
+    var hash = "#/planos-publicos?checkout=plataforma_anual" + (q.get("ref") ? "&ref=" + encodeURIComponent(q.get("ref")) : "");
     return "https://portal.amplafacial.com.br/?" + p.toString() + hash;
   }
   function track(ev, params) { try { if (window.fbq) fbq("track", ev, params || {}); } catch (e) {} }

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>Ampla Facial</title>
+  <script>
+    // Corrige links digitados com maiúscula ou erro de digitação (ex.: /Toxina, /toxinal, /ONLINE)
+    // e leva para a página certa, preservando UTMs. O resto vai para a home.
+    (function () {
+      var p = location.pathname.toLowerCase().replace(/\/+$/, "");
+      var dest = "/";
+      if (/^\/toxin/.test(p) || /^\/botox/.test(p)) dest = "/toxina/";
+      else if (/^\/onlin/.test(p) || /^\/plataforma/.test(p)) dest = "/online/";
+      else if (/^\/link/.test(p)) dest = "/links/";
+      location.replace(dest + location.search + location.hash);
+    })();
+  </script>
+  <style>body{background:#060F1D;color:#EDE8DC;font-family:sans-serif;display:grid;place-items:center;min-height:100vh;margin:0}a{color:#D4A843}</style>
+</head>
+<body>
+  <p>Redirecionando… <a href="/">ir para amplafacial.com.br</a></p>
+</body>
+</html>
